@@ -28,7 +28,7 @@
     conditional_formatting_include_nulls: false
     custom_color: "#0504AA"
     single_value_title: Total Detections
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
@@ -71,7 +71,7 @@
     conditional_formatting_include_nulls: false
     custom_color: "#F28F16"
     single_value_title: Average Lift per Detection
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
@@ -118,7 +118,7 @@
     custom_color: "#22A2F2"
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0"
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
@@ -214,7 +214,7 @@
     comparison_reverse_colors: false
     show_comparison_label: true
     enable_conditional_formatting: false
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
@@ -306,7 +306,7 @@
     comparison_reverse_colors: false
     show_comparison_label: true
     enable_conditional_formatting: false
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
@@ -398,7 +398,7 @@
     comparison_reverse_colors: false
     show_comparison_label: true
     enable_conditional_formatting: false
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
@@ -494,7 +494,7 @@
     comparison_reverse_colors: false
     show_comparison_label: true
     enable_conditional_formatting: false
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
@@ -586,7 +586,7 @@
     comparison_reverse_colors: false
     show_comparison_label: true
     enable_conditional_formatting: false
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
@@ -681,7 +681,7 @@
     comparison_reverse_colors: false
     show_comparison_label: true
     enable_conditional_formatting: false
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
@@ -792,7 +792,7 @@
     comparison_reverse_colors: false
     show_comparison_label: true
     enable_conditional_formatting: false
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]

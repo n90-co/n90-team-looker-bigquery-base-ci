@@ -28,7 +28,7 @@
     enable_conditional_formatting: false
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
-    custom_color: "#4A7820"
+    custom_color: "#0504AA"
     single_value_title: Sessions
     defaults_version: 1
     listen:
