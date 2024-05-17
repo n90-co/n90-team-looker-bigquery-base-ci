@@ -111,12 +111,14 @@ view: +lift_attribution {
           <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
     sql: "First-Party Attribution Dashboard" ;;
   }
-  dimension: comp_dash_button {
-    hidden: yes
-    html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::competitive_micromoment_attribution_dashboard?Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Airing+Type=Competitive&Date+Filter+in+Local+Time={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer+Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment+Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Spot+Length=&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day+of+Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA%20Name%2FMedia%20Type={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
-          <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
-    sql: "Competitive Attribution Dashboard" ;;
-  }
+
+# Remove Competitive Link
+  # dimension: comp_dash_button {
+  #   hidden: yes
+  #   html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::competitive_micromoment_attribution_dashboard?Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Airing+Type=Competitive&Date+Filter+in+Local+Time={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer+Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment+Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Spot+Length=&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day+of+Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA%20Name%2FMedia%20Type={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
+  #         <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
+  #   sql: "Competitive Attribution Dashboard" ;;
+  # }
   dimension: session_dash_button {
     hidden: yes
     html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::web_sessions_dashboard?Micro-Moment%20Type={{_filters['lift_attribution.airing_type'] | url_encode }}&Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Date%20Range%20Filter={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer%20Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment%20Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Lead%20Source%20Rank=5&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day%20of%20Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
@@ -138,10 +140,10 @@ view: +lift_attribution {
       label: "First Party Micro-Moment® Attribution Dashboard"
       url: "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::firstparty_micromoment_attribution_dashboard?Brand+Filter={{ value }}&Airing+Type=1st+Party"
     }
-    link: {
-      label: "Competitive Micro-Moment® Attribution Dashboard"
-      url: "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::competitive_micromoment_attribution_dashboard?Brand+Filter={{ value }}&Airing+Type=Competitive"
-    }
+    # link: {
+    #   label: "Competitive Micro-Moment® Attribution Dashboard"
+    #   url: "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::competitive_micromoment_attribution_dashboard?Brand+Filter={{ value }}&Airing+Type=Competitive"
+    # }
     link: {
       label: "Web Session Dashboard"
       url: "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::web_sessions_dashboard?Brand+Filter={{ value }}"

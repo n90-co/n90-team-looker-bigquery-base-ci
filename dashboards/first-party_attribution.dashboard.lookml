@@ -26,7 +26,7 @@
     enable_conditional_formatting: false
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
-    custom_color: "#4085c7"
+    custom_color: "#0504AA"
     single_value_title: Total Detections
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
         font_color: !!null '', color_application: {collection_id: next90-colors,
@@ -197,7 +197,7 @@
     y_axis_zoom: true
     hide_legend: false
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     ordering: none
     show_null_labels: false
@@ -289,7 +289,7 @@
     y_axis_zoom: true
     hide_legend: false
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     ordering: none
     show_null_labels: false
@@ -386,7 +386,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
@@ -482,7 +482,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
@@ -574,7 +574,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
@@ -669,7 +669,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
@@ -780,7 +780,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
@@ -819,74 +819,74 @@
     col: 0
     width: 8
     height: 11
-  - title: Competitive Dashboard Navigation Button
-    name: Competitive Dashboard Navigation Button
-    model: bigquery_dashboards
-    explore: lift_attribution
-    type: single_value
-    fields: [lift_attribution.comp_dash_button]
-    sorts: [lift_attribution.comp_dash_button]
-    limit: 500
-    column_limit: 50
-    custom_color_enabled: true
-    show_single_value_title: false
-    show_comparison: false
-    comparison_type: value
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    enable_conditional_formatting: false
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    font_size_main: '1'
-    orientation: vertical
-    style_lift_attribution.comp_dash_button: "#3A4245"
-    show_title_lift_attribution.comp_dash_button: false
-    title_placement_lift_attribution.comp_dash_button: above
-    value_format_lift_attribution.comp_dash_button: ''
-    style_lift_attribution.session_dash_button: "#3A4245"
-    show_title_lift_attribution.session_dash_button: false
-    title_placement_lift_attribution.session_dash_button: above
-    value_format_lift_attribution.session_dash_button: ''
-    show_comparison_lift_attribution.session_dash_button: false
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: ''
-    limit_displayed_rows: false
-    legend_position: center
-    point_style: none
-    show_value_labels: false
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    defaults_version: 1
-    hidden_fields: []
-    hidden_points_if_no: []
-    series_labels: {}
-    title_hidden: true
-    listen:
-      Spot Length: lift_attribution.spot_length
-      Post Log Filter: lift_attribution.include_post_log_attribution
-    row: 0
-    col: 16
-    width: 8
-    height: 1
+  # - title: Competitive Dashboard Navigation Button
+  #   name: Competitive Dashboard Navigation Button
+  #   model: bigquery_dashboards
+  #   explore: lift_attribution
+  #   type: single_value
+  #   fields: [lift_attribution.comp_dash_button]
+  #   sorts: [lift_attribution.comp_dash_button]
+  #   limit: 500
+  #   column_limit: 50
+  #   custom_color_enabled: true
+  #   show_single_value_title: false
+  #   show_comparison: false
+  #   comparison_type: value
+  #   comparison_reverse_colors: false
+  #   show_comparison_label: true
+  #   enable_conditional_formatting: false
+  #   conditional_formatting_include_totals: false
+  #   conditional_formatting_include_nulls: false
+  #   font_size_main: '1'
+  #   orientation: vertical
+  #   style_lift_attribution.comp_dash_button: "#3A4245"
+  #   show_title_lift_attribution.comp_dash_button: false
+  #   title_placement_lift_attribution.comp_dash_button: above
+  #   value_format_lift_attribution.comp_dash_button: ''
+  #   style_lift_attribution.session_dash_button: "#3A4245"
+  #   show_title_lift_attribution.session_dash_button: false
+  #   title_placement_lift_attribution.session_dash_button: above
+  #   value_format_lift_attribution.session_dash_button: ''
+  #   show_comparison_lift_attribution.session_dash_button: false
+  #   x_axis_gridlines: false
+  #   y_axis_gridlines: true
+  #   show_view_names: false
+  #   show_y_axis_labels: true
+  #   show_y_axis_ticks: true
+  #   y_axis_tick_density: default
+  #   y_axis_tick_density_custom: 5
+  #   show_x_axis_label: true
+  #   show_x_axis_ticks: true
+  #   y_axis_scale_mode: linear
+  #   x_axis_reversed: false
+  #   y_axis_reversed: false
+  #   plot_size_by_field: false
+  #   trellis: ''
+  #   stacking: ''
+  #   limit_displayed_rows: false
+  #   legend_position: center
+  #   point_style: none
+  #   show_value_labels: false
+  #   label_density: 25
+  #   x_axis_scale: auto
+  #   y_axis_combined: true
+  #   ordering: none
+  #   show_null_labels: false
+  #   show_totals_labels: false
+  #   show_silhouette: false
+  #   totals_color: "#808080"
+  #   defaults_version: 1
+  #   hidden_fields: []
+  #   hidden_points_if_no: []
+  #   series_labels: {}
+  #   title_hidden: true
+  #   listen:
+  #     Spot Length: lift_attribution.spot_length
+  #     Post Log Filter: lift_attribution.include_post_log_attribution
+  #   row: 0
+  #   col: 16
+  #   width: 8
+  #   height: 1
   - title: Sessions Dashboard Navigation Button
     name: Sessions Dashboard Navigation Button
     model: bigquery_dashboards

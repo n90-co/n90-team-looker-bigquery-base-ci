@@ -27,7 +27,7 @@
     enable_conditional_formatting: false
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
-    custom_color: "#4085c7"
+    custom_color: "#0504AA"
     single_value_title: Total Detections
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
         font_color: !!null '', color_application: {collection_id: next90-colors,
@@ -196,7 +196,7 @@
     y_axis_zoom: true
     hide_legend: false
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     ordering: none
     show_null_labels: false
@@ -288,7 +288,7 @@
     y_axis_zoom: true
     hide_legend: false
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     ordering: none
     show_null_labels: false
@@ -384,7 +384,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
@@ -479,7 +479,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
@@ -570,7 +570,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
@@ -664,7 +664,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
@@ -774,7 +774,7 @@
     series_types:
       lift_attribution.count_detections: scatter
     series_colors:
-      lift_attribution.count_detections: "#4085c7"
+      lift_attribution.count_detections: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#4d2987"
     custom_color_enabled: true
     custom_color: "#4d2987"
