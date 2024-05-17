@@ -69,7 +69,7 @@
     enable_conditional_formatting: false
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
-    custom_color: "#F28F16"
+    custom_color: "#22A2F2"
     single_value_title: Average Lift per Detection
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
@@ -115,7 +115,7 @@
     enable_conditional_formatting: false
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
-    custom_color: "#22A2F2"
+    custom_color: "#F28F16"
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0"
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
@@ -198,7 +198,7 @@
     hide_legend: false
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#22A2F2"
+      lift_attribution.total_weighted_session_lift: "#F28F16"
     ordering: none
     show_null_labels: false
     show_totals_labels: false
@@ -290,14 +290,14 @@
     hide_legend: false
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#22A2F2"
+      lift_attribution.total_weighted_session_lift: "#F28F16"
     ordering: none
     show_null_labels: false
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
     custom_color_enabled: true
-    custom_color: "#22A2F2"
+    custom_color: "#F28F16"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -387,9 +387,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#22A2F2"
+      lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
-    custom_color: "#22A2F2"
+    custom_color: "#F28F16"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -483,9 +483,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#22A2F2"
+      lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
-    custom_color: "#22A2F2"
+    custom_color: "#F28F16"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -575,9 +575,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#22A2F2"
+      lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
-    custom_color: "#22A2F2"
+    custom_color: "#F28F16"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -670,9 +670,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#22A2F2"
+      lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
-    custom_color: "#22A2F2"
+    custom_color: "#F28F16"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -781,9 +781,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#22A2F2"
+      lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
-    custom_color: "#22A2F2"
+    custom_color: "#F28F16"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -936,6 +936,7 @@
     listen:
       Spot Length: lift_attribution.spot_length
       Post Log Filter: lift_attribution.include_post_log_attribution
+      Brand Filter: brands.brand_filter
     row: 0
     col: 8
     width: 8
