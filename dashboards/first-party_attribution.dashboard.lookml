@@ -69,7 +69,7 @@
     enable_conditional_formatting: false
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
-    custom_color: "##F28F16"
+    custom_color: "#F28F16"
     single_value_title: Average Lift per Detection
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
         font_color: !!null '', color_application: {collection_id: next90-colors,
@@ -709,7 +709,7 @@
     height: 10
   - type: button
     name: button_827
-    rich_content_json: '{"text":"Advocado® Attribution Methodology","description":"","newTab":true,"alignment":"right","size":"large","style":"FILLED","color":"##F28F16","href":"https://drive.google.com/file/d/1ZagNrso_1z9dKye1fOb-0NRYpYMvLSDP/view?usp=drive_link"}'
+    rich_content_json: '{"text":"Advocado® Attribution Methodology","description":"","newTab":true,"alignment":"right","size":"large","style":"FILLED","color":"#F28F16","href":"https://drive.google.com/file/d/1ZagNrso_1z9dKye1fOb-0NRYpYMvLSDP/view?usp=drive_link"}'
     row: 20
     col: 16
     width: 8
