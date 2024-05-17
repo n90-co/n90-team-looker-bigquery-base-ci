@@ -1,6 +1,6 @@
 ---
-- dashboard: welcome_to_guac
-  title: Welcome to Guac!
+- dashboard: welcome_to_insights_power
+  title: Welcome to Insights Power!
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
@@ -72,18 +72,18 @@
         label: Custom
         type: discrete
         colors:
-        - "#78b34d"
-        - "#94c270"
-        - "#add194"
-        - "#c9e0b8"
-        - "#4085c7"
-        - "#669ed1"
-        - "#8cb5de"
-        - "#b3cfe8"
-        - "#4d2987"
-        - "#7054a1"
-        - "#9480b8"
-        - "#b8abcf"
+        - "#0504AA"
+        - "#22A2F2"
+        - "#F28F16"
+        - "#29282A"
+        - "#D9D6D2"
+        # - "#669ed1"
+        # - "#8cb5de"
+        # - "#b3cfe8"
+        # - "#4d2987"
+        # - "#7054a1"
+        # - "#9480b8"
+        # - "#b8abcf"
       options:
         steps: 5
     show_sql_query_menu_options: false
@@ -95,9 +95,9 @@
       lift_attribution.welcome_dash_brand_links: Brands
     series_text_format:
       lift_attribution.welcome_dash_brand_links:
-        fg_color: "#78b34d"
+        fg_color: "#29282A"
         align: left
-    header_font_color: "#4A7820"
+    header_font_color: "#0504AA"
     rotation: false
     defaults_version: 1
     hidden_pivots: {}
