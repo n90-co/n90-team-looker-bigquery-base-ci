@@ -709,7 +709,7 @@
     height: 10
   - type: button
     name: button_827
-    rich_content_json: '{"text":"Next90 Attribution Methodology","description":"","newTab":true,"alignment":"right","size":"large","style":"FILLED","color":"#F28F16","href":"https://drive.google.com/file/d/1GH_FlhMelLK1maIOyl1oUXqUdyA29UTH/view?usp=drive_link"}'
+    rich_content_json: '{"text":"Next90 Attribution Methodology","description":"","newTab":true,"alignment":"right","size":"large","style":"FILLED","color":"#0504aa","href":"https://drive.google.com/file/d/1GH_FlhMelLK1maIOyl1oUXqUdyA29UTH/view?usp=drive_link"}'
     row: 20
     col: 16
     width: 8
