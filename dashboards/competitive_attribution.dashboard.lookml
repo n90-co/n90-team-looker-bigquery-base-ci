@@ -703,14 +703,14 @@
     height: 10
   - type: button
     name: button_706
-    rich_content_json: '{"text":"Advocado® Attribution Methodology","description":"","newTab":true,"alignment":"right","size":"medium","style":"FILLED","color":"#F28F16","href":"https://drive.google.com/file/d/1ZagNrso_1z9dKye1fOb-0NRYpYMvLSDP/view?usp=drive_link"}'
+    rich_content_json: '{"text":"Next90 Attribution Methodology","description":"","newTab":true,"alignment":"right","size":"medium","style":"FILLED","color":"#0504aa","href":"https://drive.google.com/file/d/1GH_FlhMelLK1maIOyl1oUXqUdyA29UTH/view?usp=drive_link"}'
     row: 20
     col: 16
     width: 8
     height: 1
   - type: button
     name: button_707
-    rich_content_json: '{"text":"Key Terms","description":"","newTab":true,"alignment":"right","size":"medium","style":"FILLED","color":"#22A2F2","href":"https://docs.google.com/document/d/1Pp5Xxy_PTiKGRfG6cnNSjIVn76ep_iHmlvZo4Yc36So/edit?usp=sharing"}'
+    rich_content_json: '{"text":"Next90 Key Terms","description":"","newTab":true,"alignment":"right","size":"medium","style":"FILLED","color":"#22A2F2","href":"https://docs.google.com/document/d/1Pp5Xxy_PTiKGRfG6cnNSjIVn76ep_iHmlvZo4Yc36So/edit?usp=sharing"}'
     row: 21
     col: 16
     width: 8
