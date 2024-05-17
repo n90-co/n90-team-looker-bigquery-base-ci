@@ -55,8 +55,8 @@
     limit: 20
     column_limit: 50
     color_application:
-      collection_id: advocado-colors
-      palette_id: advocado-colors-categorical-0
+      collection_id: next90-colors
+      palette_id: next90-colors-categorical-0
       options:
         steps: 5
     x_axis_gridlines: false
@@ -133,8 +133,8 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     color_application:
-      collection_id: advocado-colors
-      palette_id: advocado-colors-categorical-0
+      collection_id: next90-colors
+      palette_id: next90-colors-categorical-0
       options:
         steps: 5
     show_sql_query_menu_options: false
@@ -150,8 +150,8 @@
       first_last: first
       num_rows: 0
     conditional_formatting: [{type: along a scale..., value: !!null '', background_color: !!null '',
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0, options: {steps: 5}}, bold: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0, options: {steps: 5}}, bold: false,
         italic: false, strikethrough: false, fields: !!null ''}]
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -248,8 +248,8 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     color_application:
-      collection_id: advocado-colors
-      palette_id: advocado-colors-categorical-0
+      collection_id: next90-colors
+      palette_id: next90-colors-categorical-0
       options:
         steps: 5
     show_sql_query_menu_options: false
@@ -265,8 +265,8 @@
       first_last: first
       num_rows: 0
     conditional_formatting: [{type: along a scale..., value: !!null '', background_color: !!null '',
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0, options: {steps: 5}}, bold: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0, options: {steps: 5}}, bold: false,
         italic: false, strikethrough: false, fields: !!null ''}]
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -356,8 +356,8 @@
     show_silhouette: false
     totals_color: "#808080"
     color_application:
-      collection_id: advocado-colors
-      palette_id: advocado-colors-categorical-0
+      collection_id: next90-colors
+      palette_id: next90-colors-categorical-0
       options:
         steps: 5
     x_axis_zoom: true

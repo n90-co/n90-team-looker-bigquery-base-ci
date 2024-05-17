@@ -29,8 +29,8 @@
     custom_color: "#4085c7"
     single_value_title: Total Detections
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     defaults_version: 1
     note_state: collapsed
@@ -72,8 +72,8 @@
     custom_color: "#78b34d"
     single_value_title: Average Lift per Detection
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -119,8 +119,8 @@
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0"
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -215,8 +215,8 @@
     show_comparison_label: true
     enable_conditional_formatting: false
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
@@ -307,8 +307,8 @@
     show_comparison_label: true
     enable_conditional_formatting: false
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
@@ -399,8 +399,8 @@
     show_comparison_label: true
     enable_conditional_formatting: false
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
@@ -495,8 +495,8 @@
     show_comparison_label: true
     enable_conditional_formatting: false
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
@@ -587,8 +587,8 @@
     show_comparison_label: true
     enable_conditional_formatting: false
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
@@ -682,8 +682,8 @@
     show_comparison_label: true
     enable_conditional_formatting: false
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
@@ -793,8 +793,8 @@
     show_comparison_label: true
     enable_conditional_formatting: false
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
-        font_color: !!null '', color_application: {collection_id: advocado-colors,
-          palette_id: advocado-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
+        font_color: !!null '', color_application: {collection_id: next90-colors,
+          palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
         fields: !!null ''}]
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false

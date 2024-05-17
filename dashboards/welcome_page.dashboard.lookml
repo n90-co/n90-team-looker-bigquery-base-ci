@@ -66,7 +66,7 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     color_application:
-      collection_id: advocado-colors
+      collection_id: next90-colors
       custom:
         id: da139382-fdb6-f328-1593-6464921e94f4
         label: Custom
