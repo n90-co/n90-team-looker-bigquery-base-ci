@@ -212,7 +212,7 @@
     map: usa
     map_projection: ''
     show_view_names: false
-    point_color: "#78B24D"
+    point_color: "#22A2F2"
     map_plot_mode: points
     heatmap_gridlines: false
     heatmap_gridlines_empty: false
