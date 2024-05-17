@@ -22,14 +22,24 @@
       0%, 11%)"}],"id":1702409545280},{"type":"h1","children":[{"text":"Dashboard
       Types:","color":"hsl(0, 0%, 11%)"}],"id":1702409541249},{"type":"p","children":[{"text":"","color":"hsl(0,
       0%, 11%)"}],"id":1702409541250},{"type":"h3","align":"start","children":[{"text":"First-party
-      Micro-Moment® Attribution Dashboard:","color":"hsl(0, 0%, 11%)"}],"id":1702409541250},{"type":"p","children":[{"text":"This
+      Micro-Moment® Attribution Dashboard:","color":"hsl(0, 0%, 11%)"}],"id":1702409541250},
+
+      {"type":"p","children":[{"text":"This
       dashboard displays Micro-Moment consumer engagement attribution data for first-party,
-      precision watermark detections.","color":"hsl(0, 0%, 11%)"}],"id":1702410067350},{"type":"p","children":[{"text":"","color":"hsl(0,
-      0%, 11%)"}],"id":1702409541252},{"type":"h3","align":"start","children":[{"text":"Competitive
-      Micro-Moment® Attribution Dashboard:","color":"hsl(0, 0%, 11%)"}],"id":1702409541252},{"type":"p","children":[{"text":"This
-      dashboard displays Micro-Moment consumer engagement attribution data for competitive,
-      ACR fingerprint detections.","color":"hsl(0, 0%, 11%)"}],"id":1702410167353},{"type":"p","children":[{"text":"","color":"hsl(0,
-      0%, 11%)"}],"id":1702409541254},{"type":"h3","align":"start","children":[{"text":"Web
+      precision watermark detections.","color":"hsl(0, 0%, 11%)"}],"id":1702410067350},
+
+      {"type":"p","children":[{"text":"","color":"hsl(0,
+      0%, 11%)"}],"id":1702409541252},
+
+      # {"type":"h3","align":"start","children":[{"text":"Competitive
+      # Micro-Moment® Attribution Dashboard:","color":"hsl(0, 0%, 11%)"}],"id":1702409541252},
+
+      # {"type":"p","children":[{"text":"This
+      # dashboard displays Micro-Moment consumer engagement attribution data for competitive,
+      # ACR fingerprint detections.","color":"hsl(0, 0%, 11%)"}],"id":1702410167353},{"type":"p","children":[{"text":"","color":"hsl(0,
+      # 0%, 11%)"}],
+
+      "id":1702409541254},{"type":"h3","align":"start","children":[{"text":"Web
       Session Dashboard:","color":"hsl(0, 0%, 11%)"}],"id":1702409541255},{"type":"p","children":[{"text":"This
       dashboard displays data gathered by Advocado''s tracking tag installed on the
       brand''s website.","fontSize":"14px","backgroundColor":"rgb(255, 255, 255)","color":"hsl(0,
