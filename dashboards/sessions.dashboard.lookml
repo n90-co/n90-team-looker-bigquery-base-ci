@@ -425,38 +425,38 @@
     col: 8
     width: 8
     height: 1
-  - title: Competitive Dashboard Navigation Button
-    name: Competitive Dashboard Navigation Button
-    model: bigquery_dashboards
-    explore: activity_sessions
-    type: single_value
-    fields: [activity_sessions.sess_to_comp_dash_button]
-    sorts: [activity_sessions.sess_to_comp_dash_button]
-    limit: 500
-    column_limit: 50
-    custom_color_enabled: true
-    show_single_value_title: false
-    show_comparison: false
-    comparison_type: value
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    enable_conditional_formatting: false
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    defaults_version: 1
-    listen:
-      Date Range Filter: activity_sessions.local_created_date_filter
-      Micro-Moment Type: activity_sessions.micromoment_type
-      Power-Moment Type: activity_sessions.powermoment_type
-      Day of Week: activity_sessions.local_created_day_of_week
-      Weekday/Weekend: activity_sessions.weekday_or_weekend
-      DMA: dmas.name
-      Customer Markets: market_grouping.customer_markets
-      Brand Filter: brands.brand_filter
-    row: 0
-    col: 16
-    width: 8
-    height: 1
+  # - title: Competitive Dashboard Navigation Button
+  #   name: Competitive Dashboard Navigation Button
+  #   model: bigquery_dashboards
+  #   explore: activity_sessions
+  #   type: single_value
+  #   fields: [activity_sessions.sess_to_comp_dash_button]
+  #   sorts: [activity_sessions.sess_to_comp_dash_button]
+  #   limit: 500
+  #   column_limit: 50
+  #   custom_color_enabled: true
+  #   show_single_value_title: false
+  #   show_comparison: false
+  #   comparison_type: value
+  #   comparison_reverse_colors: false
+  #   show_comparison_label: true
+  #   enable_conditional_formatting: false
+  #   conditional_formatting_include_totals: false
+  #   conditional_formatting_include_nulls: false
+  #   defaults_version: 1
+  #   listen:
+  #     Date Range Filter: activity_sessions.local_created_date_filter
+  #     Micro-Moment Type: activity_sessions.micromoment_type
+  #     Power-Moment Type: activity_sessions.powermoment_type
+  #     Day of Week: activity_sessions.local_created_day_of_week
+  #     Weekday/Weekend: activity_sessions.weekday_or_weekend
+  #     DMA: dmas.name
+  #     Customer Markets: market_grouping.customer_markets
+  #     Brand Filter: brands.brand_filter
+  #   row: 0
+  #   col: 16
+  #   width: 8
+  #   height: 1
   - title: Untitled
     name: Untitled
     model: bigquery_dashboards
