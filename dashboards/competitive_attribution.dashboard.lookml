@@ -115,7 +115,7 @@
     enable_conditional_formatting: false
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
-    custom_color: "#4d2987"
+    custom_color: "#22A2F2"
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0"
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#4A7820",
@@ -197,14 +197,14 @@
     hide_legend: false
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#4d2987"
+      lift_attribution.total_weighted_session_lift: "#22A2F2"
     ordering: none
     show_null_labels: false
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
     custom_color_enabled: true
-    custom_color: "#4d2987"
+    custom_color: "#22A2F2"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -289,14 +289,14 @@
     hide_legend: false
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#4d2987"
+      lift_attribution.total_weighted_session_lift: "#22A2F2"
     ordering: none
     show_null_labels: false
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
     custom_color_enabled: true
-    custom_color: "#4d2987"
+    custom_color: "#22A2F2"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -385,9 +385,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#4d2987"
+      lift_attribution.total_weighted_session_lift: "#22A2F2"
     custom_color_enabled: true
-    custom_color: "#4d2987"
+    custom_color: "#22A2F2"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -480,9 +480,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#4d2987"
+      lift_attribution.total_weighted_session_lift: "#22A2F2"
     custom_color_enabled: true
-    custom_color: "#4d2987"
+    custom_color: "#22A2F2"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -571,9 +571,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#4d2987"
+      lift_attribution.total_weighted_session_lift: "#22A2F2"
     custom_color_enabled: true
-    custom_color: "#4d2987"
+    custom_color: "#22A2F2"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -665,9 +665,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#4d2987"
+      lift_attribution.total_weighted_session_lift: "#22A2F2"
     custom_color_enabled: true
-    custom_color: "#4d2987"
+    custom_color: "#22A2F2"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
@@ -710,7 +710,7 @@
     height: 1
   - type: button
     name: button_707
-    rich_content_json: '{"text":"Key Terms","description":"","newTab":true,"alignment":"right","size":"medium","style":"FILLED","color":"#4d2987","href":"https://docs.google.com/document/d/1g7sDRf1guudKUd700WDGDbMkQE6UErh3ALNn2NeDIDQ/edit?usp=sharing"}'
+    rich_content_json: '{"text":"Key Terms","description":"","newTab":true,"alignment":"right","size":"medium","style":"FILLED","color":"#22A2F2","href":"https://docs.google.com/document/d/1g7sDRf1guudKUd700WDGDbMkQE6UErh3ALNn2NeDIDQ/edit?usp=sharing"}'
     row: 21
     col: 16
     width: 8
@@ -775,9 +775,9 @@
       lift_attribution.count_detections: scatter
     series_colors:
       lift_attribution.count_detections: "#0504AA"
-      lift_attribution.total_weighted_session_lift: "#4d2987"
+      lift_attribution.total_weighted_session_lift: "#22A2F2"
     custom_color_enabled: true
-    custom_color: "#4d2987"
+    custom_color: "#22A2F2"
     show_single_value_title: true
     single_value_title: Total Weighted Session Lift
     value_format: "#,##0.00"
