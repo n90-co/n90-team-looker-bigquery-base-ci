@@ -29,8 +29,8 @@ access_grant: can_access_demo {
   allowed_values: [ "yes"]
 }
 
-access_grant: adv_emp {
-  user_attribute: adv_emp
+access_grant: n90_emp {
+  user_attribute: n90_emp
   allowed_values: ["yes"]
 }
 

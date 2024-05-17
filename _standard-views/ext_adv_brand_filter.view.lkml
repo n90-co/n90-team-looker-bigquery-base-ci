@@ -5,7 +5,7 @@ view: ext_adv_brand_filter {
   extension: required
 
   parameter: adv_brand_filter {
-    required_access_grants: [adv_emp]
+    required_access_grants: [n90_emp]
     view_label: "{% parameter view_label_7 %}"
     label: "Brand Filter for Advocado team"
     description: "Slightly improves query time versus Brand Name Filter"

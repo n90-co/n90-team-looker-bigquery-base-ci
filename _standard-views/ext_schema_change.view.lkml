@@ -20,7 +20,7 @@ view: ext_schema_change {
     type: unquoted
     # hidden: yes
 
-    required_access_grants: [adv_emp,can_change_schema]
+    required_access_grants: [n90_emp,can_change_schema]
 
     default_value: ""
     allowed_value: {
@@ -44,7 +44,7 @@ view: ext_schema_change {
     type: unquoted
     # hidden: yes
 
-    required_access_grants: [adv_emp,can_change_schema]
+    required_access_grants: [n90_emp,can_change_schema]
 
     default_value: ""
 

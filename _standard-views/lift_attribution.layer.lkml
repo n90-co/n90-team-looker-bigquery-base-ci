@@ -161,7 +161,7 @@ view: +lift_attribution {
   dimension: weighted_lift {
     label: "Weighted Lift with Negatives"
     description: "This field can be negative in the raw data. Should use 'Weighted Session Lift (lead source level)' under 'Raw Data' at lead-source level reporting because the negative has been zeroed out. Fraction of lift that can be attributed to this event alone (raw_lift split between overlapping events by relative reach)"
-    required_access_grants: [adv_emp]
+    required_access_grants: [n90_emp]
     view_label: "{% parameter view_label_7 %}"
     #This field can be negative in the raw data. Should use weighted_session_lift below at lead-source level reporting because the negative has been zeroed out.
     # hidden: yes
@@ -293,7 +293,7 @@ view: +lift_attribution {
     label: "Raw Lift with Negatives"
     description: "This field can be negative in the raw data. Should use 'Raw Lift (lead source level)' under 'Raw Data' at lead-source level reporting because the negative has been zeroed out. Fraction of lift that can be attributed to this event alone (raw_lift split between overlapping events by relative reach)"
     # hidden: yes
-    required_access_grants: [adv_emp]
+    required_access_grants: [n90_emp]
     view_label: "{% parameter view_label_7 %}"
   }
 
