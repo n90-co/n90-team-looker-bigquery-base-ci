@@ -1,5 +1,5 @@
 ---
-- dashboard: welcome_to_insights_power
+- dashboard: welcome_to_guac
   title: Welcome to Insights Power!
   layout: newspaper
   preferred_viewer: dashboards-next
