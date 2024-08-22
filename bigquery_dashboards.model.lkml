@@ -34,6 +34,17 @@ access_grant: n90_emp {
   allowed_values: ["yes"]
 }
 
+
+map_layer: lower48_dmas {
+  file: "/map/nielsentopo.json"
+  # url: "https://raw.githubusercontent.com/simzou/nielsen-dma/master/nielsentopo.json"
+  # feature_key: "neustar_id"  # The GeoJSON property to join on
+  label: "DMA Map"
+  property_key: "neustar_dma_id"  # The name of the property to use for display
+  property_label_key: "dma1"
+  # projection: "mercator"  # Define the projection (most common: "mercator")
+}
+
 # explore: kinetiq_occurrences {}
 
 # explore: brands {

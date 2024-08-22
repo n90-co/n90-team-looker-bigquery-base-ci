@@ -115,6 +115,7 @@ view: activity_sessions {
     type: number
     description: "DMA ID as reported by our GeoIP Provider"
     sql: ${TABLE}.neustar_dma_id ;;
+    map_layer_name: lower48_dmas
   }
 
   dimension: neustar_state {

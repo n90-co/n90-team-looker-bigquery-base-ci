@@ -28,7 +28,7 @@
               7
             ]
           ],
-          "id": 662,
+          "neustar_dma_id": 662,
           "properties": {
             "name": "dma:",
             "latitude": 32.404348,
@@ -57,7 +57,7 @@
               18
             ]
           ],
-          "id": 525,
+          "neustar_dma_id": 525,
           "properties": {
             "name": "dma:",
             "latitude": 31.5279975,
@@ -87,7 +87,7 @@
               30
             ]
           ],
-          "id": 532,
+          "neustar_dma_id": 532,
           "properties": {
             "name": "dma:",
             "latitude": 43.049266,
@@ -120,7 +120,7 @@
               45
             ]
           ],
-          "id": 790,
+          "neustar_dma_id": 790,
           "properties": {
             "name": "dma:",
             "latitude": 34.4952755,
@@ -147,7 +147,7 @@
               54
             ]
           ],
-          "id": 644,
+          "neustar_dma_id": 644,
           "properties": {
             "name": "dma:",
             "latitude": 31.322628,
@@ -168,7 +168,7 @@
               57
             ]
           ],
-          "id": 583,
+          "neustar_dma_id": 583,
           "properties": {
             "name": "dma:",
             "latitude": 44.856283,
@@ -196,7 +196,7 @@
               66
             ]
           ],
-          "id": 634,
+          "neustar_dma_id": 634,
           "properties": {
             "name": "dma:",
             "latitude": 35.4797235,
@@ -227,7 +227,7 @@
               79
             ]
           ],
-          "id": 524,
+          "neustar_dma_id": 524,
           "properties": {
             "name": "dma:",
             "latitude": 33.9253975,
@@ -258,7 +258,7 @@
               92
             ]
           ],
-          "id": 520,
+          "neustar_dma_id": 520,
           "properties": {
             "name": "dma:",
             "latitude": 33.2388275,
@@ -284,7 +284,7 @@
               100
             ]
           ],
-          "id": 635,
+          "neustar_dma_id": 635,
           "properties": {
             "name": "dma:",
             "latitude": 30.331427,
@@ -310,7 +310,7 @@
               ]
             ]
           ],
-          "id": 800,
+          "neustar_dma_id": 800,
           "properties": {
             "name": "dma:",
             "latitude": 35.291006,
@@ -375,7 +375,7 @@
               ]
             ]
           ],
-          "id": 512,
+          "neustar_dma_id": 512,
           "properties": {
             "name": "dma:",
             "latitude": 38.972515,
@@ -467,7 +467,7 @@
               ]
             ]
           ],
-          "id": 537,
+          "neustar_dma_id": 537,
           "properties": {
             "name": "dma:",
             "latitude": 45.3356845,
@@ -496,7 +496,7 @@
               150
             ]
           ],
-          "id": 716,
+          "neustar_dma_id": 716,
           "properties": {
             "name": "dma:",
             "latitude": 30.4278165,
@@ -519,7 +519,7 @@
               155
             ]
           ],
-          "id": 692,
+          "neustar_dma_id": 692,
           "properties": {
             "name": "dma:",
             "latitude": 30.3724315,
@@ -542,7 +542,7 @@
               160
             ]
           ],
-          "id": 821,
+          "neustar_dma_id": 821,
           "properties": {
             "name": "dma:",
             "latitude": 44.001647,
@@ -577,7 +577,7 @@
               177
             ]
           ],
-          "id": 756,
+          "neustar_dma_id": 756,
           "properties": {
             "name": "dma:",
             "latitude": 45.8919365,
@@ -599,7 +599,7 @@
               181
             ]
           ],
-          "id": 746,
+          "neustar_dma_id": 746,
           "properties": {
             "name": "dma:",
             "latitude": 30.651123,
@@ -626,7 +626,7 @@
               189
             ]
           ],
-          "id": 502,
+          "neustar_dma_id": 502,
           "properties": {
             "name": "dma:",
             "latitude": 42.2963485,
@@ -654,7 +654,7 @@
               199
             ]
           ],
-          "id": 630,
+          "neustar_dma_id": 630,
           "properties": {
             "name": "dma:",
             "latitude": 33.5031,
@@ -680,7 +680,7 @@
               207
             ]
           ],
-          "id": 559,
+          "neustar_dma_id": 559,
           "properties": {
             "name": "dma:",
             "latitude": 37.6001745,
@@ -715,7 +715,7 @@
               224
             ]
           ],
-          "id": 757,
+          "neustar_dma_id": 757,
           "properties": {
             "name": "dma:",
             "latitude": 43.632029,
@@ -851,7 +851,7 @@
               ]
             ]
           ],
-          "id": 506,
+          "neustar_dma_id": 506,
           "properties": {
             "name": "dma:",
             "latitude": 42.501023,
@@ -878,7 +878,7 @@
               264
             ]
           ],
-          "id": 736,
+          "neustar_dma_id": 736,
           "properties": {
             "name": "dma:",
             "latitude": 37.0341725,
@@ -934,7 +934,7 @@
               ]
             ]
           ],
-          "id": 514,
+          "neustar_dma_id": 514,
           "properties": {
             "name": "dma:",
             "latitude": 42.42369,
@@ -963,7 +963,7 @@
               288
             ]
           ],
-          "id": 523,
+          "neustar_dma_id": 523,
           "properties": {
             "name": "dma:",
             "latitude": 44.071301,
@@ -994,7 +994,7 @@
               300
             ]
           ],
-          "id": 754,
+          "neustar_dma_id": 754,
           "properties": {
             "name": "dma:",
             "latitude": 45.979098,
@@ -1023,7 +1023,7 @@
               310
             ]
           ],
-          "id": 767,
+          "neustar_dma_id": 767,
           "properties": {
             "name": "dma:",
             "latitude": 43.412869,
@@ -1049,7 +1049,7 @@
               318
             ]
           ],
-          "id": 637,
+          "neustar_dma_id": 637,
           "properties": {
             "name": "dma:",
             "latitude": 42.331217,
@@ -1078,7 +1078,7 @@
               329
             ]
           ],
-          "id": 648,
+          "neustar_dma_id": 648,
           "properties": {
             "name": "dma:",
             "latitude": 39.9606635,
@@ -1125,7 +1125,7 @@
               ]
             ]
           ],
-          "id": 519,
+          "neustar_dma_id": 519,
           "properties": {
             "name": "dma:",
             "latitude": 33.181204,
@@ -1162,7 +1162,7 @@
               357
             ]
           ],
-          "id": 564,
+          "neustar_dma_id": 564,
           "properties": {
             "name": "dma:",
             "latitude": 38.376208,
@@ -1189,7 +1189,7 @@
               366
             ]
           ],
-          "id": 517,
+          "neustar_dma_id": 517,
           "properties": {
             "name": "dma:",
             "latitude": 35.477172,
@@ -1212,7 +1212,7 @@
               371
             ]
           ],
-          "id": 584,
+          "neustar_dma_id": 584,
           "properties": {
             "name": "dma:",
             "latitude": 38.1802125,
@@ -1237,7 +1237,7 @@
               377
             ]
           ],
-          "id": 575,
+          "neustar_dma_id": 575,
           "properties": {
             "name": "dma:",
             "latitude": 35.204094,
@@ -1260,7 +1260,7 @@
               382
             ]
           ],
-          "id": 759,
+          "neustar_dma_id": 759,
           "properties": {
             "name": "dma:",
             "latitude": 41.8048825,
@@ -1289,7 +1289,7 @@
               392
             ]
           ],
-          "id": 602,
+          "neustar_dma_id": 602,
           "properties": {
             "name": "dma:",
             "latitude": 41.615065,
@@ -1317,7 +1317,7 @@
               402
             ]
           ],
-          "id": 868,
+          "neustar_dma_id": 868,
           "properties": {
             "name": "dma:",
             "latitude": 40.3359675,
@@ -1346,7 +1346,7 @@
               -344
             ]
           ],
-          "id": 515,
+          "neustar_dma_id": 515,
           "properties": {
             "name": "dma:",
             "latitude": 39.0338655,
@@ -1375,7 +1375,7 @@
               -351
             ]
           ],
-          "id": 598,
+          "neustar_dma_id": 598,
           "properties": {
             "name": "dma:",
             "latitude": 38.93329,
@@ -1414,7 +1414,7 @@
               ]
             ]
           ],
-          "id": 510,
+          "neustar_dma_id": 510,
           "properties": {
             "name": "dma:",
             "latitude": 41.0958885,
@@ -1441,7 +1441,7 @@
               441
             ]
           ],
-          "id": 752,
+          "neustar_dma_id": 752,
           "properties": {
             "name": "dma:",
             "latitude": 38.061384,
@@ -1471,7 +1471,7 @@
               451
             ]
           ],
-          "id": 546,
+          "neustar_dma_id": 546,
           "properties": {
             "name": "dma:",
             "latitude": 33.896366,
@@ -1499,7 +1499,7 @@
               461
             ]
           ],
-          "id": 604,
+          "neustar_dma_id": 604,
           "properties": {
             "name": "dma:",
             "latitude": 38.8629485,
@@ -1536,7 +1536,7 @@
               ]
             ]
           ],
-          "id": 522,
+          "neustar_dma_id": 522,
           "properties": {
             "name": "dma:",
             "latitude": 32.2969995,
@@ -1570,7 +1570,7 @@
               485
             ]
           ],
-          "id": 535,
+          "neustar_dma_id": 535,
           "properties": {
             "name": "dma:",
             "latitude": 39.9719715,
@@ -1598,7 +1598,7 @@
               -193
             ]
           ],
-          "id": 673,
+          "neustar_dma_id": 673,
           "properties": {
             "name": "dma:",
             "latitude": 33.9623585,
@@ -1672,7 +1672,7 @@
               ]
             ]
           ],
-          "id": 600,
+          "neustar_dma_id": 600,
           "properties": {
             "name": "dma:",
             "latitude": 27.6933695,
@@ -1704,7 +1704,7 @@
               523
             ]
           ],
-          "id": 623,
+          "neustar_dma_id": 623,
           "properties": {
             "name": "dma:",
             "latitude": 32.702473,
@@ -1731,7 +1731,7 @@
               531
             ]
           ],
-          "id": 682,
+          "neustar_dma_id": 682,
           "properties": {
             "name": "dma:",
             "latitude": 41.5680725,
@@ -1757,7 +1757,7 @@
               537
             ]
           ],
-          "id": 542,
+          "neustar_dma_id": 542,
           "properties": {
             "name": "dma:",
             "latitude": 40.1392235,
@@ -1826,7 +1826,7 @@
               ]
             ]
           ],
-          "id": 751,
+          "neustar_dma_id": 751,
           "properties": {
             "name": "dma:",
             "latitude": 40.9981425,
@@ -1857,7 +1857,7 @@
               578
             ]
           ],
-          "id": 679,
+          "neustar_dma_id": 679,
           "properties": {
             "name": "dma:",
             "latitude": 41.8822865,
@@ -1934,7 +1934,7 @@
               ]
             ]
           ],
-          "id": 505,
+          "neustar_dma_id": 505,
           "properties": {
             "name": "dma:",
             "latitude": 42.7069935,
@@ -1961,7 +1961,7 @@
               602
             ]
           ],
-          "id": 606,
+          "neustar_dma_id": 606,
           "properties": {
             "name": "dma:",
             "latitude": 31.2429535,
@@ -2017,7 +2017,7 @@
               ]
             ]
           ],
-          "id": 676,
+          "neustar_dma_id": 676,
           "properties": {
             "name": "dma:",
             "latitude": 47.169647,
@@ -2038,7 +2038,7 @@
               618
             ]
           ],
-          "id": 765,
+          "neustar_dma_id": 765,
           "properties": {
             "name": "dma:",
             "latitude": 31.840946,
@@ -2066,7 +2066,7 @@
               626
             ]
           ],
-          "id": 565,
+          "neustar_dma_id": 565,
           "properties": {
             "name": "dma:",
             "latitude": 42.0595215,
@@ -2090,7 +2090,7 @@
               632
             ]
           ],
-          "id": 516,
+          "neustar_dma_id": 516,
           "properties": {
             "name": "dma:",
             "latitude": 41.8794375,
@@ -2117,7 +2117,7 @@
               641
             ]
           ],
-          "id": 801,
+          "neustar_dma_id": 801,
           "properties": {
             "name": "dma:",
             "latitude": 43.6937855,
@@ -2151,7 +2151,7 @@
               ]
             ]
           ],
-          "id": 802,
+          "neustar_dma_id": 802,
           "properties": {
             "name": "dma:",
             "latitude": 41.001389,
@@ -2178,7 +2178,7 @@
               654
             ]
           ],
-          "id": 649,
+          "neustar_dma_id": 649,
           "properties": {
             "name": "dma:",
             "latitude": 37.8233245,
@@ -2202,7 +2202,7 @@
               660
             ]
           ],
-          "id": 724,
+          "neustar_dma_id": 724,
           "properties": {
             "name": "dma:",
             "latitude": 47.659799,
@@ -2228,7 +2228,7 @@
               667
             ]
           ],
-          "id": 513,
+          "neustar_dma_id": 513,
           "properties": {
             "name": "dma:",
             "latitude": 43.643882,
@@ -2255,7 +2255,7 @@
               676
             ]
           ],
-          "id": 866,
+          "neustar_dma_id": 866,
           "properties": {
             "name": "dma:",
             "latitude": 36.846642,
@@ -2374,7 +2374,7 @@
               ]
             ]
           ],
-          "id": 571,
+          "neustar_dma_id": 571,
           "properties": {
             "name": "dma:",
             "latitude": 26.5720265,
@@ -2402,7 +2402,7 @@
               711
             ]
           ],
-          "id": 670,
+          "neustar_dma_id": 670,
           "properties": {
             "name": "dma:",
             "latitude": 35.5031505,
@@ -2428,7 +2428,7 @@
               719
             ]
           ],
-          "id": 509,
+          "neustar_dma_id": 509,
           "properties": {
             "name": "dma:",
             "latitude": 41.0334615,
@@ -2496,7 +2496,7 @@
               ]
             ]
           ],
-          "id": 592,
+          "neustar_dma_id": 592,
           "properties": {
             "name": "dma:",
             "latitude": 29.4735495,
@@ -2522,7 +2522,7 @@
               741
             ]
           ],
-          "id": 798,
+          "neustar_dma_id": 798,
           "properties": {
             "name": "dma:",
             "latitude": 46.836368,
@@ -2552,7 +2552,7 @@
               ]
             ]
           ],
-          "id": 773,
+          "neustar_dma_id": 773,
           "properties": {
             "name": "dma:",
             "latitude": 38.425681,
@@ -2579,7 +2579,7 @@
               755
             ]
           ],
-          "id": 563,
+          "neustar_dma_id": 563,
           "properties": {
             "name": "dma:",
             "latitude": 42.7892405,
@@ -2609,7 +2609,7 @@
               766
             ]
           ],
-          "id": 755,
+          "neustar_dma_id": 755,
           "properties": {
             "name": "dma:",
             "latitude": 47.838823,
@@ -2661,7 +2661,7 @@
               ]
             ]
           ],
-          "id": 658,
+          "neustar_dma_id": 658,
           "properties": {
             "name": "dma:",
             "latitude": 44.7644785,
@@ -2687,7 +2687,7 @@
               -362
             ]
           ],
-          "id": 518,
+          "neustar_dma_id": 518,
           "properties": {
             "name": "dma:",
             "latitude": 35.994693,
@@ -2836,7 +2836,7 @@
               ]
             ]
           ],
-          "id": 545,
+          "neustar_dma_id": 545,
           "properties": {
             "name": "dma:",
             "latitude": 35.342169,
@@ -2868,7 +2868,7 @@
               827
             ]
           ],
-          "id": 567,
+          "neustar_dma_id": 567,
           "properties": {
             "name": "dma:",
             "latitude": 35.0526635,
@@ -2901,7 +2901,7 @@
               841
             ]
           ],
-          "id": 647,
+          "neustar_dma_id": 647,
           "properties": {
             "name": "dma:",
             "latitude": 33.585109,
@@ -2939,7 +2939,7 @@
               ]
             ]
           ],
-          "id": 636,
+          "neustar_dma_id": 636,
           "properties": {
             "name": "dma:",
             "latitude": 26.311933,
@@ -2965,7 +2965,7 @@
               854
             ]
           ],
-          "id": 566,
+          "neustar_dma_id": 566,
           "properties": {
             "name": "dma:",
             "latitude": 40.2836345,
@@ -2989,7 +2989,7 @@
               860
             ]
           ],
-          "id": 569,
+          "neustar_dma_id": 569,
           "properties": {
             "name": "dma:",
             "latitude": 38.4231645,
@@ -3019,7 +3019,7 @@
               ]
             ]
           ],
-          "id": 533,
+          "neustar_dma_id": 533,
           "properties": {
             "name": "dma:",
             "latitude": 41.612664,
@@ -3046,7 +3046,7 @@
               872
             ]
           ],
-          "id": 710,
+          "neustar_dma_id": 710,
           "properties": {
             "name": "dma:",
             "latitude": 31.5670435,
@@ -3071,7 +3071,7 @@
               877
             ]
           ],
-          "id": 766,
+          "neustar_dma_id": 766,
           "properties": {
             "name": "dma:",
             "latitude": 47.1878,
@@ -3158,7 +3158,7 @@
               ]
             ]
           ],
-          "id": 618,
+          "neustar_dma_id": 618,
           "properties": {
             "name": "dma:",
             "latitude": 29.606092,
@@ -3183,7 +3183,7 @@
               904
             ]
           ],
-          "id": 691,
+          "neustar_dma_id": 691,
           "properties": {
             "name": "dma:",
             "latitude": 34.7953925,
@@ -3224,7 +3224,7 @@
               921
             ]
           ],
-          "id": 758,
+          "neustar_dma_id": 758,
           "properties": {
             "name": "dma:",
             "latitude": 43.641669,
@@ -3258,7 +3258,7 @@
               -408
             ]
           ],
-          "id": 527,
+          "neustar_dma_id": 527,
           "properties": {
             "name": "dma:",
             "latitude": 39.84288,
@@ -3295,7 +3295,7 @@
               -872
             ]
           ],
-          "id": 718,
+          "neustar_dma_id": 718,
           "properties": {
             "name": "dma:",
             "latitude": 32.1874215,
@@ -3319,7 +3319,7 @@
               955
             ]
           ],
-          "id": 639,
+          "neustar_dma_id": 639,
           "properties": {
             "name": "dma:",
             "latitude": 35.5707925,
@@ -3404,7 +3404,7 @@
               ]
             ]
           ],
-          "id": 561,
+          "neustar_dma_id": 561,
           "properties": {
             "name": "dma:",
             "latitude": 30.427575,
@@ -3432,7 +3432,7 @@
               990
             ]
           ],
-          "id": 574,
+          "neustar_dma_id": 574,
           "properties": {
             "name": "dma:",
             "latitude": 40.673069,
@@ -3459,7 +3459,7 @@
               999
             ]
           ],
-          "id": 734,
+          "neustar_dma_id": 734,
           "properties": {
             "name": "dma:",
             "latitude": 36.0989355,
@@ -3483,7 +3483,7 @@
               1005
             ]
           ],
-          "id": 603,
+          "neustar_dma_id": 603,
           "properties": {
             "name": "dma:",
             "latitude": 37.2695535,
@@ -3511,7 +3511,7 @@
               1013
             ]
           ],
-          "id": 616,
+          "neustar_dma_id": 616,
           "properties": {
             "name": "dma:",
             "latitude": 39.3042305,
@@ -3547,7 +3547,7 @@
               1029
             ]
           ],
-          "id": 557,
+          "neustar_dma_id": 557,
           "properties": {
             "name": "dma:",
             "latitude": 36.112655,
@@ -3578,7 +3578,7 @@
               1041
             ]
           ],
-          "id": 702,
+          "neustar_dma_id": 702,
           "properties": {
             "name": "dma:",
             "latitude": 44.313217,
@@ -3599,7 +3599,7 @@
               1043
             ]
           ],
-          "id": 582,
+          "neustar_dma_id": 582,
           "properties": {
             "name": "dma:",
             "latitude": 40.3451955,
@@ -3630,7 +3630,7 @@
               ]
             ]
           ],
-          "id": 642,
+          "neustar_dma_id": 642,
           "properties": {
             "name": "dma:",
             "latitude": 30.2379905,
@@ -3653,7 +3653,7 @@
               -1048
             ]
           ],
-          "id": 643,
+          "neustar_dma_id": 643,
           "properties": {
             "name": "dma:",
             "latitude": 30.2390885,
@@ -3679,7 +3679,7 @@
               1057
             ]
           ],
-          "id": 551,
+          "neustar_dma_id": 551,
           "properties": {
             "name": "dma:",
             "latitude": 42.4074535,
@@ -3702,7 +3702,7 @@
               -843
             ]
           ],
-          "id": 749,
+          "neustar_dma_id": 749,
           "properties": {
             "name": "dma:",
             "latitude": 27.388155,
@@ -3730,7 +3730,7 @@
               1070
             ]
           ],
-          "id": 839,
+          "neustar_dma_id": 839,
           "properties": {
             "name": "dma:",
             "latitude": 37.082759,
@@ -3774,7 +3774,7 @@
               -265
             ]
           ],
-          "id": 541,
+          "neustar_dma_id": 541,
           "properties": {
             "name": "dma:",
             "latitude": 37.584915,
@@ -3795,7 +3795,7 @@
               1095
             ]
           ],
-          "id": 558,
+          "neustar_dma_id": 558,
           "properties": {
             "name": "dma:",
             "latitude": 40.782607,
@@ -3826,7 +3826,7 @@
               1107
             ]
           ],
-          "id": 722,
+          "neustar_dma_id": 722,
           "properties": {
             "name": "dma:",
             "latitude": 41.282784,
@@ -3862,7 +3862,7 @@
               1122
             ]
           ],
-          "id": 693,
+          "neustar_dma_id": 693,
           "properties": {
             "name": "dma:",
             "latitude": 34.647081,
@@ -3922,7 +3922,7 @@
               ]
             ]
           ],
-          "id": 803,
+          "neustar_dma_id": 803,
           "properties": {
             "name": "dma:",
             "latitude": 35.132844,
@@ -3949,7 +3949,7 @@
               -263
             ]
           ],
-          "id": 529,
+          "neustar_dma_id": 529,
           "properties": {
             "name": "dma:",
             "latitude": 38.1524665,
@@ -3973,7 +3973,7 @@
               1147
             ]
           ],
-          "id": 651,
+          "neustar_dma_id": 651,
           "properties": {
             "name": "dma:",
             "latitude": 33.4181475,
@@ -4007,7 +4007,7 @@
               -473
             ]
           ],
-          "id": 503,
+          "neustar_dma_id": 503,
           "properties": {
             "name": "dma:",
             "latitude": 32.6218675,
@@ -4037,7 +4037,7 @@
               -525
             ]
           ],
-          "id": 669,
+          "neustar_dma_id": 669,
           "properties": {
             "name": "dma:",
             "latitude": 43.370746,
@@ -4060,7 +4060,7 @@
               1169
             ]
           ],
-          "id": 737,
+          "neustar_dma_id": 737,
           "properties": {
             "name": "dma:",
             "latitude": 43.876563,
@@ -4098,7 +4098,7 @@
               ]
             ]
           ],
-          "id": 553,
+          "neustar_dma_id": 553,
           "properties": {
             "name": "dma:",
             "latitude": 46.8707415,
@@ -4130,7 +4130,7 @@
               -644
             ]
           ],
-          "id": 813,
+          "neustar_dma_id": 813,
           "properties": {
             "name": "dma:",
             "latitude": 42.3097025,
@@ -4164,7 +4164,7 @@
               1197
             ]
           ],
-          "id": 640,
+          "neustar_dma_id": 640,
           "properties": {
             "name": "dma:",
             "latitude": 35.1946395,
@@ -4192,7 +4192,7 @@
               1204
             ]
           ],
-          "id": 711,
+          "neustar_dma_id": 711,
           "properties": {
             "name": "dma:",
             "latitude": 32.3468715,
@@ -4572,7 +4572,7 @@
               ]
             ]
           ],
-          "id": 528,
+          "neustar_dma_id": 528,
           "properties": {
             "name": "dma:",
             "latitude": 25.439022,
@@ -4595,7 +4595,7 @@
               1287
             ]
           ],
-          "id": 617,
+          "neustar_dma_id": 617,
           "properties": {
             "name": "dma:",
             "latitude": 43.1921015,
@@ -4628,7 +4628,7 @@
               1297
             ]
           ],
-          "id": 613,
+          "neustar_dma_id": 613,
           "properties": {
             "name": "dma:",
             "latitude": 46.0197555,
@@ -4662,7 +4662,7 @@
               1310
             ]
           ],
-          "id": 687,
+          "neustar_dma_id": 687,
           "properties": {
             "name": "dma:",
             "latitude": 46.8731805,
@@ -4699,7 +4699,7 @@
               1325
             ]
           ],
-          "id": 762,
+          "neustar_dma_id": 762,
           "properties": {
             "name": "dma:",
             "latitude": 47.229117,
@@ -4754,7 +4754,7 @@
               ]
             ]
           ],
-          "id": 686,
+          "neustar_dma_id": 686,
           "properties": {
             "name": "dma:",
             "latitude": 31.1061175,
@@ -4793,7 +4793,7 @@
               1351
             ]
           ],
-          "id": 628,
+          "neustar_dma_id": 628,
           "properties": {
             "name": "dma:",
             "latitude": 32.1842885,
@@ -4821,7 +4821,7 @@
               ]
             ]
           ],
-          "id": 828,
+          "neustar_dma_id": 828,
           "properties": {
             "name": "dma:",
             "latitude": 36.537526,
@@ -4849,7 +4849,7 @@
               1364
             ]
           ],
-          "id": 698,
+          "neustar_dma_id": 698,
           "properties": {
             "name": "dma:",
             "latitude": 32.0506805,
@@ -4881,7 +4881,7 @@
               ]
             ]
           ],
-          "id": 570,
+          "neustar_dma_id": 570,
           "properties": {
             "name": "dma:",
             "latitude": 34.2987775,
@@ -4917,7 +4917,7 @@
               1384
             ]
           ],
-          "id": 659,
+          "neustar_dma_id": 659,
           "properties": {
             "name": "dma:",
             "latitude": 36.07259,
@@ -5524,7 +5524,7 @@
               ]
             ]
           ],
-          "id": 622,
+          "neustar_dma_id": 622,
           "properties": {
             "name": "dma:",
             "latitude": 29.9723295,
@@ -5705,7 +5705,7 @@
               ]
             ]
           ],
-          "id": 501,
+          "neustar_dma_id": 501,
           "properties": {
             "name": "dma:",
             "latitude": 40.839717,
@@ -5804,7 +5804,7 @@
               ]
             ]
           ],
-          "id": 544,
+          "neustar_dma_id": 544,
           "properties": {
             "name": "dma:",
             "latitude": 36.608336,
@@ -5827,7 +5827,7 @@
               -1101
             ]
           ],
-          "id": 740,
+          "neustar_dma_id": 740,
           "properties": {
             "name": "dma:",
             "latitude": 41.394995,
@@ -5857,7 +5857,7 @@
               1590
             ]
           ],
-          "id": 633,
+          "neustar_dma_id": 633,
           "properties": {
             "name": "dma:",
             "latitude": 30.781491,
@@ -5888,7 +5888,7 @@
               1603
             ]
           ],
-          "id": 650,
+          "neustar_dma_id": 650,
           "properties": {
             "name": "dma:",
             "latitude": 35.667342,
@@ -5915,7 +5915,7 @@
               1611
             ]
           ],
-          "id": 652,
+          "neustar_dma_id": 652,
           "properties": {
             "name": "dma:",
             "latitude": 41.1056295,
@@ -5981,7 +5981,7 @@
               ]
             ]
           ],
-          "id": 534,
+          "neustar_dma_id": 534,
           "properties": {
             "name": "dma:",
             "latitude": 28.6562235,
@@ -6007,7 +6007,7 @@
               -1009
             ]
           ],
-          "id": 631,
+          "neustar_dma_id": 631,
           "properties": {
             "name": "dma:",
             "latitude": 40.384083,
@@ -6043,7 +6043,7 @@
               -1384
             ]
           ],
-          "id": 632,
+          "neustar_dma_id": 632,
           "properties": {
             "name": "dma:",
             "latitude": 37.2352865,
@@ -6065,7 +6065,7 @@
               1646
             ]
           ],
-          "id": 804,
+          "neustar_dma_id": 804,
           "properties": {
             "name": "dma:",
             "latitude": 33.72988,
@@ -6106,7 +6106,7 @@
               ]
             ]
           ],
-          "id": 656,
+          "neustar_dma_id": 656,
           "properties": {
             "name": "dma:",
             "latitude": 30.293713,
@@ -6132,7 +6132,7 @@
               1660
             ]
           ],
-          "id": 597,
+          "neustar_dma_id": 597,
           "properties": {
             "name": "dma:",
             "latitude": 39.336078,
@@ -6158,7 +6158,7 @@
               1665
             ]
           ],
-          "id": 675,
+          "neustar_dma_id": 675,
           "properties": {
             "name": "dma:",
             "latitude": 40.6826125,
@@ -6274,7 +6274,7 @@
               ]
             ]
           ],
-          "id": 504,
+          "neustar_dma_id": 504,
           "properties": {
             "name": "dma:",
             "latitude": 39.8995855,
@@ -6306,7 +6306,7 @@
               1702
             ]
           ],
-          "id": 753,
+          "neustar_dma_id": 753,
           "properties": {
             "name": "dma:",
             "latitude": 34.7133875,
@@ -6335,7 +6335,7 @@
               1712
             ]
           ],
-          "id": 508,
+          "neustar_dma_id": 508,
           "properties": {
             "name": "dma:",
             "latitude": 40.409733,
@@ -6383,7 +6383,7 @@
               ]
             ]
           ],
-          "id": 820,
+          "neustar_dma_id": 820,
           "properties": {
             "name": "dma:",
             "latitude": 44.191309,
@@ -6578,7 +6578,7 @@
               ]
             ]
           ],
-          "id": 500,
+          "neustar_dma_id": 500,
           "properties": {
             "name": "dma:",
             "latitude": 44.366668,
@@ -6598,7 +6598,7 @@
               -126
             ]
           ],
-          "id": 552,
+          "neustar_dma_id": 552,
           "properties": {
             "name": "dma:",
             "latitude": 46.519615,
@@ -6666,7 +6666,7 @@
               ]
             ]
           ],
-          "id": 521,
+          "neustar_dma_id": 521,
           "properties": {
             "name": "dma:",
             "latitude": 41.620932,
@@ -6696,7 +6696,7 @@
               1786
             ]
           ],
-          "id": 717,
+          "neustar_dma_id": 717,
           "properties": {
             "name": "dma:",
             "latitude": 40.066065,
@@ -6731,7 +6731,7 @@
               ]
             ]
           ],
-          "id": 560,
+          "neustar_dma_id": 560,
           "properties": {
             "name": "dma:",
             "latitude": 35.72255,
@@ -6778,7 +6778,7 @@
               ]
             ]
           ],
-          "id": 764,
+          "neustar_dma_id": 764,
           "properties": {
             "name": "dma:",
             "latitude": 43.7649485,
@@ -6816,7 +6816,7 @@
               1827
             ]
           ],
-          "id": 811,
+          "neustar_dma_id": 811,
           "properties": {
             "name": "dma:",
             "latitude": 39.4852355,
@@ -6849,7 +6849,7 @@
               1840
             ]
           ],
-          "id": 556,
+          "neustar_dma_id": 556,
           "properties": {
             "name": "dma:",
             "latitude": 37.4686305,
@@ -6888,7 +6888,7 @@
               1855
             ]
           ],
-          "id": 573,
+          "neustar_dma_id": 573,
           "properties": {
             "name": "dma:",
             "latitude": 37.6408795,
@@ -6929,7 +6929,7 @@
               ]
             ]
           ],
-          "id": 538,
+          "neustar_dma_id": 538,
           "properties": {
             "name": "dma:",
             "latitude": 42.9137715,
@@ -6955,7 +6955,7 @@
               -315
             ]
           ],
-          "id": 611,
+          "neustar_dma_id": 611,
           "properties": {
             "name": "dma:",
             "latitude": 43.552183,
@@ -6977,7 +6977,7 @@
               -526
             ]
           ],
-          "id": 610,
+          "neustar_dma_id": 610,
           "properties": {
             "name": "dma:",
             "latitude": 42.0453555,
@@ -7038,7 +7038,7 @@
               ]
             ]
           ],
-          "id": 862,
+          "neustar_dma_id": 862,
           "properties": {
             "name": "dma:",
             "latitude": 38.7885185,
@@ -7086,7 +7086,7 @@
               ]
             ]
           ],
-          "id": 576,
+          "neustar_dma_id": 576,
           "properties": {
             "name": "dma:",
             "latitude": 38.4437985,
@@ -7122,7 +7122,7 @@
               1908
             ]
           ],
-          "id": 770,
+          "neustar_dma_id": 770,
           "properties": {
             "name": "dma:",
             "latitude": 40.23193,
@@ -7150,7 +7150,7 @@
               1915
             ]
           ],
-          "id": 661,
+          "neustar_dma_id": 661,
           "properties": {
             "name": "dma:",
             "latitude": 31.186904,
@@ -7181,7 +7181,7 @@
               ]
             ]
           ],
-          "id": 641,
+          "neustar_dma_id": 641,
           "properties": {
             "name": "dma:",
             "latitude": 29.2651455,
@@ -7207,7 +7207,7 @@
               1925
             ]
           ],
-          "id": 825,
+          "neustar_dma_id": 825,
           "properties": {
             "name": "dma:",
             "latitude": 33.0195915,
@@ -7260,7 +7260,7 @@
               ]
             ]
           ],
-          "id": 807,
+          "neustar_dma_id": 807,
           "properties": {
             "name": "dma:",
             "latitude": 38.4477155,
@@ -7303,7 +7303,7 @@
               ]
             ]
           ],
-          "id": 855,
+          "neustar_dma_id": 855,
           "properties": {
             "name": "dma:",
             "latitude": 34.844663,
@@ -7404,7 +7404,7 @@
               ]
             ]
           ],
-          "id": 507,
+          "neustar_dma_id": 507,
           "properties": {
             "name": "dma:",
             "latitude": 32.168191,
@@ -7615,7 +7615,7 @@
               ]
             ]
           ],
-          "id": 819,
+          "neustar_dma_id": 819,
           "properties": {
             "name": "dma:",
             "latitude": 47.621239,
@@ -7644,7 +7644,7 @@
               2017
             ]
           ],
-          "id": 657,
+          "neustar_dma_id": 657,
           "properties": {
             "name": "dma:",
             "latitude": 34.181478,
@@ -7678,7 +7678,7 @@
               2027
             ]
           ],
-          "id": 612,
+          "neustar_dma_id": 612,
           "properties": {
             "name": "dma:",
             "latitude": 32.820852,
@@ -7707,7 +7707,7 @@
               2034
             ]
           ],
-          "id": 624,
+          "neustar_dma_id": 624,
           "properties": {
             "name": "dma:",
             "latitude": 42.621459,
@@ -7740,7 +7740,7 @@
               2043
             ]
           ],
-          "id": 725,
+          "neustar_dma_id": 725,
           "properties": {
             "name": "dma:",
             "latitude": 44.0133785,
@@ -7767,7 +7767,7 @@
               2049
             ]
           ],
-          "id": 588,
+          "neustar_dma_id": 588,
           "properties": {
             "name": "dma:",
             "latitude": 41.576527,
@@ -7806,7 +7806,7 @@
               2063
             ]
           ],
-          "id": 881,
+          "neustar_dma_id": 881,
           "properties": {
             "name": "dma:",
             "latitude": 47.0398515,
@@ -7843,7 +7843,7 @@
               2076
             ]
           ],
-          "id": 619,
+          "neustar_dma_id": 619,
           "properties": {
             "name": "dma:",
             "latitude": 37.1293385,
@@ -7865,7 +7865,7 @@
               2078
             ]
           ],
-          "id": 543,
+          "neustar_dma_id": 543,
           "properties": {
             "name": "dma:",
             "latitude": 42.3856895,
@@ -7889,7 +7889,7 @@
               2082
             ]
           ],
-          "id": 638,
+          "neustar_dma_id": 638,
           "properties": {
             "name": "dma:",
             "latitude": 40.055305,
@@ -7917,7 +7917,7 @@
               -453
             ]
           ],
-          "id": 609,
+          "neustar_dma_id": 609,
           "properties": {
             "name": "dma:",
             "latitude": 38.434253,
@@ -7945,7 +7945,7 @@
               -1860
             ]
           ],
-          "id": 555,
+          "neustar_dma_id": 555,
           "properties": {
             "name": "dma:",
             "latitude": 42.9849975,
@@ -7975,7 +7975,7 @@
               2103
             ]
           ],
-          "id": 530,
+          "neustar_dma_id": 530,
           "properties": {
             "name": "dma:",
             "latitude": 30.462299,
@@ -8231,7 +8231,7 @@
               ]
             ]
           ],
-          "id": 539,
+          "neustar_dma_id": 539,
           "properties": {
             "name": "dma:",
             "latitude": 27.9989465,
@@ -8257,7 +8257,7 @@
               2164
             ]
           ],
-          "id": 581,
+          "neustar_dma_id": 581,
           "properties": {
             "name": "dma:",
             "latitude": 39.2814045,
@@ -8314,7 +8314,7 @@
               ]
             ]
           ],
-          "id": 547,
+          "neustar_dma_id": 547,
           "properties": {
             "name": "dma:",
             "latitude": 41.384993,
@@ -8340,7 +8340,7 @@
               2181
             ]
           ],
-          "id": 605,
+          "neustar_dma_id": 605,
           "properties": {
             "name": "dma:",
             "latitude": 39.0201515,
@@ -8432,7 +8432,7 @@
               ]
             ]
           ],
-          "id": 540,
+          "neustar_dma_id": 540,
           "properties": {
             "name": "dma:",
             "latitude": 45.119199,
@@ -8476,7 +8476,7 @@
               ]
             ]
           ],
-          "id": 531,
+          "neustar_dma_id": 531,
           "properties": {
             "name": "dma:",
             "latitude": 36.732483,
@@ -8497,7 +8497,7 @@
               -1703
             ]
           ],
-          "id": 789,
+          "neustar_dma_id": 789,
           "properties": {
             "name": "dma:",
             "latitude": 31.923023,
@@ -8529,7 +8529,7 @@
               2221
             ]
           ],
-          "id": 671,
+          "neustar_dma_id": 671,
           "properties": {
             "name": "dma:",
             "latitude": 35.9900205,
@@ -8553,7 +8553,7 @@
               2226
             ]
           ],
-          "id": 760,
+          "neustar_dma_id": 760,
           "properties": {
             "name": "dma:",
             "latitude": 42.994495,
@@ -8581,7 +8581,7 @@
               2234
             ]
           ],
-          "id": 709,
+          "neustar_dma_id": 709,
           "properties": {
             "name": "dma:",
             "latitude": 32.1070105,
@@ -8606,7 +8606,7 @@
               2239
             ]
           ],
-          "id": 526,
+          "neustar_dma_id": 526,
           "properties": {
             "name": "dma:",
             "latitude": 43.205527,
@@ -8628,7 +8628,7 @@
               -894
             ]
           ],
-          "id": 626,
+          "neustar_dma_id": 626,
           "properties": {
             "name": "dma:",
             "latitude": 28.805652,
@@ -8655,7 +8655,7 @@
               2247
             ]
           ],
-          "id": 625,
+          "neustar_dma_id": 625,
           "properties": {
             "name": "dma:",
             "latitude": 31.0795205,
@@ -8702,7 +8702,7 @@
               ]
             ]
           ],
-          "id": 511,
+          "neustar_dma_id": 511,
           "properties": {
             "name": "dma:",
             "latitude": 39.127683,
@@ -8774,7 +8774,7 @@
               ]
             ]
           ],
-          "id": 549,
+          "neustar_dma_id": 549,
           "properties": {
             "name": "dma:",
             "latitude": 44.217164,
@@ -8803,7 +8803,7 @@
               -768
             ]
           ],
-          "id": 705,
+          "neustar_dma_id": 705,
           "properties": {
             "name": "dma:",
             "latitude": 44.9711405,
@@ -8858,7 +8858,7 @@
               ]
             ]
           ],
-          "id": 548,
+          "neustar_dma_id": 548,
           "properties": {
             "name": "dma:",
             "latitude": 27.096694,
@@ -8890,7 +8890,7 @@
               2297
             ]
           ],
-          "id": 554,
+          "neustar_dma_id": 554,
           "properties": {
             "name": "dma:",
             "latitude": 39.96655,
@@ -8916,7 +8916,7 @@
               2302
             ]
           ],
-          "id": 627,
+          "neustar_dma_id": 627,
           "properties": {
             "name": "dma:",
             "latitude": 33.9059285,
@@ -8943,7 +8943,7 @@
               2307
             ]
           ],
-          "id": 678,
+          "neustar_dma_id": 678,
           "properties": {
             "name": "dma:",
             "latitude": 38.672948,
@@ -8971,7 +8971,7 @@
               -989
             ]
           ],
-          "id": 577,
+          "neustar_dma_id": 577,
           "properties": {
             "name": "dma:",
             "latitude": 41.2488125,
@@ -9094,7 +9094,7 @@
               ]
             ]
           ],
-          "id": 550,
+          "neustar_dma_id": 550,
           "properties": {
             "name": "dma:",
             "latitude": 34.3480385,
@@ -9122,7 +9122,7 @@
               2343
             ]
           ],
-          "id": 810,
+          "neustar_dma_id": 810,
           "properties": {
             "name": "dma:",
             "latitude": 46.29578,
@@ -9147,7 +9147,7 @@
               2347
             ]
           ],
-          "id": 536,
+          "neustar_dma_id": 536,
           "properties": {
             "name": "dma:",
             "latitude": 41.0505515,
@@ -9172,7 +9172,7 @@
               -1694
             ]
           ],
-          "id": 771,
+          "neustar_dma_id": 771,
           "properties": {
             "name": "dma:",
             "latitude": 32.751631,
@@ -9193,7 +9193,7 @@
               2353
             ]
           ],
-          "id": 596,
+          "neustar_dma_id": 596,
           "properties": {
             "name": "dma:",
             "latitude": 39.961236,
