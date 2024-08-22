@@ -341,6 +341,7 @@ view: +activity_sessions {
     view_label: "{% parameter view_label_2 %}"
     description: "Zip Code where session was initiated reported by our GeoIP Provider"
     # hidden: yes
+
   }
 #}
 
