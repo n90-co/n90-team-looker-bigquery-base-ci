@@ -292,7 +292,7 @@ view: +activity_sessions {
   }
   dimension: neustar_dma_id {
     description: "Neustar's Market ID"
-    hidden: yes
+    # hidden: yes
   }
   dimension: neustar_state {
     label: "State Abbreviation"
