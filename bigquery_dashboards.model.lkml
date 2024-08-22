@@ -45,6 +45,15 @@ map_layer: lower48_dmas {
   # projection: "mercator"  # Define the projection (most common: "mercator")
 }
 
+map_layer: az_zips {
+  # file: "/map/nielsentopo.json"
+  url: "https://raw.githubusercontent.com/OpenDataDE/State-zip-code-GeoJSON/master/az_arizona_zip_codes_geo.min.json"
+  # feature_key: "neustar_id"  # The GeoJSON property to join on
+  label: "DMA Map"
+  property_key: "zip_code"  # The name of the property to use for display
+  # property_label_key: "dma1"
+  # projection: "mercator"  # Define the projection (most common: "mercator")
+}
 # explore: kinetiq_occurrences {}
 
 # explore: brands {
