@@ -30,8 +30,10 @@ view: +dmas {
     #           END;;
   }
   dimension: neustar_id {
+    label: "DMA"
     description: "Neustar DMA ID"
-    hidden: yes
+    hidden: no
+    map_layer_name: combined_us_canada_dmas
   }
   dimension: timezone {
     description: "{% if _explore._name == 'activity_sessions' %}Timezone where the session was initiated{% else %}Timezone where the advertisement aired{% endif %}"
