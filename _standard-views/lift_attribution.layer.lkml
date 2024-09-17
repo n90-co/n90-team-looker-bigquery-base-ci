@@ -185,7 +185,8 @@ view: +lift_attribution {
     type: number
     # value_format: "0.#"
     # removed ^^ so that raw report will include all decimals
-    sql:  if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
+    # removed the forcing of negative lift to posiitive and innacurately representing the facts if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
+    sql: ${weighted_lift}
 
     ;;
   }
