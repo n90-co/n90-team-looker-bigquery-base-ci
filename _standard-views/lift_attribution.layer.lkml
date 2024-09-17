@@ -186,7 +186,7 @@ view: +lift_attribution {
     # value_format: "0.#"
     # removed ^^ so that raw report will include all decimals
     # removed the forcing of negative lift to posiitive and innacurately representing the facts if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
-    sql: ${weighted_lift}
+    sql: if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
 
     ;;
   }
@@ -196,7 +196,7 @@ view: +lift_attribution {
     hidden: yes
     type: sum
     # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql: ${weighted_lift} ;;
+    sql: if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift) ;;
   }
 
   measure: total_weighted_session_lift {

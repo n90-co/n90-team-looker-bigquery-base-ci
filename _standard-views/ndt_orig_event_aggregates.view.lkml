@@ -48,7 +48,7 @@ view: ndt_orig_event_aggregates {
     # hidden: yes
     type: number
     # removed neg lift to 0 - if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift)
-    sql:${TABLE}.event_weighted_lift ;;
+    sql:if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift) ;;
     value_format: "#,##0.0"
     }
 
