@@ -12,7 +12,7 @@ view: +lift_attribution {
   extends: [ext_partitions,ext_schema_change,ext_competitor_info,ext_dry_label,ext_adv_brand_filter]
 
 # Overriding table name to allow dynamic schema
-  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter lift_attribution.dynamic_schema %}looker.lift_attribution_no_directv_dish`` ;;
+  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter lift_attribution.dynamic_schema %}looker.lift_attribution_no_directv_dish`;;
 
 #PRIMARY KEY{
   dimension: primary_key {
