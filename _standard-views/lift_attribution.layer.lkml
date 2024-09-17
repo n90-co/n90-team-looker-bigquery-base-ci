@@ -337,9 +337,9 @@ view: +lift_attribution {
     value_format: "#,##0"
     # sql: ${orig_event_id} ;;
     sql: CASE
-          WHEN (${dma_name} = 'DIRECTV') THEN NULL
-          WHEN (${dma_name} = 'DISH') THEN NULL
-          WHEN (${affiliate} = 'ION' and ${dma_id} <> NULL) THEN NULL
+          WHEN (${dma_name} = 'DIRECTV') THEN ''
+          WHEN (${dma_name} = 'DISH') THEN ''
+
           ELSE ${orig_event_id}
        END ;;
 
