@@ -351,7 +351,7 @@ view: +lift_attribution {
     value_format: "#,##0"
     # sql: ${orig_event_id} ;;
     sql:  case  WHEN ${dma_name} in ('DIRECTV', 'DISH') THEN NULL
-                WHEN ${adv_brand_filter} = 'ION' AND ${dma_name} <> 'NETWORK TV' THEN NULL
+                WHEN ${affiliate} = 'ION' AND ${dma_name} <> 'NETWORK TV' THEN NULL
                 ELSE ${orig_event_id}
                 END   ;;
 
