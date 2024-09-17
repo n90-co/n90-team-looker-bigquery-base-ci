@@ -338,12 +338,7 @@ view: +lift_attribution {
     type: count_distinct
     value_format: "#,##0"
     # sql: ${orig_event_id} ;;
-    sql: CASE
-          WHEN (${dma_name} = 'DIRECTV') THEN ''
-          WHEN (${dma_name} = 'DISH') THEN ''
-          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN ''
-          ELSE ${orig_event_id}
-       END ;;
+    sql:  ${orig_event_id} ;;
 
   }
 
