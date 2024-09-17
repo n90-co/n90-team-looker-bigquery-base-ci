@@ -12,7 +12,7 @@ view: +lift_attribution {
   extends: [ext_partitions,ext_schema_change,ext_competitor_info,ext_dry_label,ext_adv_brand_filter]
 
 # Overriding table name to allow dynamic schema
-  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter lift_attribution.dynamic_schema %}looker.lift_attribution_no_directv_dish`;;
+  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter lift_attribution.dynamic_schema %}looker.lift_attribution`;;
 
 #PRIMARY KEY{
   dimension: primary_key {
@@ -335,7 +335,12 @@ view: +lift_attribution {
     description: "The number of times the Advocado system received and recorded a signal that your watermarked commercial is airing on a specific TV station"
     type: count_distinct
     value_format: "#,##0"
-    sql: ${orig_event_id} ;;
+    # sql: ${orig_event_id} ;;
+    sql: CASE
+          WHEN ${dma_name} IN ('DIRECTV', 'DISH') THEN NULL
+          ELSE ${orig_event_id}
+       END ;;
+
   }
 
   measure: event_page_view_count {
