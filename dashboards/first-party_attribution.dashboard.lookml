@@ -9,12 +9,12 @@
   filters_location_top: false
   preferred_slug: hQZkcB20yOSpcpHeLZZ0uT
   elements:
-  - title: Detection Count
-    name: Detection Count
+  - title: Airing Count
+    name: Airing Count
     model: bigquery_dashboards
     explore: lift_attribution
     type: single_value
-    fields: [lift_attribution.count_detections]
+    fields: [lift_attribution.count_airings]
     limit: 500
     column_limit: 50
     custom_color_enabled: true
