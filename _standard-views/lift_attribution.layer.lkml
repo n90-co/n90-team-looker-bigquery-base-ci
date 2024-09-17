@@ -196,7 +196,7 @@ view: +lift_attribution {
     hidden: yes
     type: sum
     # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql: if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift) ;;
+    sql: ${weighted_lift}  ;;
   }
 
   measure: total_weighted_session_lift {
