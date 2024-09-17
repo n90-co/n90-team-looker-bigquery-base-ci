@@ -345,7 +345,7 @@ view: +lift_attribution {
 
   measure: count_airings {
     label: "Number of Airings"
-    view_label: "{% parameter view_label_3 %}"
+    # view_label: "{% parameter view_label_3 %}"
     description: "The number of times a watermarked commercial was aired and detected"
     type: count_distinct
     value_format: "#,##0"
