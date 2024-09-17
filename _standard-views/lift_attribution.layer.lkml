@@ -233,6 +233,18 @@ view: +lift_attribution {
     sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_weighted_lift}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_weighted_lift}*100);;
   }
 
+  dimension: event_percent_lift_adjusted_diginets {
+    label: "Percent Lift (Spot-Centric)"
+    description: "Use ONLY for spot-centric raw data reports. The percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
+    view_label: "{% parameter view_label_5 %}"
+    group_label: "Spot-Centric Level Data"
+    # hidden: yes
+    type: number
+    value_format: "0.0\%"
+    sql: ${ndt_orig_event_aggregates.event_weighted_lift}*100;;
+  }
+
+
   measure: average_percent_lift_per_detection{
     view_label: "{% parameter view_label_3 %}"
     description: "The average percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
