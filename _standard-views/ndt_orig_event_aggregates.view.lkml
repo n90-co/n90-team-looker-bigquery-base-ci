@@ -47,7 +47,8 @@ view: ndt_orig_event_aggregates {
     group_label: "Spot-Centric Level Data"
     # hidden: yes
     type: number
-    sql: if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift) ;;
+    # removed neg lift to 0 - if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift)
+    sql:${TABLE}.event_weighted_lift ;;
     value_format: "#,##0.0"
     }
 
