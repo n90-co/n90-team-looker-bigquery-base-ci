@@ -29,15 +29,30 @@ view: lift_attribution {
 
   measure: total_baseline_session_count {
     type: sum
-    sql: ${baseline_session_count} ;;  }
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${baseline_session_count}
+       END ;;  }
   measure: average_baseline_session_count {
     type: average
-    sql: ${baseline_session_count} ;;  }
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${baseline_session_count}
+       END ;;  }
 
   dimension: baseline_sessions_per_second {
     type: number
     description: "Sessions per second during the baseline period"
-    sql: ${TABLE}.baseline_sessions_per_second ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.baseline_sessions_per_second
+       END ;;
   }
 
   dimension: brand_id {
@@ -102,31 +117,56 @@ view: lift_attribution {
   dimension: ga_baseline_session_count {
     type: number
     description: "Baseline session count based off of Google Analytics data instead of our tracking tag"
-    sql: ${TABLE}.ga_baseline_session_count ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.ga_baseline_session_count
+       END ;;
   }
 
   dimension: ga_baseline_sessions_per_second {
     type: number
     description: "Baseline sessions per second based off of Google Analytics data instead of our tracking tag"
-    sql: ${TABLE}.ga_baseline_sessions_per_second ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.ga_baseline_sessions_per_second
+       END ;;
   }
 
   dimension: ga_raw_lift {
     type: number
     description: "Raw lift based off of Google Analytics data instead of our tracking tag"
-    sql: ${TABLE}.ga_raw_lift ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.ga_raw_lift
+       END ;;
   }
 
   dimension: ga_unadjusted_lift {
     type: number
     description: "Unadjusted lift based off of Google Analytics data instead of our tracking tag"
-    sql: ${TABLE}.ga_unadjusted_lift ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.ga_unadjusted_lift
+       END ;;
   }
 
   dimension: ga_weighted_lift {
     type: number
     description: "Weighted lift based off of Google Analytics data instead of our tracking tag"
-    sql: ${TABLE}.ga_weighted_lift ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.ga_weighted_lift
+       END ;;
   }
 
   dimension: geo {
@@ -162,7 +202,12 @@ view: lift_attribution {
   dimension: page_view_count {
     type: number
     description: "Number of pageviews attributed to this event"
-    sql: ${TABLE}.page_view_count ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.page_view_count
+       END ;;
   }
 
   dimension: program_uuid {
@@ -174,13 +219,23 @@ view: lift_attribution {
   dimension: raw_lift {
     type: number
     description: "Raw increase in pageviews from the expected based on baseline period"
-    sql: ${TABLE}.raw_lift ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.raw_lift
+       END ;;
   }
 
   dimension: session_count {
     type: number
     description: "Number of sessions attributed to this event"
-    sql: ${TABLE}.session_count ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.session_count
+       END ;;
   }
 
   dimension: sub_trigger_id {
@@ -192,13 +247,23 @@ view: lift_attribution {
   dimension: unadjusted_lift {
     type: number
     description: "Raw lift before negatives were removed - before PitStop Release"
-    sql: ${TABLE}.unadjusted_lift ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.unadjusted_lift
+       END ;;
   }
 
   dimension: weighted_lift {
     type: number
     description: "Fraction of lift that can be attributed to this event alone (raw_lift split between overlapping events by relative reach)"
-    sql: ${TABLE}.weighted_lift ;;
+    sql: CASE
+          WHEN (${dma_name} = 'DIRECTV') THEN 0
+          WHEN (${dma_name} = 'DISH') THEN 0
+          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
+          ELSE ${TABLE}.weighted_lift
+       END ;;
   }
   # measure: count {
   #   type: count

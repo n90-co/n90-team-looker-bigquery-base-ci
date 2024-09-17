@@ -185,12 +185,8 @@ view: +lift_attribution {
     type: number
     # value_format: "0.#"
     # removed ^^ so that raw report will include all decimals
-    sql: CASE
-          WHEN (${dma_name} = 'DIRECTV') THEN 0
-          WHEN (${dma_name} = 'DISH') THEN 0
-          WHEN (${affiliate} = 'ION' and ${dma_name} <> 'NETWORK TV') THEN 0
-          ELSE if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
-       END
+    sql:  if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
+
     ;;
   }
 
