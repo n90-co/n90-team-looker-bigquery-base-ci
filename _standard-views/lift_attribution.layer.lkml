@@ -343,6 +343,20 @@ view: +lift_attribution {
 
   }
 
+  measure: count_airings {
+    label: "Number of Airings"
+    view_label: "{% parameter view_label_3 %}"
+    description: "The number of times a watermarked commercial was aired and detected"
+    type: count_distinct
+    value_format: "#,##0"
+    # sql: ${orig_event_id} ;;
+    sql:  case  WHEN ${dma_name} in ('DIRECTV', 'DISH') THEN NULL
+                WHEN ${adv_brand_filter} = 'ION' AND ${dma_name} <> 'NETWORK TV' THEN NULL
+                ELSE ${orig_event_id}
+                END   ;;
+
+  }
+
   measure: event_page_view_count {
     hidden: yes
     type: sum
