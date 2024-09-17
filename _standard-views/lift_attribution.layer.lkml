@@ -339,7 +339,7 @@ view: +lift_attribution {
     sql: CASE
           WHEN (${dma_name} = 'DIRECTV') THEN ''
           WHEN (${dma_name} = 'DISH') THEN ''
-
+          WHEN (${affiliate} = 'ION' and ${dma_id} IS NOT NULL) THEN ''
           ELSE ${orig_event_id}
        END ;;
 
