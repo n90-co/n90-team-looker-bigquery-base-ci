@@ -225,13 +225,13 @@ view: +lift_attribution {
                 END;;
   }
 
-  measure: event_weighted_lift_corrected{
-    label: "Weighted Session Lift (Spot-Centric)"
-    hidden: yes
-    type: sum
-    # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql: ${weighted_session_lift_corrected}  ;;
-  }
+  # measure: event_weighted_lift_corrected{
+  #   label: "Weighted Session Lift (Spot-Centric)"
+  #   hidden: yes
+  #   type: sum
+  #   # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
+  #   sql: ${weighted_session_lift_corrected}  ;;
+  # }
   measure: total_weighted_session_lift {
     description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
     # hidden: yes
@@ -253,15 +253,15 @@ view: +lift_attribution {
     value_format: "#,##0.0"
   }
 
-  measure: total_weighted_session_lift_corrected {
-    description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
-    # hidden: yes
-    view_label: "{% parameter view_label_3 %}"
-    type: sum
-    # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql: ${ndt_orig_event_aggregates.event_weighted_lift_corrected} ;;
-    value_format: "#,##0.0"
-  }
+  # measure: total_weighted_session_lift_corrected {
+  #   description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
+  #   # hidden: yes
+  #   view_label: "{% parameter view_label_3 %}"
+  #   type: sum
+  #   # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
+  #   sql: ${ndt_orig_event_aggregates.event_weighted_lift_corrected} ;;
+  #   value_format: "#,##0.0"
+  # }
 
   #Percent Lift{
   dimension: percent_lift {
@@ -295,6 +295,17 @@ view: +lift_attribution {
     type: number
     value_format: "0.0\%"
     sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_weighted_lift}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_weighted_lift}*100);;
+  }
+
+  dimension: event_percent_lift_excl_directv_dish_ion {
+    label: "Percent Lift (Spot-Centric)"
+    description: "Use ONLY for spot-centric raw data reports. The percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
+    view_label: "{% parameter view_label_5 %}"
+    group_label: "Spot-Centric Level Data"
+    # hidden: yes
+    type: number
+    value_format: "0.0\%"
+    sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_weighted_lift_excl_directv_dish_ion}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_weighted_lift_excl_directv_dish_ion}*100);;
   }
 
   dimension: event_percent_lift_adjusted_diginets {
