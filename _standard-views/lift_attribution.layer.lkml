@@ -341,13 +341,21 @@ view: +lift_attribution {
   }
   #}
 
-  measure: average_percent_lift_per_detection_corrected{
+  measure: average_percent_lift_per_detection_excl_directv_dish_ion {
     view_label: "{% parameter view_label_3 %}"
     description: "The average percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
     type: average
-    sql: ${event_percent_lift_corrected} ;;
+    sql: ${event_percent_lift_excl_directv_dish_ion} ;;
     value_format: "0.0\%"
   }
+
+  # measure: average_percent_lift_per_detection_corrected{
+  #   view_label: "{% parameter view_label_3 %}"
+  #   description: "The average percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
+  #   type: average
+  #   sql: ${event_percent_lift_corrected} ;;
+  #   value_format: "0.0\%"
+  # }
 
   #Baseline Counts/Rates{
   dimension: baseline_session_count {
