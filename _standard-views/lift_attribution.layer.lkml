@@ -243,15 +243,15 @@ view: +lift_attribution {
   }
   #}
 
-  # measure: total_weighted_session_lift_excl_directv_dish_ion {
-  #   description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
-  #   # hidden: yes
-  #   view_label: "{% parameter view_label_3 %}"
-  #   type: sum
-  #   # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-  #   sql: ${ndt_orig_event_aggregates.event_weighted_lift_excl_directv_dish_ion} ;;
-  #   value_format: "#,##0.0"
-  # }
+  measure: total_weighted_session_lift_excl_directv_dish_ion {
+    description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
+    # hidden: yes
+    view_label: "{% parameter view_label_3 %}"
+    type: sum
+    # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
+    sql: ${ndt_orig_event_aggregates.event_weighted_lift_excl_directv_dish_ion} ;;
+    value_format: "#,##0.0"
+  }
 
   measure: total_weighted_session_lift_corrected {
     description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
