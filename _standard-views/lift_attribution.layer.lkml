@@ -107,13 +107,8 @@ view: +lift_attribution {
 #Navigation Links{
   dimension: first_party_dash_button {
     hidden: yes
-    html: {% if _user_attributes['default_to_detections_or_airings'] == 'airings' %}
-    <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::firstparty_micromoment_attribution_dashboard_airings?Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Airing+Type=1st+Party&Date+Filter+in+Local+Time={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer+Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment+Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Spot+Length=&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day+of+Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA%20Name%2FMedia%20Type={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
-          <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>
-    {% else %}
-    <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::firstparty_micromoment_attribution_dashboard?Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Airing+Type=1st+Party&Date+Filter+in+Local+Time={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer+Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment+Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Spot+Length=&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day+of+Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA%20Name%2FMedia%20Type={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
-          <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>
-    {% endif %};;
+    html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::{{_user_attributes['first_party_dashboard_version']}}?Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Airing+Type=1st+Party&Date+Filter+in+Local+Time={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer+Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment+Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Spot+Length=&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day+of+Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA%20Name%2FMedia%20Type={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
+          <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
     sql: "First-Party Attribution Dashboard" ;;
   }
 
@@ -143,7 +138,7 @@ view: +lift_attribution {
     hidden: yes
     link: {
       label: "First Party Micro-Moment® Attribution Dashboard"
-      url: "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::firstparty_micromoment_attribution_dashboard?Brand+Filter={{ value }}&Airing+Type=1st+Party"
+      url: "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::{{_user_attributes['first_party_dashboard_version']}}?Brand+Filter={{ value }}&Airing+Type=1st+Party"
     }
     # link: {
     #   label: "Competitive Micro-Moment® Attribution Dashboard"
@@ -196,6 +191,21 @@ view: +lift_attribution {
     ;;
   }
 
+  dimension: weighted_session_lift_corrected {
+    label: "Weighted Session Lift (lead source level)"
+    description: "Use ONLY for lead-source level raw data reports. Fraction of lift that can be attributed to this event alone (raw_lift split between overlapping airings)"
+    # hidden: yes
+    view_label: "{% parameter view_label_5 %}"
+    group_label: "Lead Source Level Data"
+    type: number
+    # value_format: "0.#"
+    # removed ^^ so that raw report will include all decimals
+    # removed the forcing of negative lift to posiitive and innacurately representing the facts if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
+    sql: if(sum(${TABLE}.weighted_lift)<0, 0, sum(${weighted_lift}))
+
+          ;;
+  }
+
   measure: event_weighted_lift{
     label: "Weighted Session Lift (Spot-Centric)"
     hidden: yes
@@ -204,6 +214,13 @@ view: +lift_attribution {
     sql: ${weighted_lift}  ;;
   }
 
+  measure: event_weighted_lift_corrected{
+    label: "Weighted Session Lift (Spot-Centric)"
+    hidden: yes
+    type: sum
+    # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
+    sql: ${weighted_session_lift_corrected}  ;;
+  }
   measure: total_weighted_session_lift {
     description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
     # hidden: yes
@@ -215,8 +232,29 @@ view: +lift_attribution {
   }
   #}
 
+  measure: total_weighted_session_lift_corrected {
+    description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
+    # hidden: yes
+    view_label: "{% parameter view_label_3 %}"
+    type: sum
+    # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
+    sql: ${ndt_orig_event_aggregates.event_weighted_lift_corrected} ;;
+    value_format: "#,##0.0"
+  }
+
   #Percent Lift{
   dimension: percent_lift {
+    label: "Percent Lift  (lead source level)"
+    description: "Use ONLY for lead-source level raw data reports. The percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
+    view_label: "{% parameter view_label_5 %}"
+    group_label: "Lead Source Level Data"
+    # hidden: yes
+    type: number
+    value_format: "0.0\%"
+    sql: if(${baseline_sessions_per_second}>0,${weighted_session_lift}/(${baseline_sessions_per_second}*(300+${event_length}))*100,${weighted_session_lift}*100);;
+  }
+
+  dimension: percent_lift_corrected {
     label: "Percent Lift  (lead source level)"
     description: "Use ONLY for lead-source level raw data reports. The percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
     view_label: "{% parameter view_label_5 %}"
@@ -249,6 +287,18 @@ view: +lift_attribution {
     sql: ${ndt_orig_event_aggregates.event_weighted_lift}*100;;
   }
 
+  dimension: event_percent_lift_corrected {
+    label: "Percent Lift (Spot-Centric)"
+    description: "Use ONLY for spot-centric raw data reports. The percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
+    view_label: "{% parameter view_label_5 %}"
+    group_label: "Spot-Centric Level Data"
+    # hidden: yes
+    type: number
+    value_format: "0.0\%"
+    sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_weighted_lift}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_weighted_lift}*100);;
+    # ${ndt_orig_event_aggregates.event_weighted_lift}*100;;
+  }
+
 
   measure: average_percent_lift_per_detection{
     view_label: "{% parameter view_label_3 %}"
@@ -258,6 +308,14 @@ view: +lift_attribution {
     value_format: "0.0\%"
   }
   #}
+
+  measure: average_percent_lift_per_detection_corrected{
+    view_label: "{% parameter view_label_3 %}"
+    description: "The average percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
+    type: average
+    sql: ${event_percent_lift_corrected} ;;
+    value_format: "0.0\%"
+  }
 
   #Baseline Counts/Rates{
   dimension: baseline_session_count {
@@ -326,7 +384,7 @@ view: +lift_attribution {
     view_label: "{% parameter view_label_5 %}"
     group_label: "Lead Source Level Data"
     type: number
-    sql: if(${TABLE}.raw_lift<0, 0, ${raw_lift}) ;;
+    sql: if(sum(${TABLE}.raw_lift)<0, 0, sum(${raw_lift})) ;;
   }
 
   measure: event_raw_lift{
@@ -334,6 +392,13 @@ view: +lift_attribution {
     hidden: yes
     type: sum
     sql: ${raw_lift} ;;
+  }
+
+  measure: event_raw_lift_corrected{
+    label: "Raw Lift (Spot-Centric)"
+    hidden: yes
+    type: sum
+    sql: ${corrected_raw_lift} ;;
   }
 
   # measure: total_raw_lift {

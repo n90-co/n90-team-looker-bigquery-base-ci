@@ -16,10 +16,12 @@ view: ndt_orig_event_aggregates {
     explore_source: lift_attribution {
       column: orig_event_id {}
       column: event_weighted_lift {}
+      column: event_weighted_lift_corrected {}
       column: event_baseline_session_count {}
       column: event_baseline_sessions_per_second {}
       column: event_page_view_count {}
       column: event_raw_lift {}
+      column: event_raw_lift_corrected {}
       column: event_session_count {}
       column: year {}
       column: month {}
