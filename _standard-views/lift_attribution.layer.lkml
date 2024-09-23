@@ -357,13 +357,13 @@ view: +lift_attribution {
 
   measure: count_airings {
     label: "Number of Airings"
-    # view_label: "{% parameter view_label_3 %}"
+    view_label: "{% parameter view_label_3 %}"
     description: "The number of times a watermarked commercial was aired and detected"
     type: count_distinct
     value_format: "#,##0"
     # sql: ${orig_event_id} ;;
-    sql:  case  WHEN ${dma_name} in ('DIRECTV', 'DISH') THEN NULL
-                WHEN ${affiliate} = 'ION' AND ${dma_name} <> 'NETWORK TV' THEN NULL
+    sql:  case  WHEN ${dma_name} in ('DIRECT', 'DISH') THEN NULL
+                WHEN ${affiliate} in ('ION') AND ${dma_name} <> 'NETWORK TV' THEN NULL
                 ELSE ${orig_event_id}
                 END   ;;
 
