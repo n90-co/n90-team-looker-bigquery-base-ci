@@ -108,7 +108,7 @@ view: +lift_attribution {
   dimension: first_party_dash_button {
     hidden: yes
     html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::{{_user_attributes['first_party_dashboard_version']}}?Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Airing+Type=1st+Party&Date+Filter+in+Local+Time={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer+Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment+Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Spot+Length=&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day+of+Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA%20Name%2FMedia%20Type={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
-          <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
+      <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
     sql: "First-Party Attribution Dashboard" ;;
   }
 
@@ -122,7 +122,7 @@ view: +lift_attribution {
   dimension: session_dash_button {
     hidden: yes
     html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::web_sessions_dashboard?Micro-Moment%20Type={{_filters['lift_attribution.airing_type'] | url_encode }}&Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Date%20Range%20Filter={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer%20Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment%20Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Lead%20Source%20Rank=5&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day%20of%20Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
-          <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
+      <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
     sql: "Web Sessions Dashboard" ;;
   }
   dimension: return_to_welcome_dash_button {
@@ -188,7 +188,7 @@ view: +lift_attribution {
     # removed the forcing of negative lift to posiitive and innacurately representing the facts if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
     sql: if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
 
-    ;;
+          ;;
   }
 
   dimension: weighted_session_lift_corrected {
@@ -203,7 +203,7 @@ view: +lift_attribution {
     # removed the forcing of negative lift to posiitive and innacurately representing the facts if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
     sql: ${weighted_lift}
 
-          ;;
+                ;;
   }
 
   measure: event_weighted_lift{
@@ -211,27 +211,16 @@ view: +lift_attribution {
     hidden: yes
     type: sum
     # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql: ${weighted_session_lift}  ;;
+    sql: ${weighted_lift}  ;;
   }
 
-  measure: event_weighted_lift_excl_directv_dish_ion{
+  measure: event_weighted_lift_corrected{
     label: "Weighted Session Lift (Spot-Centric)"
     hidden: yes
     type: sum
     # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql: case  WHEN (${dma_name} in ('DIRECT', 'DISH')) THEN NULL
-                WHEN (${affiliate} in ('ION') AND ${dma_name} <> 'NETWORK TV') THEN NULL
-                ELSE ${weighted_session_lift}
-                END;;
+    sql: ${weighted_session_lift_corrected}  ;;
   }
-
-  # measure: event_weighted_lift_corrected{
-  #   label: "Weighted Session Lift (Spot-Centric)"
-  #   hidden: yes
-  #   type: sum
-  #   # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-  #   sql: ${weighted_session_lift_corrected}  ;;
-  # }
   measure: total_weighted_session_lift {
     description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
     # hidden: yes
@@ -243,25 +232,15 @@ view: +lift_attribution {
   }
   #}
 
-  measure: total_weighted_session_lift_excl_directv_dish_ion {
+  measure: total_weighted_session_lift_corrected {
     description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
     # hidden: yes
     view_label: "{% parameter view_label_3 %}"
     type: sum
     # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql: ${ndt_orig_event_aggregates.event_weighted_lift_excl_directv_dish_ion} ;;
+    sql: ${ndt_orig_event_aggregates.event_weighted_lift_corrected} ;;
     value_format: "#,##0.0"
   }
-
-  # measure: total_weighted_session_lift_corrected {
-  #   description: "The incremental increase in sessions that occurred during the Micro-Moment. Sessions are split with equal weight in the occurrence of overlapping sessions"
-  #   # hidden: yes
-  #   view_label: "{% parameter view_label_3 %}"
-  #   type: sum
-  #   # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-  #   sql: ${ndt_orig_event_aggregates.event_weighted_lift_corrected} ;;
-  #   value_format: "#,##0.0"
-  # }
 
   #Percent Lift{
   dimension: percent_lift {
@@ -294,19 +273,8 @@ view: +lift_attribution {
     # hidden: yes
     type: number
     value_format: "0.0\%"
-    sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_raw_lift}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_raw_lift}*100);;
+    sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_weighted_lift}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_weighted_lift}*100);;
   }
-
-  # dimension: event_percent_lift_excl_directv_dish_ion {
-  #   label: "Percent Lift (Spot-Centric)"
-  #   description: "Use ONLY for spot-centric raw data reports. The percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
-  #   view_label: "{% parameter view_label_5 %}"
-  #   group_label: "Spot-Centric Level Data"
-  #   # hidden: yes
-  #   type: number
-  #   value_format: "0.0\%"
-  #   sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_weighted_lift}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_weighted_lift}*100);;
-  # }
 
   dimension: event_percent_lift_adjusted_diginets {
     label: "Percent Lift (Spot-Centric)"
@@ -341,22 +309,13 @@ view: +lift_attribution {
   }
   #}
 
-  # Hold this one until pipeline can be reviewed
-  # measure: average_percent_lift_per_detection_excl_directv_dish_ion {
-  #   view_label: "{% parameter view_label_3 %}"
-  #   description: "The average percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
-  #   type: average
-  #   sql: ${event_percent_lift_excl_directv_dish_ion} ;;
-  #   value_format: "0.0\%"
-  # }
-
-  # measure: average_percent_lift_per_detection_corrected{
-  #   view_label: "{% parameter view_label_3 %}"
-  #   description: "The average percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
-  #   type: average
-  #   sql: ${event_percent_lift_corrected} ;;
-  #   value_format: "0.0\%"
-  # }
+  measure: average_percent_lift_per_detection_corrected{
+    view_label: "{% parameter view_label_3 %}"
+    description: "The average percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
+    type: average
+    sql: ${event_percent_lift_corrected} ;;
+    value_format: "0.0\%"
+  }
 
   #Baseline Counts/Rates{
   dimension: baseline_session_count {
@@ -497,7 +456,7 @@ view: +lift_attribution {
     type: string
     sql: {% condition include_post_log_attribution %} ${include_post_log} {% endcondition %} ;;
     suggest_dimension: include_post_log
-    }
+  }
 
   dimension: include_post_log {
     hidden: yes
@@ -618,116 +577,116 @@ view: +lift_attribution {
 
 
 #Hiding/Renaming/Relabeling Dimensions{
-  dimension: affiliate {
-    description: "TV Affiliate where the event aired"
-    hidden: yes
-    view_label: "{% parameter view_label_1 %}"
-  }
-  dimension: brand_id {
-    description: "A unique identifier by Advocado for each brand. An agency could be handling multiple brand IDs."
-    hidden: yes
-  }
-  dimension: callsign {
-    description: "Station Call Sign where the event aired"
-    # hidden: yes
-    view_label: "{% parameter view_label_1 %}"
-  }
-  dimension: detection_timezone {
-    description: "Timezone of the event"
-    hidden: yes
-    view_label: "{% parameter view_label_2 %}"
-  }
-  dimension: dma_id {
-    description: "Advocado's Market ID"
-    hidden: yes
-  }
-  dimension: dma_name {
-    description: "Market Name"
-    hidden: yes
-  }
-  dimension_group: end {
-    description: "End Timestamp of this event"
-    hidden: yes
-  }
-  dimension: event_length {
-    description: "Length of the event in seconds"
-    # hidden: yes
-    label: "Ad Length"
-    view_label: "{% parameter view_label_1 %}"
-  }
-  dimension_group: event_start {
-    description: "Start time of the event"
-    # hidden: yes
-    label: "Event Start (in UTC)"
-    view_label: "{% parameter view_label_6 %}"
-  }
-  dimension: event_type {
-    description: "Type of event with detection source"
-    hidden: yes
-  }
-  dimension: ga_baseline_session_count {
-    description: "Baseline session count based off of Google Analytics data instead of our tracking tag"
-    hidden: yes
-  }
-  dimension: ga_baseline_sessions_per_second {
-    description: "Baseline sessions per second based off of Google Analytics data instead of our tracking tag"
-    hidden: yes
-  }
-  dimension: ga_raw_lift {
-    description: "Raw lift based off of Google Analytics data instead of our tracking tag"
-    hidden: yes
-  }
-  dimension: ga_unadjusted_lift {
-    description: "Unadjusted lift based off of Google Analytics data instead of our tracking tag"
-    hidden: yes
-  }
-  dimension: ga_weighted_lift {
-    description: "Weighted lift based off of Google Analytics data instead of our tracking tag"
-    hidden: yes
-  }
-  dimension: geo {
-    description: "Geographic area of the event (zip code, market, …)"
-    # hidden: yes
-    label: "Geographic Location"
-    view_label: "{% parameter view_label_2 %}"
-  }
-  dimension: hour {
-    hidden: yes
-  }
-  dimension: is_powermoment {
-    description: "Indicates if an event triggered a campaign automation action"
-    hidden: yes
-  }
-  dimension: lead_source {
-    description: "Calculated source of the attributed sessions. By default, this is populated by the UTM parameter from the referring URL. However, you may create custom lead sources in the Advocado portal by working with your customer success manager."
-    # hidden: yes
-    view_label: "{% parameter view_label_5 %}"
-  }
-  dimension: orig_event_id {
-    description: "A unique identifier by Advocado that groups together detections into a single event."
-    # hidden: yes
-    label: "Event ID"
-    view_label: "{% parameter view_label_5 %}"
-  }
-  dimension: page_view_count {
-    # hidden: yes
-    label: "Number of Page Views (lead source level)"
-    description: "Use ONLY for lead-source level raw data reports. Number of pageviews attributed to this event."
-    view_label: "{% parameter view_label_5 %}"
-    group_label: "Lead Source Level Data"
-  }
-  dimension: program_uuid {
-    description: "ID to link to WWTV program data"
-    hidden: yes
-  }
-  dimension: sub_trigger_id {
-    description: "ID of the original triggering detection (watermark_id, creative_resource_id, product_id, …)"
-    hidden: yes
-  }
-  dimension: unadjusted_lift {
-    description: "Raw lift before negatives were removed - before PitStop Release"
-    hidden: yes
-  }
+    dimension: affiliate {
+      description: "TV Affiliate where the event aired"
+      hidden: yes
+      view_label: "{% parameter view_label_1 %}"
+    }
+    dimension: brand_id {
+      description: "A unique identifier by Advocado for each brand. An agency could be handling multiple brand IDs."
+      hidden: yes
+    }
+    dimension: callsign {
+      description: "Station Call Sign where the event aired"
+      # hidden: yes
+      view_label: "{% parameter view_label_1 %}"
+    }
+    dimension: detection_timezone {
+      description: "Timezone of the event"
+      hidden: yes
+      view_label: "{% parameter view_label_2 %}"
+    }
+    dimension: dma_id {
+      description: "Advocado's Market ID"
+      hidden: yes
+    }
+    dimension: dma_name {
+      description: "Market Name"
+      hidden: yes
+    }
+    dimension_group: end {
+      description: "End Timestamp of this event"
+      hidden: yes
+    }
+    dimension: event_length {
+      description: "Length of the event in seconds"
+      # hidden: yes
+      label: "Ad Length"
+      view_label: "{% parameter view_label_1 %}"
+    }
+    dimension_group: event_start {
+      description: "Start time of the event"
+      # hidden: yes
+      label: "Event Start (in UTC)"
+      view_label: "{% parameter view_label_6 %}"
+    }
+    dimension: event_type {
+      description: "Type of event with detection source"
+      hidden: yes
+    }
+    dimension: ga_baseline_session_count {
+      description: "Baseline session count based off of Google Analytics data instead of our tracking tag"
+      hidden: yes
+    }
+    dimension: ga_baseline_sessions_per_second {
+      description: "Baseline sessions per second based off of Google Analytics data instead of our tracking tag"
+      hidden: yes
+    }
+    dimension: ga_raw_lift {
+      description: "Raw lift based off of Google Analytics data instead of our tracking tag"
+      hidden: yes
+    }
+    dimension: ga_unadjusted_lift {
+      description: "Unadjusted lift based off of Google Analytics data instead of our tracking tag"
+      hidden: yes
+    }
+    dimension: ga_weighted_lift {
+      description: "Weighted lift based off of Google Analytics data instead of our tracking tag"
+      hidden: yes
+    }
+    dimension: geo {
+      description: "Geographic area of the event (zip code, market, …)"
+      # hidden: yes
+      label: "Geographic Location"
+      view_label: "{% parameter view_label_2 %}"
+    }
+    dimension: hour {
+      hidden: yes
+    }
+    dimension: is_powermoment {
+      description: "Indicates if an event triggered a campaign automation action"
+      hidden: yes
+    }
+    dimension: lead_source {
+      description: "Calculated source of the attributed sessions. By default, this is populated by the UTM parameter from the referring URL. However, you may create custom lead sources in the Advocado portal by working with your customer success manager."
+      # hidden: yes
+      view_label: "{% parameter view_label_5 %}"
+    }
+    dimension: orig_event_id {
+      description: "A unique identifier by Advocado that groups together detections into a single event."
+      # hidden: yes
+      label: "Event ID"
+      view_label: "{% parameter view_label_5 %}"
+    }
+    dimension: page_view_count {
+      # hidden: yes
+      label: "Number of Page Views (lead source level)"
+      description: "Use ONLY for lead-source level raw data reports. Number of pageviews attributed to this event."
+      view_label: "{% parameter view_label_5 %}"
+      group_label: "Lead Source Level Data"
+    }
+    dimension: program_uuid {
+      description: "ID to link to WWTV program data"
+      hidden: yes
+    }
+    dimension: sub_trigger_id {
+      description: "ID of the original triggering detection (watermark_id, creative_resource_id, product_id, …)"
+      hidden: yes
+    }
+    dimension: unadjusted_lift {
+      description: "Raw lift before negatives were removed - before PitStop Release"
+      hidden: yes
+    }
 #}
 
-}
+  }

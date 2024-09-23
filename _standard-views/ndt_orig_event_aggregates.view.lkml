@@ -15,10 +15,8 @@ view: ndt_orig_event_aggregates {
 
     explore_source: lift_attribution {
       column: orig_event_id {}
-      column: dma_id {}
       column: event_weighted_lift {}
-      column: event_weighted_lift_excl_directv_dish_ion {}
-      # column: event_weighted_lift_corrected {}
+      column: event_weighted_lift_corrected {}
       column: event_baseline_session_count {}
       column: event_baseline_sessions_per_second {}
       column: event_page_view_count {}
@@ -42,8 +40,6 @@ view: ndt_orig_event_aggregates {
     sql: ${TABLE}.orig_event_id ;;
   }
 
-
-
 #DIMENSIONS{
   dimension: event_weighted_lift {
     label: "Weighted Lift (Spot-Centric)"
@@ -55,9 +51,9 @@ view: ndt_orig_event_aggregates {
     # removed neg lift to 0 - if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift)
     sql:if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift) ;;
     value_format: "#,##0.0"
-    }
+  }
 
-  dimension: event_weighted_lift_excl_directv_dish_ion {
+  dimension: event_weighted_lift_corrected {
     label: "Weighted Lift (Spot-Centric)"
     description: "Use ONLY for spot-centric raw data reports. The total weighted session lift for the detection. Fraction of lift that can be attributed to this detection alone (raw lift split between overlapping airings)"
     view_label: "{% parameter view_label_5 %}"
@@ -65,35 +61,9 @@ view: ndt_orig_event_aggregates {
     # hidden: yes
     type: number
     # removed neg lift to 0 - if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift)
-    sql:${TABLE}.event_weighted_lift_excl_directv_dish_ion ;;
+    sql:${TABLE}.event_weighted_lift ;;
     value_format: "#,##0.0"
   }
-
-  # dimension: event_weighted_lift_excl_directv_dish_ion {
-  #   label: "Weighted Lift (Spot-Centric)"
-  #   description: "Use ONLY for spot-centric raw data reports. The total weighted session lift for the detection. Fraction of lift that can be attributed to this detection alone (raw lift split between overlapping airings)"
-  #   view_label: "{% parameter view_label_5 %}"
-  #   group_label: "Spot-Centric Level Data"
-  #   # hidden: yes
-  #   type: number
-  #
-  #   # removed neg lift to 0 - if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift)
-  #   sql:case when (${TABLE}.dma_name not in ('DIRECTV', 'DISH')) THEN if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift)
-  #   when (${});;
-  #   value_format: "#,##0.0"
-  # }
-
-  # dimension: event_weighted_lift_corrected {
-  #   label: "Weighted Lift (Spot-Centric)"
-  #   description: "Use ONLY for spot-centric raw data reports. The total weighted session lift for the detection. Fraction of lift that can be attributed to this detection alone (raw lift split between overlapping airings)"
-  #   view_label: "{% parameter view_label_5 %}"
-  #   group_label: "Spot-Centric Level Data"
-  #   # hidden: yes
-  #   type: number
-  #   # removed neg lift to 0 - if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift)
-  #   sql:${TABLE}.event_weighted_lift ;;
-  #   value_format: "#,##0.0"
-  # }
 
   dimension: event_baseline_sessions {
     label: "Baseline Sessions Count (Spot-Centric)"
@@ -122,7 +92,7 @@ view: ndt_orig_event_aggregates {
     description: "Use ONLY for spot-centric raw data reports. The total number of page views that occurred for any session(s) attributed to the detection."
     view_label: "{% parameter view_label_5 %}"
     group_label: "Spot-Centric Level Data"
-    # hidden: yesevent_weighted_lift_excl_directv_dish_ion
+    # hidden: yes
     type: number
     sql: ${TABLE}.event_page_view_count ;;
     value_format: "#,##0"
