@@ -27,15 +27,22 @@ explore: lift_attribution {
       lift_attribution.local_start_date_filter: "last 30 days",
       lift_attribution.airing_type: "1st Party",
       brands.brand_filter: ""
-      ]
+    ]
   }
 
-  sql_always_where: ${local_start_date} between ${filter_start_date} and DATE_ADD(${filter_end_date}, INTERVAL -1 DAY)
-                    AND ${event_start_date} between DATE_ADD(${filter_start_date}, INTERVAL -1 DAY) AND ${filter_end_date}
-                    AND DATE(${year},${month},${day}) between DATE_ADD(${filter_start_date}, INTERVAL -1 DAY) AND ${filter_end_date}
-                    {% if _user_attributes['excluded_dmas'] != '' %} AND ${dmas.name} NOT IN ({{ _user_attributes['excluded_dmas'] | split: ',' | array_to_string }}){% endif %}
-                    {% if adv_brand_filter._is_filtered %}AND ${brand_id} = SUBSTR({% parameter adv_brand_filter %}, -24) {% endif %}
-                    ;;
+  sql_always_where:
+    ${local_start_date} between ${filter_start_date} and DATE_ADD(${filter_end_date}, INTERVAL -1 DAY)
+    AND ${event_start_date} between DATE_ADD(${filter_start_date}, INTERVAL -1 DAY) AND ${filter_end_date}
+    AND DATE(${year},${month},${day}) between DATE_ADD(${filter_start_date}, INTERVAL -1 DAY) AND ${filter_end_date}
+
+    {% if _user_attributes['exclude_directv_dish'] == 'yes' %}
+      AND ${dmas.name} NOT IN ('DIRECTV', 'DISH')
+    {% endif %}
+
+    {% if adv_brand_filter._is_filtered %}
+      AND ${brand_id} = SUBSTR({% parameter adv_brand_filter %}, -24)
+    {% endif %}
+    ;;
 
   join: brand_central_products {
     type: left_outer
@@ -45,15 +52,13 @@ explore: lift_attribution {
 
   join: brands {
     type: inner
-    sql_on:
-      ${lift_attribution.brand_id} = ${brands.brand_id};;
+    sql_on: ${lift_attribution.brand_id} = ${brands.brand_id};;
     relationship: many_to_one
   }
 
   join: dmas {
     type: left_outer
-    sql_on:
-      ${lift_attribution.dma_id} = ${dmas.dma_id};;
+    sql_on: ${lift_attribution.dma_id} = ${dmas.dma_id};;
     relationship: many_to_one
   }
 
@@ -73,13 +78,6 @@ explore: lift_attribution {
     relationship: many_to_one
   }
 
-  # join: kinetiq_occurrences {
-  #   type: left_outer
-  #   sql_on: ${lift_attribution.sub_trigger_id}=${kinetiq_occurrences.creative_resource_id} AND
-  #           ${lift_attribution.event_start_date}=${kinetiq_occurrences.start_time_utc_date};;
-  #   relationship: many_to_one
-  # }
-
   join: pdt_brand_startend_dates {
     type: left_outer
     sql_on: ${lift_attribution.brand_id} = ${pdt_brand_startend_dates.brand_id} ;;
@@ -95,8 +93,7 @@ explore: lift_attribution {
   join: market_grouping {
     type: left_outer
     sql_on: ${lift_attribution.brand_id} = ${market_grouping.brand_id} AND
-            ${lift_attribution.dma_id} = ${market_grouping.dma_id};;
-            # ${lift_attribution.dma_name} = ${market_grouping.dma_name};;
+      ${lift_attribution.dma_id} = ${market_grouping.dma_id};;
     relationship: many_to_one
   }
 
@@ -109,6 +106,7 @@ explore: lift_attribution {
     relationship: many_to_one
   }
 }
+
 # TOOK THESE OUT TO MAKE CONVERSION ATTRIBUTION ITS OWN EXPLORE
 # issues with lift_attribution lead sources not matching
 # include: "/_standard-views/conversion_attribution.layer.lkml"
