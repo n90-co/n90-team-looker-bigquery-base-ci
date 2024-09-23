@@ -201,7 +201,7 @@ view: +lift_attribution {
     # value_format: "0.#"
     # removed ^^ so that raw report will include all decimals
     # removed the forcing of negative lift to posiitive and innacurately representing the facts if(${TABLE}.weighted_lift<0, 0, ${weighted_lift})
-    sql: if(sum(${TABLE}.weighted_lift)<0, 0, sum(${weighted_lift}))
+    sql: ${weighted_lift}
 
           ;;
   }
@@ -251,7 +251,7 @@ view: +lift_attribution {
     # hidden: yes
     type: number
     value_format: "0.0\%"
-    sql: if(${baseline_sessions_per_second}>0,${weighted_session_lift}/(${baseline_sessions_per_second}*(300+${event_length}))*100,${weighted_session_lift}*100);;
+    sql: if(${baseline_sessions_per_second}>0,${weighted_session_lift_corrected}/(${baseline_sessions_per_second}*(300+${event_length}))*100,${weighted_session_lift}*100);;
   }
 
   dimension: percent_lift_corrected {
@@ -384,7 +384,7 @@ view: +lift_attribution {
     view_label: "{% parameter view_label_5 %}"
     group_label: "Lead Source Level Data"
     type: number
-    sql: if(sum(${TABLE}.raw_lift)<0, 0, sum(${raw_lift})) ;;
+    sql: if${TABLE}.raw_lift<0, 0, ${raw_lift}) ;;
   }
 
   measure: event_raw_lift{
