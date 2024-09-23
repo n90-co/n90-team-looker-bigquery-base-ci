@@ -107,8 +107,13 @@ view: +lift_attribution {
 #Navigation Links{
   dimension: first_party_dash_button {
     hidden: yes
-    html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::firstparty_micromoment_attribution_dashboard?Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Airing+Type=1st+Party&Date+Filter+in+Local+Time={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer+Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment+Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Spot+Length=&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day+of+Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA%20Name%2FMedia%20Type={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
-          <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
+    html: {% if _user_attributes['default_to_detections_or_airings'] == 'airings' %}
+    <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::firstparty_micromoment_attribution_dashboard_airings?Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Airing+Type=1st+Party&Date+Filter+in+Local+Time={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer+Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment+Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Spot+Length=&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day+of+Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA%20Name%2FMedia%20Type={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
+          <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>
+    {% else %}
+    <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::firstparty_micromoment_attribution_dashboard?Brand+Filter={{ _filters['brands.brand_filter'] | url_encode }}&Airing+Type=1st+Party&Date+Filter+in+Local+Time={{_filters['lift_attribution.local_start_date_filter'] | url_encode }}&Customer+Markets={{_filters['market_grouping.customer_markets'] | url_encode }}&Power-Moment+Type={{_filters['lift_attribution.powermoment_type'] | url_encode }}&Spot+Length=&Weekday%2FWeekend={{_filters['lift_attribution.weekday_or_weekend'] | url_encode }}&Day+of+Week={{_filters['lift_attribution.local_start_day_of_week'] | url_encode }}&DMA%20Name%2FMedia%20Type={{_filters['dmas.name'] | url_encode }}" target="_blank" rel="noopener noreferrer">
+          <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>
+    {% endif %};;
     sql: "First-Party Attribution Dashboard" ;;
   }
 
@@ -127,7 +132,7 @@ view: +lift_attribution {
   }
   dimension: return_to_welcome_dash_button {
     hidden: yes
-    html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::welcome_to_guac" target="_blank" rel="noopener noreferrer">
+    html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::welcome_to_insights_power" target="_blank" rel="noopener noreferrer">
       <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
     sql: "Return to Welcome Dashboard" ;;
   }
