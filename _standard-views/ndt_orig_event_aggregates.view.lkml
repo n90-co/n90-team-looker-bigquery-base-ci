@@ -109,7 +109,16 @@ view: ndt_orig_event_aggregates {
     value_format: "#,##0.0"
   }
 
-
+  dimension: event_raw_lift_corrected {
+    label: "Raw Lift (Spot-Centric)"
+    description: "Use ONLY for spot-centric raw data reports. The total raw increase in sessions from the projected baseline attributed to the detection."
+    view_label: "{% parameter view_label_5 %}"
+    group_label: "Spot-Centric Level Data"
+    # hidden: yes
+    type: number
+    sql: ${TABLE}.event_raw_lift ;;
+    value_format: "#,##0.0"
+  }
   dimension: event_session_count {
     label: "Sessions Count (Spot-Centric)"
     description: "Use ONLY for spot-centric raw data reports. The total number of web sessions initiated on the website in the 5 minutes Micro-Moment of an airing event across all lead sources."
