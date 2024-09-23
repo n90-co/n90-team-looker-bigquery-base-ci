@@ -13,11 +13,19 @@ include: "/_standard-views/pdt_kinetiq_creatives.view.lkml"
 explore: joined_implicit_attribution {
   hidden: yes
 
+
+  # Exclude DMAs based on user attribute
+  # sql_always_where: ${dmas.name} NOT IN ({{ _user_attributes['excluded_dmas'] | split: ',' | array_to_string }}) ;;
+
+
   join: dmas {
     type: left_outer
     sql_on: ${joined_implicit_attribution.dma_id} = ${dmas.dma_id};;
     relationship: many_to_one
   }
+
+
+
 
   join: brand_central_products {
     type: left_outer

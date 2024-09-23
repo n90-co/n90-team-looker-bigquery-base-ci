@@ -1,6 +1,3 @@
-## Created by: Mary
-## Last edited: 2/2/24 by Mary
-
 include: "/_base-views/dmas.view.lkml"
 include: "/_standard-views/ext_DRY_label.view.lkml"
 
@@ -9,37 +6,33 @@ view: +dmas {
 
   sql_table_name: `bigquery-sandbox-393916.looker.dmas` ;;
 
-#Hiding/Renaming/Relabeling Dimensions{
+
+  # Hiding/Renaming/Relabeling Dimensions
   dimension: dma_id {
     description: "Advocado's Market ID"
     hidden: yes
   }
+
   dimension: kantar_region {
     description: "Geographic Region"
     hidden: yes
   }
+
   dimension: name {
     description: "{% if _explore._name == 'activity_sessions' %}DMA Name{% else %}Market name for local market airings or Media Type (Network TV, Cable TV, etc.) for National airings{% endif %}"
-    # hidden: yes
     label: "{% if _explore._name == 'lift_attribution' %}DMA Name/Media Type{% else %}DMA Name{% endif %}"
-    # label: "DMA Name/Media Type"
-    view_label: "{% parameter view_label_2 %}"
-    # sql: CASE WHEN ${TABLE}.name in ('DISH','DIRECTV','HISPANIC TV','CABLE TV','NETWORK TV') THEN 'US National'
-    #           WHEN ${TABLE}.name = 'CANADIAN SPECL' THEN 'Canadian National'
-    #           ELSE ${TABLE}.name
-    #           END;;
+    view_label: "{% parameter view_label_2 %}"  # Ensure that the parameter 'view_label_2' exists and is properly defined elsewhere
   }
+
   dimension: neustar_id {
     label: "DMA"
     description: "Neustar DMA ID"
     hidden: no
     map_layer_name: combined_us_canada_dmas
   }
+
   dimension: timezone {
     description: "{% if _explore._name == 'activity_sessions' %}Timezone where the session was initiated{% else %}Timezone where the advertisement aired{% endif %}"
-    # hidden: yes
-    view_label: "{% parameter view_label_2 %}"
+    view_label: "{% parameter view_label_2 %}"  # Ensure the 'view_label_2' parameter exists in the model
   }
-#}
-
 }

@@ -35,6 +35,7 @@ explore: activity_sessions {
                     AND ${created_date} between DATE_ADD(${filter_session_start_date}, INTERVAL -1 DAY) AND ${filter_session_end_date}
                     AND ${dmas.timezone} is not null
                     AND DATE(${year},${month},${day}) between DATE_ADD(${filter_session_start_date}, INTERVAL -1 DAY) AND ${filter_session_end_date}
+                    {% if _user_attributes['excluded_dmas'] != '' %} AND ${dmas.name} NOT IN ({{ _user_attributes['excluded_dmas'] | split: ',' | array_to_string }}){% endif %}
                     {% if adv_brand_filter._is_filtered %}AND ${brand_id} = SUBSTR({% parameter adv_brand_filter %}, -24) {% endif %}
                     ;;
 
