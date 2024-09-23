@@ -215,14 +215,14 @@ view: +lift_attribution {
   }
 
   measure: event_weighted_lift_excl_directv_dish_ion{
-    label: "Weighted Session Lift (Spot-Centric-Cleaned)"
+    label: "Weighted Session Lift (Spot-Centric)"
     hidden: yes
     type: sum
     # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql:   (if ${dma_name} in ('DIRECT', 'DISH') THEN 0 if
-                 (${affiliate} in ('ION') AND ${dma_name} <> 'NETWORK TV') THEN 0
-                ELSE ${weighted_session_lift})
-                ;;
+    sql: case  WHEN (${dma_name} in ('DIRECT', 'DISH')) THEN NULL
+                WHEN (${affiliate} in ('ION') AND ${dma_name} <> 'NETWORK TV') THEN NULL
+                ELSE ${weighted_session_lift}
+                END;;
   }
 
   # measure: event_weighted_lift_corrected{
@@ -294,19 +294,19 @@ view: +lift_attribution {
     # hidden: yes
     type: number
     value_format: "0.0\%"
-    sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_weighted_lift}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_weighted_lift}*100);;
+    sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_raw_lift}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_raw_lift}*100);;
   }
 
-  dimension: event_percent_lift_excl_directv_dish_ion {
-    label: "Percent Lift (Spot-Centric)"
-    description: "Use ONLY for spot-centric raw data reports. The percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
-    view_label: "{% parameter view_label_5 %}"
-    group_label: "Spot-Centric Level Data"
-    # hidden: yes
-    type: number
-    value_format: "0.0\%"
-    sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_weighted_lift_excl_directv_dish_ion}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_weighted_lift_excl_directv_dish_ion}*100);;
-  }
+  # dimension: event_percent_lift_excl_directv_dish_ion {
+  #   label: "Percent Lift (Spot-Centric)"
+  #   description: "Use ONLY for spot-centric raw data reports. The percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
+  #   view_label: "{% parameter view_label_5 %}"
+  #   group_label: "Spot-Centric Level Data"
+  #   # hidden: yes
+  #   type: number
+  #   value_format: "0.0\%"
+  #   sql: if(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}>0,${ndt_orig_event_aggregates.event_weighted_lift}/(${ndt_orig_event_aggregates.event_baseline_sessions_per_second}*(300+${event_length}))*100,${ndt_orig_event_aggregates.event_weighted_lift}*100);;
+  # }
 
   dimension: event_percent_lift_adjusted_diginets {
     label: "Percent Lift (Spot-Centric)"
