@@ -8,6 +8,7 @@ include: "/logical-explores/activity_sessions.explore.lkml"
 include: "/logical-explores/lift_attribution.explore.lkml"
 
 include: "/dashboards/first-party_attribution.dashboard.lookml"
+include: "/dashboards/first-party_attribution_airings.dashboard.lookml"
 include: "/dashboards/competitive_attribution.dashboard.lookml"
 include: "/dashboards/sessions.dashboard.lookml"
 include: "/dashboards/welcome_page.dashboard.lookml"

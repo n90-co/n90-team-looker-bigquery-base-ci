@@ -150,7 +150,7 @@
     model: bigquery_dashboards
     explore: lift_attribution
     type: looker_line
-    fields: [lift_attribution.local_start_week, lift_attribution.count_detections,
+    fields: [lift_attribution.local_start_week, lift_attribution.count_airings,
       lift_attribution.average_percent_lift_per_detection, lift_attribution.total_weighted_session_lift]
     fill_fields: [lift_attribution.local_start_week]
     sorts: [lift_attribution.local_start_week desc]
@@ -184,8 +184,8 @@
             id: lift_attribution.total_weighted_session_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: '',
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: left, series: [{axisId: lift_attribution.count_detections,
-            id: lift_attribution.count_detections, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: left, series: [{axisId: lift_attribution.count_airings,
+            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}, {label: !!null '', orientation: right, series: [{axisId: lift_attribution.average_percent_lift_per_detection,
             id: lift_attribution.average_percent_lift_per_detection, name: Average
@@ -197,7 +197,7 @@
     y_axis_zoom: true
     hide_legend: false
     series_colors:
-      lift_attribution.count_detections: "#0504AA"
+      lift_attribution.count_airings: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#F28F16"
     ordering: none
     show_null_labels: false
@@ -242,7 +242,7 @@
     model: bigquery_dashboards
     explore: lift_attribution
     type: looker_line
-    fields: [lift_attribution.count_detections, lift_attribution.average_percent_lift_per_detection,
+    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
       lift_attribution.total_weighted_session_lift, lift_attribution.local_start_date]
     fill_fields: [lift_attribution.local_start_date]
     sorts: [lift_attribution.local_start_date desc]
@@ -276,8 +276,8 @@
             id: lift_attribution.total_weighted_session_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: '',
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: left, series: [{axisId: lift_attribution.count_detections,
-            id: lift_attribution.count_detections, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: left, series: [{axisId: lift_attribution.count_airings,
+            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}, {label: !!null '', orientation: right, series: [{axisId: lift_attribution.average_percent_lift_per_detection,
             id: lift_attribution.average_percent_lift_per_detection, name: Average
@@ -289,7 +289,7 @@
     y_axis_zoom: true
     hide_legend: false
     series_colors:
-      lift_attribution.count_detections: "#0504AA"
+      lift_attribution.count_airings: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#F28F16"
     ordering: none
     show_null_labels: false
@@ -334,9 +334,9 @@
     model: bigquery_dashboards
     explore: lift_attribution
     type: looker_bar
-    fields: [lift_attribution.count_detections, lift_attribution.average_percent_lift_per_detection,
+    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
       lift_attribution.total_weighted_session_lift, spots.creative_name]
-    sorts: [lift_attribution.count_detections desc 0]
+    sorts: [lift_attribution.count_airings desc 0]
     limit: 10
     column_limit: 50
     x_axis_gridlines: true
@@ -374,8 +374,8 @@
             id: lift_attribution.total_weighted_session_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_detections,
-            id: lift_attribution.count_detections, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
+            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -384,9 +384,9 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_detections: scatter
+      lift_attribution.count_airings: scatter
     series_colors:
-      lift_attribution.count_detections: "#0504AA"
+      lift_attribution.count_airings: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
@@ -429,7 +429,7 @@
     model: bigquery_dashboards
     explore: lift_attribution
     type: looker_bar
-    fields: [lift_attribution.count_detections, lift_attribution.average_percent_lift_per_detection,
+    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
       lift_attribution.total_weighted_session_lift, lift_attribution.day_part]
     fill_fields: [lift_attribution.day_part]
     sorts: [lift_attribution.day_part]
@@ -470,8 +470,8 @@
             id: lift_attribution.total_weighted_session_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_detections,
-            id: lift_attribution.count_detections, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
+            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -480,9 +480,9 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_detections: scatter
+      lift_attribution.count_airings: scatter
     series_colors:
-      lift_attribution.count_detections: "#0504AA"
+      lift_attribution.count_airings: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
@@ -522,9 +522,9 @@
     model: bigquery_dashboards
     explore: lift_attribution
     type: looker_bar
-    fields: [lift_attribution.count_detections, lift_attribution.average_percent_lift_per_detection,
+    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
       lift_attribution.total_weighted_session_lift, lift_attribution.updated_affiliate]
-    sorts: [lift_attribution.count_detections desc 0]
+    sorts: [lift_attribution.count_airings desc 0]
     limit: 10
     column_limit: 50
     x_axis_gridlines: true
@@ -562,8 +562,8 @@
             id: lift_attribution.total_weighted_session_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_detections,
-            id: lift_attribution.count_detections, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
+            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -572,9 +572,9 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_detections: scatter
+      lift_attribution.count_airings: scatter
     series_colors:
-      lift_attribution.count_detections: "#0504AA"
+      lift_attribution.count_airings: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
@@ -617,9 +617,9 @@
     model: bigquery_dashboards
     explore: lift_attribution
     type: looker_bar
-    fields: [lift_attribution.count_detections, lift_attribution.average_percent_lift_per_detection,
+    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
       lift_attribution.total_weighted_session_lift, dmas.name]
-    sorts: [lift_attribution.count_detections desc 0]
+    sorts: [lift_attribution.count_airings desc 0]
     limit: 10
     column_limit: 50
     x_axis_gridlines: true
@@ -657,8 +657,8 @@
             id: lift_attribution.total_weighted_session_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_detections,
-            id: lift_attribution.count_detections, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
+            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -667,9 +667,9 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_detections: scatter
+      lift_attribution.count_airings: scatter
     series_colors:
-      lift_attribution.count_detections: "#0504AA"
+      lift_attribution.count_airings: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
@@ -726,11 +726,11 @@
     model: bigquery_dashboards
     explore: lift_attribution
     type: looker_bar
-    fields: [lift_attribution.count_detections, lift_attribution.average_percent_lift_per_detection,
+    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
       lift_attribution.total_weighted_session_lift, wwtv_programs.genre]
     filters:
       wwtv_programs.genre: "-NULL"
-    sorts: [lift_attribution.count_detections desc 0]
+    sorts: [lift_attribution.count_airings desc 0]
     limit: 10
     column_limit: 50
     x_axis_gridlines: true
@@ -768,8 +768,8 @@
             id: lift_attribution.total_weighted_session_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_detections,
-            id: lift_attribution.count_detections, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
+            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -778,9 +778,9 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_detections: scatter
+      lift_attribution.count_airings: scatter
     series_colors:
-      lift_attribution.count_detections: "#0504AA"
+      lift_attribution.count_airings: "#0504AA"
       lift_attribution.total_weighted_session_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
