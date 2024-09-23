@@ -52,6 +52,18 @@ view: ndt_orig_event_aggregates {
     value_format: "#,##0.0"
     }
 
+  dimension: event_weighted_lift_corrected {
+    label: "Weighted Lift (Spot-Centric)"
+    description: "Use ONLY for spot-centric raw data reports. The total weighted session lift for the detection. Fraction of lift that can be attributed to this detection alone (raw lift split between overlapping airings)"
+    view_label: "{% parameter view_label_5 %}"
+    group_label: "Spot-Centric Level Data"
+    # hidden: yes
+    type: number
+    # removed neg lift to 0 - if(${TABLE}.event_weighted_lift<0, 0, ${TABLE}.event_weighted_lift)
+    sql:if(sum(${TABLE}.event_weighted_lift)<0, 0, sum(${TABLE}.event_weighted_lift)) ;;
+    value_format: "#,##0.0"
+  }
+
   dimension: event_baseline_sessions {
     label: "Baseline Sessions Count (Spot-Centric)"
     description: "Use ONLY for spot-centric raw data reports. The total number of web sessions initiated on the website in the 5 minutes before an airing event across all lead sources."
@@ -86,6 +98,17 @@ view: ndt_orig_event_aggregates {
   }
 
   dimension: event_raw_lift {
+    label: "Raw Lift (Spot-Centric)"
+    description: "Use ONLY for spot-centric raw data reports. The total raw increase in sessions from the projected baseline attributed to the detection."
+    view_label: "{% parameter view_label_5 %}"
+    group_label: "Spot-Centric Level Data"
+    # hidden: yes
+    type: number
+    sql: if(sum(${TABLE}.event_raw_lift)<0, 0, sum(${TABLE}.event_raw_lift)) ;;
+    value_format: "#,##0.0"
+  }
+
+  dimension: event_raw_lift_corrected {
     label: "Raw Lift (Spot-Centric)"
     description: "Use ONLY for spot-centric raw data reports. The total raw increase in sessions from the projected baseline attributed to the detection."
     view_label: "{% parameter view_label_5 %}"
