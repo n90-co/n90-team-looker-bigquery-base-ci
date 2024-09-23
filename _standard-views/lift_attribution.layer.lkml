@@ -211,18 +211,18 @@ view: +lift_attribution {
     hidden: yes
     type: sum
     # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql: ${weighted_lift}  ;;
+    sql: ${weighted_session_lift}  ;;
   }
 
   measure: event_weighted_lift_excl_directv_dish_ion{
-    label: "Weighted Session Lift (Spot-Centric)"
+    label: "Weighted Session Lift (Spot-Centric-Cleaned)"
     hidden: yes
     type: sum
     # filters: [is_weighted_lift: "Yes"] -- REMOVED because we want to zero weighted_lift AFTER we SUM all lead sources to make the raw_lift/weighted_lift for the spot.
-    sql: case  WHEN ${dma_name} in ('DIRECT', 'DISH') THEN NULL
-                WHEN (${affiliate} in ('ION') AND ${dma_name} <> 'NETWORK TV') THEN NULL
-                ELSE ${weighted_lift}
-                END;;
+    sql:   (if ${dma_name} in ('DIRECT', 'DISH') THEN 0 if
+                 (${affiliate} in ('ION') AND ${dma_name} <> 'NETWORK TV') THEN 0
+                ELSE ${weighted_session_lift})
+                ;;
   }
 
   # measure: event_weighted_lift_corrected{
@@ -341,13 +341,14 @@ view: +lift_attribution {
   }
   #}
 
-  measure: average_percent_lift_per_detection_excl_directv_dish_ion {
-    view_label: "{% parameter view_label_3 %}"
-    description: "The average percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
-    type: average
-    sql: ${event_percent_lift_excl_directv_dish_ion} ;;
-    value_format: "0.0\%"
-  }
+  # Hold this one until pipeline can be reviewed
+  # measure: average_percent_lift_per_detection_excl_directv_dish_ion {
+  #   view_label: "{% parameter view_label_3 %}"
+  #   description: "The average percent increase in the number of sessions that your site received in the Micro-Moment compared to the expected sessions based on the visits in the 5 minutes before the detection"
+  #   type: average
+  #   sql: ${event_percent_lift_excl_directv_dish_ion} ;;
+  #   value_format: "0.0\%"
+  # }
 
   # measure: average_percent_lift_per_detection_corrected{
   #   view_label: "{% parameter view_label_3 %}"
