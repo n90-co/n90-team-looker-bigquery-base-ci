@@ -2,7 +2,7 @@
 view: spots {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `bigquery-sandbox-393916.looker.spots` ;;
+  sql_table_name: `bigquery-sandbox-393916.looker.spots_condensed` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -69,11 +69,11 @@ view: spots {
     sql: ${TABLE}.module ;;
   }
 
-  dimension: trigger_id {
-    type: string
-    description: "Advocado ID"
-    sql: ${TABLE}.trigger_id ;;
-  }
+  # dimension: trigger_id {
+  #   type: string
+  #   description: "Advocado ID"
+  #   sql: ${TABLE}.trigger_id ;;
+  # }
   # measure: count {
   #   type: count
   #   drill_fields: [creative_name]

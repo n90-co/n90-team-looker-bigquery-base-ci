@@ -18,7 +18,7 @@ view: +lift_attribution_new_baseline {
   dimension: primary_key {
     primary_key: yes
     hidden: yes
-    sql: CONCAT(${orig_event_id}, ${geo}, ${lead_source}, ${brand_id}) ;;
+    sql: CONCAT(${orig_event_id}, ${geo}, ${brand_id}) ;;
   }
 #}
 
