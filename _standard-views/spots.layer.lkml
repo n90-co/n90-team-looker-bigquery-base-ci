@@ -8,7 +8,7 @@ view: +spots {
   extends: [ext_dry_label]
 
 ## Overriding the table name to allow for demo schema, no matter which explore.
-  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}looker.spots` ;;
+  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}looker.spots_condensed` ;;
 
   dimension: primary_key {
     primary_key: yes
