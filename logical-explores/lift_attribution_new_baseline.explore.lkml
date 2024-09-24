@@ -34,14 +34,9 @@ explore: lift_attribution_new_baseline {
     ${local_start_date} between ${filter_start_date} and DATE_ADD(${filter_end_date}, INTERVAL -1 DAY)
     AND ${event_start_date} between DATE_ADD(${filter_start_date}, INTERVAL -1 DAY) AND ${filter_end_date}
     AND DATE(${year},${month},${day}) between DATE_ADD(${filter_start_date}, INTERVAL -1 DAY) AND ${filter_end_date}
-
-    # {% if _user_attributes['exclude_directv_dish'] == 'yes' %}
-    # AND ${dmas.name} NOT IN ('DIRECTV', 'DISH')
-    # {% endif %}
-
-    # {% if adv_brand_filter._is_filtered %}
-    # AND ${brand_id} = SUBSTR({% parameter adv_brand_filter %}, -24)
-    # {% endif %}
+    {% if adv_brand_filter._is_filtered %}
+    AND ${brand_id} = SUBSTR({% parameter adv_brand_filter %}, -24)
+    {% endif %}
     ;;
 
   join: brand_central_products {
@@ -75,7 +70,7 @@ explore: lift_attribution_new_baseline {
             ${lift_attribution_new_baseline.year} = ${ndt_orig_event_aggregates_new_baseline.year} and
             ${lift_attribution_new_baseline.month} = ${ndt_orig_event_aggregates_new_baseline.month} and
             ${lift_attribution_new_baseline.day} = ${ndt_orig_event_aggregates_new_baseline.day};;
-    relationship: one_to_one
+    relationship: many_to_one
   }
 
   join: pdt_brand_startend_dates {

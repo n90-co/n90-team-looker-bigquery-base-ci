@@ -27,10 +27,13 @@ view: lift_attribution_new_baseline {
 
   measure: total_baseline_session_count {
     type: sum
+    view_label: "{% parameter view_label_3 %}"
     sql: ${baseline_session_count} ;;  }
   measure: average_baseline_session_count {
     type: average
-    sql: ${baseline_session_count} ;;  }
+    view_label: "{% parameter view_label_3 %}"
+    sql: ${baseline_session_count} ;;
+    value_format: "#,##0.0"}
 
   dimension: baseline_sessions_per_second {
     type: number
@@ -85,12 +88,15 @@ view: lift_attribution_new_baseline {
     sql: ${TABLE}.event_lift ;;
   }
 
-  measure: total_event_liftt {
+  measure: total_event_lift {
     type: sum
+    view_label: "{% parameter view_label_3 %}"
     sql: ${event_lift} ;;  }
   measure: average_event_lift {
     type: average
-    sql: ${event_lift} ;;  }
+    view_label: "{% parameter view_label_3 %}"
+    sql: ${event_lift} ;;
+    value_format: "#,##0.0"}
 
   dimension_group: event_start {
     type: time
@@ -132,6 +138,10 @@ view: lift_attribution_new_baseline {
     type: number
     sql: ${TABLE}.page_view_count ;;
   }
+  measure: total_page_view_count {
+    type: sum
+    view_label: "{% parameter view_label_3 %}"
+    sql: ${page_view_count} ;;  }
 
   dimension: percent_lift_increase {
     type: number
@@ -140,7 +150,9 @@ view: lift_attribution_new_baseline {
 
   measure: average_lift_increase {
     type: average
+    view_label: "{% parameter view_label_3 %}"
     sql: ${TABLE}.percent_lift_increase ;;
+    value_format: "0.0\%"
   }
 
   dimension: program_uuid {
@@ -155,10 +167,13 @@ view: lift_attribution_new_baseline {
 
   measure: total_session_count {
     type: sum
+    view_label: "{% parameter view_label_3 %}"
     sql: ${session_count} ;;  }
   measure: average_session_count {
     type: average
-    sql: ${session_count} ;;  }
+    view_label: "{% parameter view_label_3 %}"
+    sql: ${session_count} ;;
+    value_format: "#,##0.0"}
 
   dimension: sub_trigger_id {
     type: string

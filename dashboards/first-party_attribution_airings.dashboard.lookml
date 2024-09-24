@@ -12,9 +12,9 @@
   - title: Airing Count
     name: Airing Count
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: single_value
-    fields: [lift_attribution.count_airings]
+    fields: [lift_attribution_new_baseline.count_airings]
     limit: 500
     column_limit: 50
     custom_color_enabled: true
@@ -38,26 +38,26 @@
     note_text: 'Record of Advocado’s Systems receiving and recording a signal that
       your watermarked TV spot aired was detected on its source TV station / network. '
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 1
     col: 0
     width: 5
     height: 4
-  - title: Average Percent Lift
-    name: Average Percent Lift
+  - title: Average Lift Increase
+    name: Average Lift Increase
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: single_value
-    fields: [lift_attribution.average_percent_lift_per_detection]
+    fields: [lift_attribution_new_baseline.average_lift_increase]
     limit: 500
     column_limit: 50
     custom_color_enabled: true
@@ -70,7 +70,7 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     custom_color: "#22A2F2"
-    single_value_title: Average Lift per Detection
+    single_value_title: Average Lift Increase per Airing
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
           palette_id: next90-colors-sequential-0}, bold: false, italic: false, strikethrough: false,
@@ -81,29 +81,29 @@
     note_display: hover
     note_text: Percent Lift is the relative increase in sessions during a Micro-Moment
       versus how many sessions we expected (i.e., the baseline count). It is calculated
-      by taking weighted session lift divided by baseline session count. We calculate
-      this value for each detection and aggregate it as an average percent increase.
+      by taking event session lift divided by baseline session count. We calculate
+      this value for each airing and aggregate it as an average percent increase.
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 1
     col: 5
     width: 5
     height: 4
-  - title: Weighted Session Lift
-    name: Weighted Session Lift
+  - title: Total Event Lift
+    name: Total Event Lift
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: single_value
-    fields: [lift_attribution.event_raw_lift]
+    fields: [lift_attribution_new_baseline.total_event_lift]
     limit: 500
     column_limit: 50
     custom_color_enabled: true
@@ -116,7 +116,7 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     custom_color: "#F28F16"
-    single_value_title: Total Weighted Session Lift
+    single_value_title: Total Event Lift
     value_format: "#,##0"
     conditional_formatting: [{type: equal to, value: !!null '', background_color: "#0504AA",
         font_color: !!null '', color_application: {collection_id: next90-colors,
@@ -128,19 +128,19 @@
     note_display: hover
     note_text: 'The incremental increase in sessions that your site received during
       the Micro-Moment compared to the expected sessions based on the visits in the
-      5 minutes before the detection. Sessions are split with equal weight in the
+      5 minutes before the airing. Sessions are split with equal weight in the
       occurrence of overlapping Micro-Moments. '
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 1
     col: 10
     width: 6
@@ -148,12 +148,12 @@
   - title: Lift by Week
     name: Lift by Week
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: looker_line
-    fields: [lift_attribution.local_start_week, lift_attribution.count_airings,
-      lift_attribution.average_percent_lift_per_detection, lift_attribution.event_raw_lift]
-    fill_fields: [lift_attribution.local_start_week]
-    sorts: [lift_attribution.local_start_week desc]
+    fields: [lift_attribution_new_baseline.local_start_week, lift_attribution_new_baseline.count_airings,
+      lift_attribution_new_baseline.average_lift_increase, lift_attribution_new_baseline.total_event_lift]
+    fill_fields: [lift_attribution_new_baseline.local_start_week]
+    sorts: [lift_attribution_new_baseline.local_start_week desc]
     limit: 500
     column_limit: 50
     x_axis_gridlines: true
@@ -180,15 +180,15 @@
     y_axis_combined: true
     show_null_points: true
     interpolation: linear
-    y_axes: [{label: '', orientation: left, series: [{axisId: lift_attribution.event_raw_lift,
-            id: lift_attribution.event_raw_lift, name: Total Weighted
+    y_axes: [{label: '', orientation: left, series: [{axisId: lift_attribution_new_baseline.total_event_lift,
+            id: lift_attribution_new_baseline.total_event_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: '',
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: left, series: [{axisId: lift_attribution.count_airings,
-            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: left, series: [{axisId: lift_attribution_new_baseline.count_airings,
+            id: lift_attribution_new_baseline.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear}, {label: !!null '', orientation: right, series: [{axisId: lift_attribution.average_percent_lift_per_detection,
-            id: lift_attribution.average_percent_lift_per_detection, name: Average
+        type: linear}, {label: !!null '', orientation: right, series: [{axisId: lift_attribution_new_baseline.average_lift_increase,
+            id: lift_attribution_new_baseline.average_lift_increase, name: Average
               Percent Lift per Detection}], showLabels: true, showValues: true, valueFormat: 0\%,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 11, type: linear}]
     x_axis_label: Week Start Date
@@ -197,8 +197,8 @@
     y_axis_zoom: true
     hide_legend: false
     series_colors:
-      lift_attribution.count_airings: "#0504AA"
-      lift_attribution.event_raw_lift: "#F28F16"
+      lift_attribution_new_baseline.count_airings: "#0504AA"
+      lift_attribution_new_baseline.total_event_lift: "#F28F16"
     ordering: none
     show_null_labels: false
     show_totals_labels: false
@@ -223,16 +223,16 @@
     defaults_version: 1
     hidden_pivots: {}
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 5
     col: 0
     width: 8
@@ -240,12 +240,12 @@
   - title: Lift by Day
     name: Lift by Day
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: looker_line
-    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
-      lift_attribution.event_raw_lift, lift_attribution.local_start_date]
-    fill_fields: [lift_attribution.local_start_date]
-    sorts: [lift_attribution.local_start_date desc]
+    fields: [lift_attribution_new_baseline.count_airings, lift_attribution_new_baseline.average_lift_increase,
+      lift_attribution_new_baseline.total_event_lift, lift_attribution_new_baseline.local_start_date]
+    fill_fields: [lift_attribution_new_baseline.local_start_date]
+    sorts: [lift_attribution_new_baseline.local_start_date desc]
     limit: 500
     column_limit: 50
     x_axis_gridlines: true
@@ -272,15 +272,15 @@
     y_axis_combined: true
     show_null_points: true
     interpolation: linear
-    y_axes: [{label: '', orientation: left, series: [{axisId: lift_attribution.event_raw_lift,
-            id: lift_attribution.event_raw_lift, name: Total Weighted
+    y_axes: [{label: '', orientation: left, series: [{axisId: lift_attribution_new_baseline.total_event_lift,
+            id: lift_attribution_new_baseline.total_event_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: '',
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: left, series: [{axisId: lift_attribution.count_airings,
-            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: left, series: [{axisId: lift_attribution_new_baseline.count_airings,
+            id: lift_attribution_new_baseline.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear}, {label: !!null '', orientation: right, series: [{axisId: lift_attribution.average_percent_lift_per_detection,
-            id: lift_attribution.average_percent_lift_per_detection, name: Average
+        type: linear}, {label: !!null '', orientation: right, series: [{axisId: lift_attribution_new_baseline.average_lift_increase,
+            id: lift_attribution_new_baseline.average_lift_increase, name: Average
               Percent Lift per Detection}], showLabels: true, showValues: true, valueFormat: 0\%,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear}]
     x_axis_label: Date
@@ -289,8 +289,8 @@
     y_axis_zoom: true
     hide_legend: false
     series_colors:
-      lift_attribution.count_airings: "#0504AA"
-      lift_attribution.event_raw_lift: "#F28F16"
+      lift_attribution_new_baseline.count_airings: "#0504AA"
+      lift_attribution_new_baseline.total_event_lift: "#F28F16"
     ordering: none
     show_null_labels: false
     show_totals_labels: false
@@ -315,16 +315,16 @@
     defaults_version: 1
     hidden_pivots: {}
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 5
     col: 8
     width: 8
@@ -332,11 +332,11 @@
   - title: Lift by Creative
     name: Lift by Creative
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: looker_bar
-    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
-      lift_attribution.event_raw_lift, spots.creative_name]
-    sorts: [lift_attribution.count_airings desc 0]
+    fields: [lift_attribution_new_baseline.count_airings, lift_attribution_new_baseline.average_lift_increase,
+      lift_attribution_new_baseline.total_event_lift, spots.creative_name]
+    sorts: [lift_attribution_new_baseline.count_airings desc 0]
     limit: 10
     column_limit: 50
     x_axis_gridlines: true
@@ -366,16 +366,16 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution.average_percent_lift_per_detection,
-            id: lift_attribution.average_percent_lift_per_detection, name: Average
+    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution_new_baseline.average_lift_increase,
+            id: lift_attribution_new_baseline.average_lift_increase, name: Average
               Percent Lift per Detection}], showLabels: true, showValues: true, valueFormat: 0\%,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
-      {label: '', orientation: bottom, series: [{axisId: lift_attribution.event_raw_lift,
-            id: lift_attribution.event_raw_lift, name: Total Weighted
+      {label: '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.total_event_lift,
+            id: lift_attribution_new_baseline.total_event_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
-            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.count_airings,
+            id: lift_attribution_new_baseline.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -384,10 +384,10 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_airings: scatter
+      lift_attribution_new_baseline.count_airings: scatter
     series_colors:
-      lift_attribution.count_airings: "#0504AA"
-      lift_attribution.event_raw_lift: "#F28F16"
+      lift_attribution_new_baseline.count_airings: "#0504AA"
+      lift_attribution_new_baseline.total_event_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
     show_single_value_title: true
@@ -410,16 +410,16 @@
     note_display: hover
     note_text: Showing Top 10 by Number of Detections (explore data to see more)
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 1
     col: 16
     width: 8
@@ -427,12 +427,12 @@
   - title: Lift by Day Part
     name: Lift by Day Part
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: looker_bar
-    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
-      lift_attribution.event_raw_lift, lift_attribution.day_part]
-    fill_fields: [lift_attribution.day_part]
-    sorts: [lift_attribution.day_part]
+    fields: [lift_attribution_new_baseline.count_airings, lift_attribution_new_baseline.average_lift_increase,
+      lift_attribution_new_baseline.total_event_lift, lift_attribution_new_baseline.day_part]
+    fill_fields: [lift_attribution_new_baseline.day_part]
+    sorts: [lift_attribution_new_baseline.day_part]
     limit: 500
     column_limit: 50
     x_axis_gridlines: true
@@ -462,16 +462,16 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution.average_percent_lift_per_detection,
-            id: lift_attribution.average_percent_lift_per_detection, name: Average
+    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution_new_baseline.average_lift_increase,
+            id: lift_attribution_new_baseline.average_lift_increase, name: Average
               Percent Lift per Detection}], showLabels: true, showValues: true, valueFormat: 0\%,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
-      {label: '', orientation: bottom, series: [{axisId: lift_attribution.event_raw_lift,
-            id: lift_attribution.event_raw_lift, name: Total Weighted
+      {label: '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.total_event_lift,
+            id: lift_attribution_new_baseline.total_event_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
-            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.count_airings,
+            id: lift_attribution_new_baseline.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -480,10 +480,10 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_airings: scatter
+      lift_attribution_new_baseline.count_airings: scatter
     series_colors:
-      lift_attribution.count_airings: "#0504AA"
-      lift_attribution.event_raw_lift: "#F28F16"
+      lift_attribution_new_baseline.count_airings: "#0504AA"
+      lift_attribution_new_baseline.total_event_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
     show_single_value_title: true
@@ -503,16 +503,16 @@
     defaults_version: 1
     hidden_pivots: {}
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 11
     col: 0
     width: 8
@@ -520,11 +520,11 @@
   - title: Lift by Affiliate
     name: Lift by Affiliate
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: looker_bar
-    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
-      lift_attribution.event_raw_lift, lift_attribution.updated_affiliate]
-    sorts: [lift_attribution.count_airings desc 0]
+    fields: [lift_attribution_new_baseline.count_airings, lift_attribution_new_baseline.average_lift_increase,
+      lift_attribution_new_baseline.total_event_lift, lift_attribution_new_baseline.updated_affiliate]
+    sorts: [lift_attribution_new_baseline.count_airings desc 0]
     limit: 10
     column_limit: 50
     x_axis_gridlines: true
@@ -554,16 +554,16 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution.average_percent_lift_per_detection,
-            id: lift_attribution.average_percent_lift_per_detection, name: Average
+    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution_new_baseline.average_lift_increase,
+            id: lift_attribution_new_baseline.average_lift_increase, name: Average
               Percent Lift per Detection}], showLabels: true, showValues: true, valueFormat: 0\%,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
-      {label: '', orientation: bottom, series: [{axisId: lift_attribution.event_raw_lift,
-            id: lift_attribution.event_raw_lift, name: Total Weighted
+      {label: '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.total_event_lift,
+            id: lift_attribution_new_baseline.total_event_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
-            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.count_airings,
+            id: lift_attribution_new_baseline.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -572,10 +572,10 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_airings: scatter
+      lift_attribution_new_baseline.count_airings: scatter
     series_colors:
-      lift_attribution.count_airings: "#0504AA"
-      lift_attribution.event_raw_lift: "#F28F16"
+      lift_attribution_new_baseline.count_airings: "#0504AA"
+      lift_attribution_new_baseline.total_event_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
     show_single_value_title: true
@@ -598,16 +598,16 @@
     note_display: hover
     note_text: Showing Top 10 by Number of Detections (explore data to see more)
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 11
     col: 8
     width: 8
@@ -615,11 +615,11 @@
   - title: Lift by Market/Media Type
     name: Lift by Market/Media Type
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: looker_bar
-    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
-      lift_attribution.event_raw_lift, dmas.name]
-    sorts: [lift_attribution.count_airings desc 0]
+    fields: [lift_attribution_new_baseline.count_airings, lift_attribution_new_baseline.average_lift_increase,
+      lift_attribution_new_baseline.total_event_lift, dmas.name]
+    sorts: [lift_attribution_new_baseline.count_airings desc 0]
     limit: 10
     column_limit: 50
     x_axis_gridlines: true
@@ -649,16 +649,16 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution.average_percent_lift_per_detection,
-            id: lift_attribution.average_percent_lift_per_detection, name: Average
+    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution_new_baseline.average_lift_increase,
+            id: lift_attribution_new_baseline.average_lift_increase, name: Average
               Percent Lift per Detection}], showLabels: true, showValues: true, valueFormat: 0\%,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
-      {label: '', orientation: bottom, series: [{axisId: lift_attribution.event_raw_lift,
-            id: lift_attribution.event_raw_lift, name: Total Weighted
+      {label: '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.total_event_lift,
+            id: lift_attribution_new_baseline.total_event_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
-            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.count_airings,
+            id: lift_attribution_new_baseline.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -667,10 +667,10 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_airings: scatter
+      lift_attribution_new_baseline.count_airings: scatter
     series_colors:
-      lift_attribution.count_airings: "#0504AA"
-      lift_attribution.event_raw_lift: "#F28F16"
+      lift_attribution_new_baseline.count_airings: "#0504AA"
+      lift_attribution_new_baseline.total_event_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
     show_single_value_title: true
@@ -693,16 +693,16 @@
     note_display: hover
     note_text: Showing Top 10 by Number of Detections (explore data to see more)
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 10
     col: 16
     width: 8
@@ -724,13 +724,13 @@
   - title: Lift by Genre
     name: Lift by Genre
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: looker_bar
-    fields: [lift_attribution.count_airings, lift_attribution.average_percent_lift_per_detection,
-      lift_attribution.event_raw_lift, wwtv_programs.genre]
+    fields: [lift_attribution_new_baseline.count_airings, lift_attribution_new_baseline.average_lift_increase,
+      lift_attribution_new_baseline.total_event_lift, wwtv_programs.genre]
     filters:
       wwtv_programs.genre: "-NULL"
-    sorts: [lift_attribution.count_airings desc 0]
+    sorts: [lift_attribution_new_baseline.count_airings desc 0]
     limit: 10
     column_limit: 50
     x_axis_gridlines: true
@@ -760,16 +760,16 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution.average_percent_lift_per_detection,
-            id: lift_attribution.average_percent_lift_per_detection, name: Average
+    y_axes: [{label: !!null '', orientation: top, series: [{axisId: lift_attribution_new_baseline.average_lift_increase,
+            id: lift_attribution_new_baseline.average_lift_increase, name: Average
               Percent Lift per Detection}], showLabels: true, showValues: true, valueFormat: 0\%,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
-      {label: '', orientation: bottom, series: [{axisId: lift_attribution.event_raw_lift,
-            id: lift_attribution.event_raw_lift, name: Total Weighted
+      {label: '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.total_event_lift,
+            id: lift_attribution_new_baseline.total_event_lift, name: Total Weighted
               Session Lift}], showLabels: true, showValues: true, valueFormat: "#,##0",
         unpinAxis: false, tickDensity: default, tickDensityCustom: 4, type: linear},
-      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution.count_airings,
-            id: lift_attribution.count_airings, name: Number of Detections}], showLabels: false,
+      {label: !!null '', orientation: bottom, series: [{axisId: lift_attribution_new_baseline.count_airings,
+            id: lift_attribution_new_baseline.count_airings, name: Number of Detections}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     x_axis_label: ''
@@ -778,10 +778,10 @@
     y_axis_zoom: true
     hide_legend: false
     series_types:
-      lift_attribution.count_airings: scatter
+      lift_attribution_new_baseline.count_airings: scatter
     series_colors:
-      lift_attribution.count_airings: "#0504AA"
-      lift_attribution.event_raw_lift: "#F28F16"
+      lift_attribution_new_baseline.count_airings: "#0504AA"
+      lift_attribution_new_baseline.total_event_lift: "#F28F16"
     custom_color_enabled: true
     custom_color: "#F28F16"
     show_single_value_title: true
@@ -805,16 +805,16 @@
     note_text: Showing Top 10 by Number of Detections (explore data to see more).
       Genre data only available starting 8/13/2023.
     listen:
-      Spot Length: lift_attribution.spot_length
+      Spot Length: lift_attribution_new_baseline.spot_length
       DMA Name/Media Type: dmas.name
-      Day of Week: lift_attribution.local_start_day_of_week
-      Weekday/Weekend: lift_attribution.weekday_or_weekend
-      Power-Moment Type: lift_attribution.powermoment_type
+      Day of Week: lift_attribution_new_baseline.local_start_day_of_week
+      Weekday/Weekend: lift_attribution_new_baseline.weekday_or_weekend
+      Power-Moment Type: lift_attribution_new_baseline.powermoment_type
       Brand Filter: brands.brand_filter
       Customer Markets: market_grouping.customer_markets
-      Date Filter in Local Time: lift_attribution.local_start_date_filter
-      Airing Type: lift_attribution.airing_type
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Date Filter in Local Time: lift_attribution_new_baseline.local_start_date_filter
+      Airing Type: lift_attribution_new_baseline.airing_type
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 22
     col: 0
     width: 8
@@ -822,10 +822,10 @@
   # - title: Competitive Dashboard Navigation Button
   #   name: Competitive Dashboard Navigation Button
   #   model: bigquery_dashboards
-  #   explore: lift_attribution
+  #   explore: lift_attribution_new_baseline
   #   type: single_value
-  #   fields: [lift_attribution.comp_dash_button]
-  #   sorts: [lift_attribution.comp_dash_button]
+  #   fields: [lift_attribution_new_baseline.comp_dash_button]
+  #   sorts: [lift_attribution_new_baseline.comp_dash_button]
   #   limit: 500
   #   column_limit: 50
   #   custom_color_enabled: true
@@ -839,15 +839,15 @@
   #   conditional_formatting_include_nulls: false
   #   font_size_main: '1'
   #   orientation: vertical
-  #   style_lift_attribution.comp_dash_button: "#3A4245"
-  #   show_title_lift_attribution.comp_dash_button: false
-  #   title_placement_lift_attribution.comp_dash_button: above
-  #   value_format_lift_attribution.comp_dash_button: ''
-  #   style_lift_attribution.session_dash_button: "#3A4245"
-  #   show_title_lift_attribution.session_dash_button: false
-  #   title_placement_lift_attribution.session_dash_button: above
-  #   value_format_lift_attribution.session_dash_button: ''
-  #   show_comparison_lift_attribution.session_dash_button: false
+  #   style_lift_attribution_new_baseline.comp_dash_button: "#3A4245"
+  #   show_title_lift_attribution_new_baseline.comp_dash_button: false
+  #   title_placement_lift_attribution_new_baseline.comp_dash_button: above
+  #   value_format_lift_attribution_new_baseline.comp_dash_button: ''
+  #   style_lift_attribution_new_baseline.session_dash_button: "#3A4245"
+  #   show_title_lift_attribution_new_baseline.session_dash_button: false
+  #   title_placement_lift_attribution_new_baseline.session_dash_button: above
+  #   value_format_lift_attribution_new_baseline.session_dash_button: ''
+  #   show_comparison_lift_attribution_new_baseline.session_dash_button: false
   #   x_axis_gridlines: false
   #   y_axis_gridlines: true
   #   show_view_names: false
@@ -881,8 +881,8 @@
   #   series_labels: {}
   #   title_hidden: true
   #   listen:
-  #     Spot Length: lift_attribution.spot_length
-  #     Post Log Filter: lift_attribution.include_post_log_attribution
+  #     Spot Length: lift_attribution_new_baseline.spot_length
+  #     Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
   #   row: 0
   #   col: 16
   #   width: 8
@@ -890,10 +890,10 @@
   - title: Sessions Dashboard Navigation Button
     name: Sessions Dashboard Navigation Button
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: single_value
-    fields: [lift_attribution.session_dash_button]
-    sorts: [lift_attribution.session_dash_button]
+    fields: [lift_attribution_new_baseline.session_dash_button]
+    sorts: [lift_attribution_new_baseline.session_dash_button]
     limit: 500
     column_limit: 50
     custom_color_enabled: true
@@ -934,8 +934,8 @@
     totals_color: "#808080"
     defaults_version: 1
     listen:
-      Spot Length: lift_attribution.spot_length
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Spot Length: lift_attribution_new_baseline.spot_length
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
       Brand Filter: brands.brand_filter
     row: 0
     col: 8
@@ -944,10 +944,10 @@
   - title: Welcome Dashboard Navigation
     name: Welcome Dashboard Navigation
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     type: single_value
-    fields: [lift_attribution.return_to_welcome_dash_button]
-    sorts: [lift_attribution.return_to_welcome_dash_button]
+    fields: [lift_attribution_new_baseline.return_to_welcome_dash_button]
+    sorts: [lift_attribution_new_baseline.return_to_welcome_dash_button]
     limit: 500
     column_limit: 50
     custom_color_enabled: true
@@ -961,8 +961,8 @@
     conditional_formatting_include_nulls: false
     defaults_version: 1
     listen:
-      Spot Length: lift_attribution.spot_length
-      Post Log Filter: lift_attribution.include_post_log_attribution
+      Spot Length: lift_attribution_new_baseline.spot_length
+      Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 0
     col: 0
     width: 8
@@ -978,7 +978,7 @@
       type: dropdown_menu
       display: inline
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: []
     field: brands.brand_filter
   - name: Airing Type
@@ -993,9 +993,9 @@
       options:
       - 1st Party
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: []
-    field: lift_attribution.airing_type
+    field: lift_attribution_new_baseline.airing_type
   - name: Date Filter in Local Time
     title: Date Filter in Local Time
     type: field_filter
@@ -1007,9 +1007,9 @@
       display: popover
       options: []
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: []
-    field: lift_attribution.local_start_date_filter
+    field: lift_attribution_new_baseline.local_start_date_filter
   - name: Customer Markets
     title: Customer Markets
     type: field_filter
@@ -1020,7 +1020,7 @@
       type: checkboxes
       display: popover
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: [Brand Filter, Date Filter in Local Time, Airing Type]
     field: market_grouping.customer_markets
   - name: Power-Moment Type
@@ -1033,9 +1033,9 @@
       type: checkboxes
       display: popover
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: []
-    field: lift_attribution.powermoment_type
+    field: lift_attribution_new_baseline.powermoment_type
   - name: Spot Length
     title: Spot Length
     type: field_filter
@@ -1046,10 +1046,10 @@
       type: checkboxes
       display: popover
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: [Brand Filter, Customer Markets, Date Filter in Local Time,
       Airing Type]
-    field: lift_attribution.spot_length
+    field: lift_attribution_new_baseline.spot_length
   - name: Weekday/Weekend
     title: Weekday/Weekend
     type: field_filter
@@ -1063,9 +1063,9 @@
       - Weekday
       - Weekend
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: []
-    field: lift_attribution.weekday_or_weekend
+    field: lift_attribution_new_baseline.weekday_or_weekend
   - name: Day of Week
     title: Day of Week
     type: field_filter
@@ -1076,9 +1076,9 @@
       type: checkboxes
       display: popover
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: []
-    field: lift_attribution.local_start_day_of_week
+    field: lift_attribution_new_baseline.local_start_day_of_week
   - name: Post Log Filter
     title: Post Log Filter
     type: field_filter
@@ -1089,9 +1089,9 @@
       type: button_group
       display: inline
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: []
-    field: lift_attribution.include_post_log_attribution
+    field: lift_attribution_new_baseline.include_post_log_attribution
   - name: DMA Name/Media Type
     title: DMA Name/Media Type
     type: field_filter
@@ -1102,7 +1102,7 @@
       type: tag_list
       display: overflow
     model: bigquery_dashboards
-    explore: lift_attribution
+    explore: lift_attribution_new_baseline
     listens_to_filters: [Brand Filter, Customer Markets, Date Filter in Local Time,
       Airing Type]
     field: dmas.name
