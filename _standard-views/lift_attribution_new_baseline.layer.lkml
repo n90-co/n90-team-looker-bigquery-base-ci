@@ -370,26 +370,26 @@ view: +lift_attribution_new_baseline {
       description: "Type of event with detection source"
       hidden: yes
     }
-    dimension: ga_baseline_session_count {
-      description: "Baseline session count based off of Google Analytics data instead of our tracking tag"
-      hidden: yes
-    }
-    dimension: ga_baseline_sessions_per_second {
-      description: "Baseline sessions per second based off of Google Analytics data instead of our tracking tag"
-      hidden: yes
-    }
-    dimension: ga_raw_lift {
-      description: "Raw lift based off of Google Analytics data instead of our tracking tag"
-      hidden: yes
-    }
-    dimension: ga_unadjusted_lift {
-      description: "Unadjusted lift based off of Google Analytics data instead of our tracking tag"
-      hidden: yes
-    }
-    dimension: ga_weighted_lift {
-      description: "Weighted lift based off of Google Analytics data instead of our tracking tag"
-      hidden: yes
-    }
+    # dimension: ga_baseline_session_count {
+    #   description: "Baseline session count based off of Google Analytics data instead of our tracking tag"
+    #   hidden: yes
+    # }
+    # dimension: ga_baseline_sessions_per_second {
+    #   description: "Baseline sessions per second based off of Google Analytics data instead of our tracking tag"
+    #   hidden: yes
+    # }
+    # dimension: ga_raw_lift {
+    #   description: "Raw lift based off of Google Analytics data instead of our tracking tag"
+    #   hidden: yes
+    # }
+    # dimension: ga_unadjusted_lift {
+    #   description: "Unadjusted lift based off of Google Analytics data instead of our tracking tag"
+    #   hidden: yes
+    # }
+    # dimension: ga_weighted_lift {
+    #   description: "Weighted lift based off of Google Analytics data instead of our tracking tag"
+    #   hidden: yes
+    # }
     dimension: geo {
       description: "Geographic area of the event (zip code, market, …)"
       # hidden: yes
@@ -429,10 +429,10 @@ view: +lift_attribution_new_baseline {
       description: "ID of the original triggering detection (watermark_id, creative_resource_id, product_id, …)"
       hidden: yes
     }
-    dimension: unadjusted_lift {
-      description: "Raw lift before negatives were removed - before PitStop Release"
-      hidden: yes
-    }
+    # dimension: unadjusted_lift {
+    #   description: "Raw lift before negatives were removed - before PitStop Release"
+    #   hidden: yes
+    # }
 #}
 
   }
