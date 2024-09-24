@@ -85,7 +85,7 @@ view: lift_attribution_new_baseline {
 
   dimension: event_lift {
     type: number
-    sql: ${TABLE}.event_lift ;;
+    sql: distinct(${TABLE}.event_lift) ;;
   }
 
   measure: total_event_lift {
