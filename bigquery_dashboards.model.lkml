@@ -6,6 +6,7 @@ label: "Customer Dashboards"
 # include: "/logical-explores/activity_sessions.explore.layer.lkml"
 include: "/logical-explores/activity_sessions.explore.lkml"
 include: "/logical-explores/lift_attribution.explore.lkml"
+include: "/logical-explores/lift_attribution_new_baseline.explore.lkml"
 
 include: "/dashboards/first-party_attribution.dashboard.lookml"
 include: "/dashboards/first-party_attribution_airings.dashboard.lookml"
