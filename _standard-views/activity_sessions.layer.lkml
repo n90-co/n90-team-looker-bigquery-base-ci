@@ -78,7 +78,7 @@ view: +activity_sessions {
   }
   dimension: return_to_welcome_dash_button {
     hidden: yes
-    html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::welcome_to_guac" target="_blank" rel="noopener noreferrer">
+    html: <a href= "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::welcome_to_insights_power" target="_blank" rel="noopener noreferrer">
       <button style="background-color:#787878; border:none; color:white; border-radius:4px">{{value}}</button></a>;;
     sql: "Return to Welcome Dashboard" ;;
   }
