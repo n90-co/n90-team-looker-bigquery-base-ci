@@ -965,7 +965,7 @@
       Post Log Filter: lift_attribution_new_baseline.include_post_log_attribution
     row: 0
     col: 0
-    width: 8
+    width: 16
     height: 1
   filters:
   - name: Brand Filter
