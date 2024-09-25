@@ -13,6 +13,7 @@ include: "/dashboards/first-party_attribution_airings.dashboard.lookml"
 include: "/dashboards/competitive_attribution.dashboard.lookml"
 include: "/dashboards/sessions.dashboard.lookml"
 include: "/dashboards/welcome_page.dashboard.lookml"
+include: "/dashboards/welcome_page_2.dashboard.lookml"
 
 datagroup: bigquery_dashboards_default_datagroup {
   sql_trigger: SELECT MAX(event_start_time) FROM lift_attribution;;

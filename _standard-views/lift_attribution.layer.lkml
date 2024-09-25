@@ -158,6 +158,32 @@ view: +lift_attribution {
   }
 #}
 
+#Welcome Dashboard Limited{
+  dimension: welcome_dash_brand_links_limited {
+    hidden: yes
+    link: {
+      label: "First Party Micro-Moment® Attribution Dashboard"
+      url: "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::{{_user_attributes['first_party_dashboard_version']}}?Brand+Filter={{ value }}&Airing+Type=1st+Party"
+    }
+    # link: {
+    #   label: "Competitive Micro-Moment® Attribution Dashboard"
+    #   url: "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::competitive_micromoment_attribution_dashboard?Brand+Filter={{ value }}&Airing+Type=Competitive"
+    # }
+    # link: {
+    #   label: "Web Session Dashboard"
+    #   url: "https://{{_user_attributes['instance']}}.cloud.looker.com/dashboards/bigquery_dashboards::web_sessions_dashboard?Brand+Filter={{ value }}"
+    # }
+    sql: ${brands.brand_name} ;;
+  }
+
+  measure: measure {
+    hidden: yes
+    type: number
+    sql: 1 ;;
+  }
+#}
+
+
 #Lift numbers that become aggregates{
   #Weighted Lift{
   dimension: weighted_lift {
