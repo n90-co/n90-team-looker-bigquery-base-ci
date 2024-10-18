@@ -2,7 +2,8 @@
 view: dmas {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `bigquery-sandbox-393916.looker.dmas` ;;
+  sql_table_name: (SELECT dma_id, kantar_region,  case when (neustar_id > 0) then neustar_id else 808080.0 end as neustar_id, name, timezone FROM `bigquery-sandbox-393916.looker.dmas`) ;;
+  # sql_table_name: `bigquery-sandbox-393916.looker.dmas` ;;
   drill_fields: [dma_id]
 
   # This primary key is the unique key for this table in the underlying database.
