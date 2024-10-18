@@ -59,7 +59,7 @@ map_layer: az_zips {
 }
 
 map_layer: combined_us_canada_dmas {
-  file: "/map/cleaned_combined_US_CANADA_dmas2.geojson"
+  file: "/map/cleaned_new_combined_US_CANADA_dmas.geojson"
   # url: "https://raw.githubusercontent.com/simzou/nielsen-dma/master/nielsentopo.json"
   # feature_key: "DMA"  # The GeoJSON property to join on
   label: "DMA Map"
