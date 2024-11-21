@@ -2,7 +2,7 @@
 view: kinetiq_occurrences {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `bigquery-sandbox-393916.looker.kinetiq_occurrences` ;;
+  sql_table_name: `next90-core-applications.omniData.kinetiq_occurrences` ;;
   drill_fields: [id]
 
   # This primary key is the unique key for this table in the underlying database.

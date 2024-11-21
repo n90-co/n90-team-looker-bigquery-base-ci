@@ -10,7 +10,7 @@ include: "/_standard-views/ext_adv_brand_filter.view.lkml"
 view: +activity_sessions {
   extends: [ext_partitions,ext_schema_change,ext_dry_label,ext_adv_brand_filter]
 
-  sql_table_name: `bigquery-sandbox-393916.{% parameter activity_sessions.demo_schema %}{% parameter activity_sessions.dynamic_schema %}looker.activity_sessions` ;;
+  sql_table_name: `next90-core-applications.{% parameter activity_sessions.demo_schema %}{% parameter activity_sessions.dynamic_schema %}looker.activity_sessions` ;;
 
 #FILTERS{
   filter: local_created_date_filter {
@@ -56,7 +56,7 @@ view: +activity_sessions {
     label: "Hour of Day AM/PM (in local time)"
     description: "Returns the local hour of the day in 12-hour AM/PM format."
     view_label: "{% parameter view_label_6 %}"
-    convert_tz: no
+    # convert_tz: no
     type: string
     sql: FORMAT_TIMESTAMP('%l %p', DATETIME_TRUNC(CAST(${local_created_raw} AS TIMESTAMP), HOUR)) ;;
     order_by_field: local_created_hour_of_day
@@ -217,17 +217,17 @@ view: +activity_sessions {
   dimension: id {
     label: "Session ID"
     view_label: "{% parameter view_label_5 %}"
-    description: "Advocado's session ID. This session ID is attached to pageviews that fall within a rolling 30 minute window from the same IP address."
+    description: "Next90's session ID. This session ID is attached to pageviews that fall within a rolling 30 minute window from the same IP address."
     # hidden: yes
   }
   dimension: brand_id {
-    description: "A unique identifier by Advocado for each brand. An agency could be handling multiple brand IDs."
+    description: "A unique identifier by Next90 for each brand. An agency could be handling multiple brand IDs."
     hidden: yes
   }
   dimension: calculated_source {
     label: "Lead Source"
     view_label: "{% parameter view_label_4 %}"
-    description: "The calculated source Advocado determined the Session originated from"
+    description: "The calculated source Next90 determined the Session originated from"
     # hidden: yes
   }
   dimension_group: created {

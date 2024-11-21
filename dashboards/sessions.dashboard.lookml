@@ -4,7 +4,7 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   crossfilter_enabled: true
-  description: This dashboard displays data gathered by Advocado's tracking tag installed
+  description: This dashboard displays data gathered by Next90's tracking tag installed
     on the brand's website.
   filters_location_top: false
   preferred_slug: mbVgyjXRkGCIqXmq3bH7hK
@@ -31,7 +31,7 @@
     defaults_version: 1
     note_state: collapsed
     note_display: hover
-    note_text: 'Advocado’s proprietary tag tracks a visit to your website. A session
+    note_text: 'Next90’s proprietary tag tracks a visit to your website. A session
       is a grouping of pageviews. These are determined in real time. A session may
       have infinite length, but sessions longer than 3 days may be broken into multiple
       records. A session continues until a user has a gap in pageviews longer than

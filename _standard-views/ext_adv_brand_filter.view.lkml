@@ -7,7 +7,7 @@ view: ext_adv_brand_filter {
   parameter: adv_brand_filter {
     required_access_grants: [n90_emp]
     view_label: "{% parameter view_label_7 %}"
-    label: "Brand Filter for Advocado team"
+    label: "Brand Filter for Next90 team"
     description: "Slightly improves query time versus Brand Name Filter"
     # view_label: "Brand"
     type: string
@@ -15,7 +15,7 @@ view: ext_adv_brand_filter {
   }
 
   dimension: brand_name_plus_id {
-    label: "Brand Filter for Advocado team"
+    label: "Brand Filter for Next90 team"
     type: string
     hidden: yes
     # sql: CONCAT(${brand_id},'-',${brands.brand_name}) ;;

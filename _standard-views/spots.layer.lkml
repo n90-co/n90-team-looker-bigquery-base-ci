@@ -8,7 +8,7 @@ view: +spots {
   extends: [ext_dry_label]
 
 ## Overriding the table name to allow for demo schema, no matter which explore.
-  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}looker.spots_condensed` ;;
+  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}looker.spots_condensed` ;;
 
   dimension: primary_key {
     primary_key: yes
@@ -17,7 +17,7 @@ view: +spots {
   }
 
   dimension: creative_name {
-    description: "Creative name if updated in Advocado portal, otherwise will default to ISCI"
+    description: "Creative name if updated in Next90 portal, otherwise will default to ISCI"
     view_label: "{% parameter view_label_1 %}"
     sql: COALESCE(${TABLE}.creative_name, ${isci}) ;;
   }
@@ -36,11 +36,11 @@ view: +spots {
 
 #Hiding/Renaming/Relabeling Dimensions{
   dimension: aeis_id {
-    description: "Advocado's watermark ID"
+    description: "Next90's watermark ID"
     hidden: yes
   }
   dimension: brand_id {
-    description: "A unique identifier by Advocado for each brand. An agency could be handling multiple brand IDs."
+    description: "A unique identifier by Next90 for each brand. An agency could be handling multiple brand IDs."
     hidden: yes
   }
   dimension: is_removed {

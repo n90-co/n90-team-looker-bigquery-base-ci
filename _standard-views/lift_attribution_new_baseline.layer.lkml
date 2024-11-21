@@ -12,7 +12,7 @@ view: +lift_attribution_new_baseline {
   extends: [ext_partitions,ext_schema_change,ext_competitor_info,ext_dry_label,ext_adv_brand_filter]
 
 # Overriding table name to allow dynamic schema
-  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter lift_attribution.dynamic_schema %}looker.lift_attribution_new_baseline`;;
+  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter lift_attribution.dynamic_schema %}looker.lift_attribution_new_baseline`;;
 
 #PRIMARY KEY{
   dimension: primary_key {
@@ -65,7 +65,7 @@ view: +lift_attribution_new_baseline {
     label: "Hour of Day AM/PM (in local time)"
     description: "Returns the local hour of the day in 12-hour AM/PM format."
     view_label: "{% parameter view_label_6 %}"
-    convert_tz: no
+    # convert_tz: no
     type: string
     sql: FORMAT_TIMESTAMP('%l %p', DATETIME_TRUNC(CAST(${local_start_raw} AS TIMESTAMP), HOUR)) ;;
     order_by_field: local_start_hour_of_day
@@ -178,7 +178,7 @@ view: +lift_attribution_new_baseline {
   measure: count_detections {
     label: "Number of Detections"
     view_label: "{% parameter view_label_3 %}"
-    description: "The number of times the Advocado system received and recorded a signal that your watermarked commercial is airing on a specific TV station"
+    description: "The number of times the Next90 system received and recorded a signal that your watermarked commercial is airing on a specific TV station"
     type: count_distinct
     value_format: "#,##0"
     # sql: ${orig_event_id} ;;
@@ -329,7 +329,7 @@ view: +lift_attribution_new_baseline {
       view_label: "{% parameter view_label_1 %}"
     }
     dimension: brand_id {
-      description: "A unique identifier by Advocado for each brand. An agency could be handling multiple brand IDs."
+      description: "A unique identifier by Next90 for each brand. An agency could be handling multiple brand IDs."
       hidden: yes
     }
     dimension: callsign {
@@ -343,7 +343,7 @@ view: +lift_attribution_new_baseline {
       view_label: "{% parameter view_label_2 %}"
     }
     dimension: dma_id {
-      description: "Advocado's Market ID"
+      description: "Next90's Market ID"
       hidden: yes
     }
     dimension: dma_name {
@@ -404,12 +404,12 @@ view: +lift_attribution_new_baseline {
       hidden: yes
     }
     dimension: lead_source {
-      description: "Calculated source of the attributed sessions. By default, this is populated by the UTM parameter from the referring URL. However, you may create custom lead sources in the Advocado portal by working with your customer success manager."
+      description: "Calculated source of the attributed sessions. By default, this is populated by the UTM parameter from the referring URL. However, you may create custom lead sources in the Next90 portal by working with your customer success manager."
       # hidden: yes
       view_label: "{% parameter view_label_5 %}"
     }
     dimension: orig_event_id {
-      description: "A unique identifier by Advocado that groups together detections into a single event."
+      description: "A unique identifier by Next90 that groups together detections into a single event."
       # hidden: yes
       label: "Event ID"
       view_label: "{% parameter view_label_5 %}"

@@ -2,7 +2,7 @@
 view: spots {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `bigquery-sandbox-393916.looker.spots_condensed` ;;
+  sql_table_name: `next90-core-applications.omniData.spots_condensed` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -13,19 +13,19 @@ view: spots {
 
   dimension: aeis_id {
     type: string
-    description: "Advocado ID"
+    description: "Next90 ID"
     sql: ${TABLE}.aeis_id ;;
   }
 
   dimension: brand_id {
     type: string
-    description: "Advocado ID"
+    description: "Next90 ID"
     sql: ${TABLE}.brand_id ;;
   }
 
   dimension: creative_name {
     type: string
-    description: "Creative name if updated in Advocado portal, otherwise will default to ISCI"
+    description: "Creative name if updated in Next90 portal, otherwise will default to ISCI"
     sql: ${TABLE}.creative_name ;;
   }
 
@@ -43,7 +43,7 @@ view: spots {
 
   dimension: kantar_encoding_id {
     type: string
-    description: "Advocado ID"
+    description: "Next90 ID"
     sql: ${TABLE}.kantar_encoding_id ;;
   }
 
@@ -71,7 +71,7 @@ view: spots {
 
   # dimension: trigger_id {
   #   type: string
-  #   description: "Advocado ID"
+  #   description: "Next90 ID"
   #   sql: ${TABLE}.trigger_id ;;
   # }
   # measure: count {

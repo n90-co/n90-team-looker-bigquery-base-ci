@@ -9,7 +9,7 @@ view: pdt_brand_startend_dates {
     sql:  SELECT  brand_id,
                   MIN(DATE(created_time)) as brand_start_date,
                   MAX(DATE(created_time)) as brand_end_date
-          FROM `bigquery-sandbox-393916.looker.activity_sessions`
+          FROM `next90-core-applications.omniData.activity_sessions`
           GROUP BY brand_id;;
   }
 

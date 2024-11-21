@@ -2,7 +2,7 @@
 view: joined_implicit_attribution {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `bigquery-sandbox-393916.looker.joined_implicit_attribution` ;;
+  sql_table_name: `next90-core-applications.omniData.joined_implicit_attribution` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -32,7 +32,7 @@ view: joined_implicit_attribution {
 
   dimension: brand_id {
     type: string
-    description: "Advocado Brand Id"
+    description: "Next90 Brand Id"
     # hidden: yes
     sql: ${TABLE}.brand_id ;;
   }
@@ -245,7 +245,7 @@ view: joined_implicit_attribution {
 
   dimension: orig_event_id {
     type: string
-    description: "A unique identifier by Advocado that groups together detections into a single event."
+    description: "A unique identifier by Next90 that groups together detections into a single event."
     sql: ${TABLE}.orig_event_id ;;
   }
 

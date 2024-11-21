@@ -35,7 +35,7 @@
     defaults_version: 1
     note_state: collapsed
     note_display: hover
-    note_text: 'Record of Advocado’s Systems receiving and recording a signal that
+    note_text: 'Record of Next90’s Systems receiving and recording a signal that
       your watermarked TV spot aired was detected on its source TV station / network. '
     listen:
       Spot Length: lift_attribution_new_baseline.spot_length

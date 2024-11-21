@@ -7,7 +7,7 @@ include: "/_standard-views/ext_DRY_label.view.lkml"
 view: +brand_central_products {
   extends: [ext_dry_label]
 
-  sql_table_name: `bigquery-sandbox-393916.looker.brand_central_products` ;;
+  sql_table_name: `next90-core-applications.omniData.brand_central_products` ;;
 
   dimension: orig_product_id {
     description: "Kantar ID. The oproduct_id in data activity tables reflects the original product as it was captured. Changes may be made to the original product table that reflect the current product_id as it is currently reported in the system. This allows updates to any of the product information to be reported at the most recent stage reflected in our syndicated reporting without needing to re-send the activity tables. Join from activity table to oproduct, via oproduct_id. Then use product_id to join to product table for current information."
@@ -25,7 +25,7 @@ view: +brand_central_products {
     hidden: yes
   }
   dimension: brand_id {
-    description: "A unique identifier by Advocado for each brand. An agency could be handling multiple brand IDs."
+    description: "A unique identifier by Next90 for each brand. An agency could be handling multiple brand IDs."
     hidden: yes
   }
   dimension: brand_name {

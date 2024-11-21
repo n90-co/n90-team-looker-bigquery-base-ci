@@ -8,12 +8,12 @@ view: +brands {
   extends: [ext_dry_label]
 
   # Overriding the table name to allow for demo schema, no matter which explore.
-  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}looker.brands` ;;
+  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}looker.brands` ;;
 
 #Hiding/Renaming/Relabeling Dimensions{
   dimension: brand_id {
     view_label: "Brand"
-    description: "A unique identifier by Advocado for each brand. An agency could be handling multiple brand IDs."
+    description: "A unique identifier by Next90 for each brand. An agency could be handling multiple brand IDs."
     hidden: yes
   }
   dimension: brand_name {

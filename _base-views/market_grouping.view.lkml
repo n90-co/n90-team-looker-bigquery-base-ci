@@ -2,7 +2,7 @@
 view: market_grouping {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `bigquery-sandbox-393916.looker.market_grouping` ;;
+  sql_table_name: `next90-core-applications.omniData.market_grouping` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.

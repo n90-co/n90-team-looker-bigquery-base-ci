@@ -4,12 +4,12 @@ include: "/_standard-views/ext_DRY_label.view.lkml"
 view: +dmas {
   extends: [ext_dry_label]
 
-  sql_table_name: `bigquery-sandbox-393916.looker.dmas` ;;
+  sql_table_name: `next90-core-applications.omniData.dmas` ;;
 
 
   # Hiding/Renaming/Relabeling Dimensions
   dimension: dma_id {
-    description: "Advocado's Market ID"
+    description: "Next90's Market ID"
     hidden: yes
   }
 

@@ -11,7 +11,7 @@ view: +conversion_attribution {
   extends: [ext_partitions,ext_schema_change,ext_competitor_info,ext_dry_label]
 
 # Overriding table name to allow dynamic schema
-  sql_table_name: `bigquery-sandbox-393916.{% parameter conversion_attribution.dynamic_schema %}{% parameter conversion_attribution.demo_schema %}looker.conversion_attribution` ;;
+  sql_table_name: `next90-core-applications.{% parameter conversion_attribution.dynamic_schema %}{% parameter conversion_attribution.demo_schema %}looker.conversion_attribution` ;;
 
 #PRIMARY KEY{
   dimension: primary_key {
@@ -45,7 +45,7 @@ view: +conversion_attribution {
     hidden: yes
   }
   dimension: brand_id {
-    description: "A unique identifier by Advocado for each brand. An agency could be handling multiple brand IDs."
+    description: "A unique identifier by Next90 for each brand. An agency could be handling multiple brand IDs."
     hidden: yes
   }
   dimension: conversion_count {
@@ -58,7 +58,7 @@ view: +conversion_attribution {
     hidden: yes
   }
   dimension: dma_id {
-    description: "Advocado's Market ID"
+    description: "Next90's Market ID"
     hidden: yes
   }
   dimension: dma_name {
@@ -82,7 +82,7 @@ view: +conversion_attribution {
     hidden: yes
   }
   dimension: goal_id {
-    description: "Advocado ID of the goal reached for the attributed conversion"
+    description: "Next90 ID of the goal reached for the attributed conversion"
     hidden: yes
   }
   dimension: goal_name {
@@ -97,7 +97,7 @@ view: +conversion_attribution {
     hidden: yes
   }
   dimension: orig_event_id {
-    description: "A unique identifier by Advocado that groups together detections into a single event."
+    description: "A unique identifier by Next90 that groups together detections into a single event."
     hidden: yes
   }
   dimension: program_uuid {

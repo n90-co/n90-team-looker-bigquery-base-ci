@@ -11,7 +11,7 @@ view: brands {
   dimension: brand_id {
     primary_key: yes
     type: string
-    description: "A unique identifier by Advocado for each brand. Individual report exports are only going to have one brand ID, but an agency could be handling multiple brand exports"
+    description: "A unique identifier by Next90 for each brand. Individual report exports are only going to have one brand ID, but an agency could be handling multiple brand exports"
     sql: ${TABLE}.brand_id ;;
   }
     # Here's what a typical dimension looks like in LookML.

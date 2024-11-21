@@ -2,7 +2,7 @@
 view: activity_sessions {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `bigquery-sandbox-393916.looker.activity_sessions` ;;
+  sql_table_name: `next90-core-applications.omniData.activity_sessions` ;;
   drill_fields: [id]
 
   # This primary key is the unique key for this table in the underlying database.
@@ -11,7 +11,7 @@ view: activity_sessions {
   dimension: id {
     primary_key: yes
     type: string
-    description: "Advocado's session ID. This session ID is attached to pageviews that fall within a rolling 30 minute window from the same IP address."
+    description: "Next90's session ID. This session ID is attached to pageviews that fall within a rolling 30 minute window from the same IP address."
     sql: ${TABLE}.id ;;
   }
     # Here's what a typical dimension looks like in LookML.
@@ -20,14 +20,14 @@ view: activity_sessions {
 
   dimension: brand_id {
     type: string
-    description: "Advocado Brand ID"
+    description: "Next90 Brand ID"
     # hidden: yes
     sql: ${TABLE}.brand_id ;;
   }
 
   dimension: calculated_source {
     type: string
-    description: "The source Advocado determined the Session originated from"
+    description: "The source Next90 determined the Session originated from"
     sql: ${TABLE}.calculated_source ;;
   }
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.

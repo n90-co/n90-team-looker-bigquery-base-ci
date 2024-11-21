@@ -11,7 +11,7 @@ view: pdt_kinetiq_creatives {
                 MAX(subcategory)    as subcategory,
                 MAX(thumbnail_url)  as thumbnail_url,
                 MAX(video_url)      as video_url
-          FROM `bigquery-sandbox-393916.looker.kinetiq_creatives`
+          FROM `next90-core-applications.omniData.kinetiq_creatives`
           GROUP BY creative_resource_id ;;
   }
 

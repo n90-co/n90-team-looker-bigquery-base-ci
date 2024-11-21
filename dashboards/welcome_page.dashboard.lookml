@@ -33,7 +33,7 @@
 
       {"type":"h3","align":"start","children":[{"text":"Web
       Session Dashboard:","color":"hsl(0, 0%, 11%)"}],"id":1702409541255},{"type":"p","children":[{"text":"This
-      dashboard displays data gathered by Advocado''s tracking tag installed on the
+      dashboard displays data gathered by Next90''s tracking tag installed on the
       brand''s website.","fontSize":"14px","backgroundColor":"rgb(255, 255, 255)","color":"hsl(0,
       0%, 11%)"}],"id":1702409541256}]'
     rich_content_json: '{"format":"slate"}'

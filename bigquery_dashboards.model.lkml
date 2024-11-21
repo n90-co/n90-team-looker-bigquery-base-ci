@@ -1,6 +1,6 @@
 #Last edited: 2/5/24 by Mary
 
-connection: "advocado-bq-datalake"
+connection: "next90-bq-datalake"
 label: "Customer Dashboards"
 
 # include: "/logical-explores/activity_sessions.explore.layer.lkml"

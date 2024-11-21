@@ -8,7 +8,7 @@ view: +wwtv_programs {
 label: "TV Program Data"
   extends: [ext_partitions]
 
-  sql_table_name: `bigquery-sandbox-393916.looker.wwtv_programs` ;;
+  sql_table_name: `next90-core-applications.omniData.wwtv_programs` ;;
 
 #primary key
   dimension: program_uuid {
@@ -79,11 +79,11 @@ label: "TV Program Data"
     hidden: yes
   }
   dimension: master_channel_id {
-    description: "Advocado ID"
+    description: "Next90 ID"
     hidden: yes
   }
   dimension: monitored_channel_id {
-    description: "Advocado ID"
+    description: "Next90 ID"
     hidden: yes
   }
   dimension: mpaa_rating {

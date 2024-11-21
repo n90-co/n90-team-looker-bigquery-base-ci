@@ -35,7 +35,7 @@ filter: brand_filter {
 #     value: "62f5529b226681547a94a798"
 #   }
 #   allowed_value: {
-#     label: "Advocado"
+#     label: "Next90"
 #     value: "5c4fa0a9d90b2d00411bdd3f"
 #   }
 #   allowed_value: {

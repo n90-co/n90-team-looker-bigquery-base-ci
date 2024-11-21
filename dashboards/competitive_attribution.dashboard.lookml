@@ -36,7 +36,7 @@
     defaults_version: 1
     note_state: collapsed
     note_display: hover
-    note_text: Record of Advocado’s Systems receiving and recording a signal that
+    note_text: Record of Next90’s Systems receiving and recording a signal that
       a Fingerprint ACR Product TV spot aired on a specific TV station for one of
       your chosen competitors.
     listen:

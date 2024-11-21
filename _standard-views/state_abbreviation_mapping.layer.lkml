@@ -7,7 +7,7 @@ include: "/_standard-views/ext_DRY_label.view.lkml"
 view: +state_abbreviation_mapping{
   extends: [ext_dry_label]
 
-  sql_table_name: `bigquery-sandbox-393916.looker.state_abbreviation_mapping` ;;
+  sql_table_name: `next90-core-applications.omniData.state_abbreviation_mapping` ;;
 
   dimension: state {
     # hidden: yes

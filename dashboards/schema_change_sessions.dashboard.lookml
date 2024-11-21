@@ -3,7 +3,7 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   crossfilter_enabled: true
-  description: Visualizations using data gathered by Advocado's tracking tag you have
+  description: Visualizations using data gathered by Next90's tracking tag you have
     installed on your website
   refresh: 1 day
   filters_location_top: false
@@ -462,7 +462,7 @@
   - name: "*"
     title: "*"
     type: field_filter
-    default_value: looker^_advocado
+    default_value: looker^_Next90
     allow_multiple_values: true
     required: false
     ui_config:

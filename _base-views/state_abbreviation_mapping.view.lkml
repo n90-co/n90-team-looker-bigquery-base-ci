@@ -2,7 +2,7 @@
 view: state_abbreviation_mapping {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `bigquery-sandbox-393916.looker.state_abbreviation_mapping` ;;
+  sql_table_name: `next90-core-applications.omniData.state_abbreviation_mapping` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.

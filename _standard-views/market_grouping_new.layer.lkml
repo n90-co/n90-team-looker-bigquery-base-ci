@@ -10,7 +10,7 @@ view: +market_grouping {
   extends: [ext_dry_label]
 
 ## Overriding the table name to allow for demo schema, no matter which explore.
-  sql_table_name: `bigquery-sandbox-393916.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}{% parameter lift_attribution.dynamic_schema %}{% parameter conversion_attribution.dynamic_schema %}{% parameter activity_sessions.dynamic_schema %}looker.market_grouping` ;;
+  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}{% parameter lift_attribution.dynamic_schema %}{% parameter conversion_attribution.dynamic_schema %}{% parameter activity_sessions.dynamic_schema %}looker.market_grouping` ;;
 
   dimension: customer_markets {
     view_label: "{% parameter view_label_2 %}"
@@ -27,7 +27,7 @@ view: +market_grouping {
 
 #Hiding/Renaming/Relabeling Dimensions{
   dimension: brand_id {
-    description: "A unique identifier by Advocado for each brand. An agency could be handling multiple brand IDs."
+    description: "A unique identifier by Next90 for each brand. An agency could be handling multiple brand IDs."
     hidden: yes
   }
   # NEW Market Groups file does not have this field
@@ -36,7 +36,7 @@ view: +market_grouping {
   #   hidden: yes
   # }
   dimension: dma_id {
-    description: "Advocado's Market ID"
+    description: "Next90's Market ID"
     hidden: yes
   }
   dimension: dma_name {

@@ -11,7 +11,7 @@ explore: brand_central_products {
 view: brand_central_products {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `bigquery-sandbox-393916.looker.brand_central_products` ;;
+  sql_table_name: `next90-core-applications.omniData.brand_central_products` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -34,7 +34,7 @@ view: brand_central_products {
 
   dimension: brand_id {
     type: number
-    description: "Advocado ID"
+    description: "Next90 ID"
     sql: ${TABLE}.brand_id ;;
   }
 

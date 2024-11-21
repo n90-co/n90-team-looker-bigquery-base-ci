@@ -1,5 +1,5 @@
 view: market_grouping {
-  sql_table_name: `bigquery-sandbox-393916.test_looker.market_grouping` ;;
+  sql_table_name: `next90-core-applications.test_looker.market_grouping` ;;
 
   dimension: brand_id {
     type: string

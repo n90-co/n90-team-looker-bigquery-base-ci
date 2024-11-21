@@ -2,8 +2,8 @@
 view: dmas {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: (SELECT dma_id, kantar_region,  case when (neustar_id > 0) then neustar_id else 808080.0 end as neustar_id, name, timezone FROM `bigquery-sandbox-393916.looker.dmas`) ;;
-  # sql_table_name: `bigquery-sandbox-393916.looker.dmas` ;;
+  sql_table_name: (SELECT dma_id, kantar_region,  case when (neustar_id > 0) then neustar_id else 808080.0 end as neustar_id, name, timezone FROM `next90-core-applications.omniData.dmas`) ;;
+  # sql_table_name: `next90-core-applications.omniData.dmas` ;;
   drill_fields: [dma_id]
 
   # This primary key is the unique key for this table in the underlying database.
@@ -12,7 +12,7 @@ view: dmas {
   dimension: dma_id {
     primary_key: yes
     type: string
-    description: "Advocado DMA ID"
+    description: "Next90 DMA ID"
     sql: ${TABLE}.dma_id ;;
   }
     # Here's what a typical dimension looks like in LookML.
