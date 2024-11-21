@@ -11,7 +11,7 @@ view: +joined_implicit_attribution {
   extends: [ext_partitions,ext_schema_change,ext_competitor_info,ext_dry_label]
 
 # Overriding table name to allow dynamic schema
-  sql_table_name: `next90-core-applications.{% parameter activity_sessions.demo_schema %}{% parameter activity_sessions.dynamic_schema %}looker.joined_implicit_attribution` ;;
+  sql_table_name: `next90-core-applications.{% parameter activity_sessions.demo_schema %}{% parameter activity_sessions.dynamic_schema %}omniData.joined_implicit_attribution` ;;
 
 #PRIMARY KEY{
   dimension: primary_key {

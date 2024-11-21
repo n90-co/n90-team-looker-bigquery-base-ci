@@ -12,7 +12,7 @@ view: +lift_attribution_new_baseline {
   extends: [ext_partitions,ext_schema_change,ext_competitor_info,ext_dry_label,ext_adv_brand_filter]
 
 # Overriding table name to allow dynamic schema
-  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter lift_attribution.dynamic_schema %}looker.lift_attribution_new_baseline`;;
+  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter lift_attribution.dynamic_schema %}omniData.lift_attribution_new_baseline`;;
 
 #PRIMARY KEY{
   dimension: primary_key {

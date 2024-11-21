@@ -10,7 +10,7 @@ include: "/_standard-views/ext_adv_brand_filter.view.lkml"
 view: +activity_sessions {
   extends: [ext_partitions,ext_schema_change,ext_dry_label,ext_adv_brand_filter]
 
-  sql_table_name: `next90-core-applications.{% parameter activity_sessions.demo_schema %}{% parameter activity_sessions.dynamic_schema %}looker.activity_sessions` ;;
+  sql_table_name: `next90-core-applications.{% parameter activity_sessions.demo_schema %}{% parameter activity_sessions.dynamic_schema %}omniData.activity_sessions` ;;
 
 #FILTERS{
   filter: local_created_date_filter {

@@ -10,7 +10,7 @@ view: +click_view_reports {
   extends: [ext_partitions,ext_dry_label]
 
 # Overriding the table name to allow for demo schema, no matter which explore.
-  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}looker.click_view_reports` ;;
+  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}omniData.click_view_reports` ;;
 
 #PRIMARY KEY{
   dimension: primary_key {

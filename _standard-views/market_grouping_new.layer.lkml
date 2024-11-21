@@ -10,7 +10,7 @@ view: +market_grouping {
   extends: [ext_dry_label]
 
 ## Overriding the table name to allow for demo schema, no matter which explore.
-  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}{% parameter lift_attribution.dynamic_schema %}{% parameter conversion_attribution.dynamic_schema %}{% parameter activity_sessions.dynamic_schema %}looker.market_grouping` ;;
+  sql_table_name: `next90-core-applications.{% parameter lift_attribution.demo_schema %}{% parameter conversion_attribution.demo_schema %}{% parameter activity_sessions.demo_schema %}{% parameter lift_attribution.dynamic_schema %}{% parameter conversion_attribution.dynamic_schema %}{% parameter activity_sessions.dynamic_schema %}omniData.market_grouping` ;;
 
   dimension: customer_markets {
     view_label: "{% parameter view_label_2 %}"
